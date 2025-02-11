@@ -1,0 +1,716 @@
+#军改相关决议
+
+PRC_pla_reformation_1 = {
+	PRC_military_project_mission_1 = {
+		#icon = GFX_decision_ger_military_buildup
+		allowed = { 
+			tag = PRC
+		}
+		activation = {
+			always = no
+		}
+		available = {
+			always = no
+		}
+		is_good = yes
+		selectable_mission = no
+		days_mission_timeout = 125
+		fire_only_once = no
+		timeout_effect = {
+		}
+		complete_effect = {
+		}
+		priority = 999
+	}
+	PRC_project_dark_sword_1_dec = { #暗剑无人机
+		#icon = GFX_decision_ger_military_buildup
+		cost = 25
+		fire_only_once = yes
+		allowed = { 
+			tag = PRC
+		}
+		visible = {
+			has_completed_focus = PRC_trust_in_the_pilot_1
+		}
+		available = {
+			NOT = {
+				has_country_flag = PRC_military_project_researching
+			}
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = anti_debil
+				}
+			}
+		}
+		complete_effect = {
+			country_event = china.2631
+			set_country_flag = anti_debil
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	PRC_project_ghost_1_dec = { #幽灵
+		#icon = GFX_decision_ger_military_buildup
+		cost = 25
+		fire_only_once = yes
+		allowed = { 
+			tag = PRC
+		}
+		visible = {
+			has_completed_focus = PRC_artillery_project_1
+		}
+		available = {
+			NOT = {
+				has_country_flag = PRC_military_project_researching
+			}
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = anti_debil
+				}
+			}
+		}
+		complete_effect = {
+			country_event = china.2591
+			set_country_flag = anti_debil
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	PRC_project_nib_1_dec = { #点触笔
+		#icon = GFX_decision_ger_military_buildup
+		cost = 25
+		fire_only_once = yes
+		allowed = { 
+			tag = PRC
+		}
+		visible = {
+			has_completed_focus = PRC_artillery_project_1
+		}
+		available = {
+			NOT = {
+				has_country_flag = PRC_military_project_researching
+			}
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = anti_debil
+				}
+			}
+		}
+		complete_effect = {
+			country_event = china.2601
+			set_country_flag = anti_debil
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	PRC_project_flash_1_dec = { #闪电
+		#icon = GFX_decision_ger_military_buildup
+		cost = 25
+		fire_only_once = yes
+		allowed = { 
+			tag = PRC
+		}
+		visible = {
+			has_completed_focus = PRC_artillery_project_1
+		}
+		available = {
+			NOT = {
+				has_country_flag = PRC_military_project_researching
+			}
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = anti_debil
+				}
+			}
+		}
+		complete_effect = {
+			country_event = china.2641
+			set_country_flag = anti_debil
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	PRC_project_swimmer_1_dec = { #奔涌者
+		#icon = GFX_decision_ger_military_buildup
+		cost = 25
+		fire_only_once = yes
+		allowed = { 
+			tag = PRC
+		}
+		visible = {
+			has_completed_focus = PRC_rain_fire_from_above_1
+		}
+		available = {
+			NOT = {
+				has_country_flag = PRC_military_project_researching
+			}
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = anti_debil
+				}
+			}
+		}
+		complete_effect = {
+			country_event = china.2611
+			set_country_flag = anti_debil
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	PRC_project_impulse_1_dec = { #脉冲
+		#icon = GFX_decision_ger_military_buildup
+		cost = 25
+		fire_only_once = yes
+		allowed = { 
+			tag = PRC
+		}
+		visible = {
+			has_completed_focus = PRC_resurrect_the_battleship_1
+		}
+		available = {
+			NOT = {
+				has_country_flag = PRC_military_project_researching
+			}
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = anti_debil
+				}
+			}
+		}
+		complete_effect = {
+			country_event = china.2621
+			set_country_flag = anti_debil
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	PRC_conduct_army_exercises_1 = { #陆军演习
+		allowed = {
+			tag = PRC
+		}
+		visible = {
+			has_completed_focus = PRC_modern_military_reforms
+		}
+		fire_only_once = no
+		cost = 0
+		custom_cost_text = PRC_operation_crimson_sky_decision_cost
+		custom_cost_trigger = {
+			NOT = {
+				command_power < 30
+			}
+		}
+		days_remove = 100
+		days_re_enable = 50
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -30
+			}
+		}
+		modifier = {
+			experience_gain_army_factor = 0.1
+			experience_gain_army_unit_factor = 0.25
+		}
+		remove_effect = {
+			army_experience = 15
+		}
+		ai_will_do = {
+		base = 5
+		}
+	}
+	PRC_conduct_air_exercises_1 = { #空军演习
+		allowed = {
+			tag = PRC
+		}
+		visible = {
+			has_completed_focus = PRC_modern_military_reforms
+		}
+		fire_only_once = no
+		cost = 0
+		custom_cost_text = PRC_operation_crimson_sky_decision_cost
+		custom_cost_trigger = {
+			NOT = {
+				command_power < 30
+			}
+		}
+		days_remove = 100
+		days_re_enable = 50
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -30
+			}
+		}
+		modifier = {
+			experience_gain_air_factor = 0.25
+			air_training_xp_gain_factor = 0.25
+		}
+		remove_effect = {
+			air_experience = 10
+		}
+		ai_will_do = {
+		base = 5
+		}
+	}
+	PRC_conduct_naval_exercises_1 = { #海军演习
+		allowed = {
+			tag = PRC
+		}
+		visible = {
+			has_completed_focus = PRC_modern_military_reforms
+		}
+		fire_only_once = no
+		cost = 0
+		custom_cost_text = PRC_operation_crimson_sky_decision_cost
+		custom_cost_trigger = {
+			NOT = {
+				command_power < 30
+			}
+		}
+		days_remove = 100
+		days_re_enable = 50
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -30
+			}
+		}
+		modifier = {
+			experience_gain_navy_factor = 0.25
+			experience_gain_navy_unit_factor = 0.25
+		}
+		remove_effect = {
+			navy_experience = 10
+		}
+		ai_will_do = {
+		base = 5
+		}
+	} 
+	PRC_thunder_god_program_mountain_1 = { #山地演习
+		icon = generic_propaganda_campaigns
+		
+		fire_only_once = yes
+		days_remove = 150
+	
+		visible = { 
+			has_completed_focus = PRC_expand_the_thunder_gods_1
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = PRC_thunder_gods_mountain_complete
+				}
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = PRC_thunder_god_program_in_progress
+			}
+		}
+		custom_cost_text = PRC_operation_crimson_sky_decision_cost
+		custom_cost_trigger = {
+			NOT = {
+				command_power < 30
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+		complete_effect = {
+			set_country_flag = PRC_thunder_gods_mountain_flag
+			set_country_flag = PRC_thunder_god_program_in_progress
+			hidden_effect = {
+				add_command_power = -30
+			}
+		}
+		remove_effect = {
+			clr_country_flag = PRC_thunder_gods_mountain_flag
+			clr_country_flag = PRC_thunder_god_program_in_progress
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = PRC_pla_dummy_idea
+					add_idea = PRC_thunder_gods_mountains_idea
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+				var = PRC_acclimatization_cold_climate_gain_factor_dynamic_var
+					value = 0.2
+				}
+				add_to_variable = {
+					var = PRC_pla_training_time_factor_dynamic_var
+					value = 0.1
+				}
+				add_to_variable = {
+					var = PRC_terrain_penalty_reduction_dynamic_var
+					value = 0.05
+				}
+			}
+		}
+		modifier = {
+			experience_gain_army = 0.1
+			military_development_monthly = 0.01
+		}
+	}
+	PRC_thunder_god_program_jungle_1 = { #丛林演习
+		icon = generic_propaganda_campaigns
+		
+		fire_only_once = yes
+		days_remove = 150
+	
+		visible = {
+			has_completed_focus = PRC_expand_the_thunder_gods_1
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = PRC_thunder_gods_jungle_complete
+				}
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = PRC_thunder_god_program_in_progress
+			}
+		}
+		custom_cost_text = PRC_operation_crimson_sky_decision_cost
+		custom_cost_trigger = {
+			NOT = {
+				command_power < 30
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -30
+			}
+			set_country_flag = PRC_thunder_gods_jungle_flag
+			set_country_flag = PRC_thunder_god_program_in_progress
+		}
+		remove_effect = {
+			clr_country_flag = PRC_thunder_gods_jungle_flag
+			clr_country_flag = PRC_thunder_god_program_in_progress
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = PRC_pla_dummy_idea
+					add_idea = PRC_thunder_gods_jungle_idea
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					var = PRC_acclimatization_hot_climate_gain_factor_dynamic_var
+					value = 0.2
+				}
+				add_to_variable = {
+					var = PRC_pla_training_time_factor_dynamic_var
+					value = 0.1
+				}
+				add_to_variable = {
+					var = PRC_terrain_penalty_reduction_dynamic_var
+					value = 0.05
+				}
+			}
+		}
+		modifier = {
+			experience_gain_army = 0.1
+			military_development_monthly = 0.01
+		}
+	}
+	PRC_command_tank = { #现代装甲作战指挥训练
+		icon = generic_propaganda_campaigns
+		
+		fire_only_once = yes
+		cost = 100
+		days_remove = 90
+	
+		visible = { 
+			has_completed_focus = PRC_iron_great_wall
+		}
+		available = {		
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+		complete_effect = {
+			
+		}
+		remove_effect = {
+		    every_army_leader = {
+			    add_unit_leader_trait = armor_officer			
+		    }
+		}
+	}
+	PRC_zhurihe = { #朱日和实战演习
+		icon = generic_propaganda_campaigns
+		
+		fire_only_once = no
+		days_remove = 365
+		cost = 100
+		days_re_enable = 380
+	
+		visible = { 
+			has_completed_focus = PRC_expand_the_thunder_gods_1
+		}
+		available = {
+			
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+		complete_effect = {
+			
+		}
+		remove_effect = {
+		custom_effect_tooltip = PRC_zhurihe_tt
+		hidden_effect = { 
+			add_timed_idea = {
+				idea = PLA_experience
+				days = 2	
+			}
+		}
+	}
+	}
+	PRC_command_trait = { #极端地形指挥训练
+		icon = generic_propaganda_campaigns
+		
+		fire_only_once = yes
+		cost = 100
+		days_remove = 90
+	
+		visible = { 
+			has_completed_focus = PRC_expand_the_thunder_gods_1
+		}
+		available = {
+			
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+		complete_effect = {
+			
+		}
+		remove_effect = {
+		    every_army_leader = {
+			    add_unit_leader_trait = adaptable			
+		    }
+		}
+	}
+	PRC_artillery_project_2 = { #203自火军改研发
+		#icon = GFX_decision_ger_military_buildup
+		cost = 25
+		fire_only_once = yes
+		allowed = { 
+			tag = PRC
+		}
+		visible = {
+			has_completed_focus = PRC_artillery_project_1
+		}
+		available = {
+			NOT = {
+				has_country_flag = PRC_military_project_researching
+			}
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = anti_debil
+				}
+			}
+		}
+		complete_effect = {
+			country_event = artillery.260
+			set_country_flag = anti_debil
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	PRC_Electronic_Warfare_System_Jamming = { #电子战干扰
+		icon = PRC_Electronic_Warfare_System_Jamming
+		fire_only_once = no	
+		cost = 20
+		days_remove = 60
+		allowed = {
+			tag = PRC
+		}
+		available = {
+			has_war = yes
+		}
+		visible = {
+			has_completed_focus = PRC_Electronic_Warfare_System
+		}
+		complete_effect = {
+			every_country = {
+	 			limit = { 
+	 				has_war_with = PRC 
+	 			}
+				add_timed_idea= {
+					idea = PRC_electronic_warfare_system_jamming
+					days = 30
+				}
+	 		}
+		}
+     	ai_will_do = {
+			base = 1
+		}
+	}
+
+	PRC_large_scale_amphibious_manoeuvre = { #大规模两栖演习
+		icon = PRC_large_scale_amphibious_manoeuvre
+		fire_only_once = yes	
+		cost = 100
+		days_remove = 60
+		allowed = {
+			tag = PRC
+		}
+		available = {
+		}
+		visible = {
+			has_completed_focus = PRC_rain_fire_from_above_2
+		}
+		    complete_effect = {
+		     effect_tooltip = {
+			    swap_ideas = {
+				    remove_idea = PRC_plan_dummy
+				    add_idea = PRC_rain_fire_from_above_1
+			    }
+		    }
+		    hidden_effect = {
+			    add_to_variable = {
+				    var = PRC_plan_naval_invasion_penalty_dynamic_var #登陆惩罚
+				    value = -0.2
+			    }
+			    add_to_variable = {
+				    var = PRC_plan_naval_invasion_capacity_dynamic_var  #两栖登陆速度
+				    value = 200
+			    }
+		    }
+		}
+     	ai_will_do = {
+			base = 1
+		}
+	}
+
+
+	PRC_military_satellite_launch= { #发射军事卫星
+		icon = PRC_large_scale_amphibious_manoeuvre
+		fire_only_once = no	
+		cost = 30
+		days_remove = 200
+		allowed = {
+			tag = PRC
+		}
+		available = {
+		}
+		visible = {
+			has_completed_focus = PRC_military_satellite_network_upgrade
+		}
+		    complete_effect = {	      
+		     effect_tooltip = {
+			    swap_ideas = {
+				    remove_idea = PRC_pla_dummy_idea
+				    add_idea = PRC_advanced_joint_logistics_support_system_idea_1
+			    }
+ 			    swap_ideas = {
+				    remove_idea = PRC_plaaf
+				    add_idea = PRC_advanced_joint_logistics_support_system_idea_2
+			    }
+		    }
+			    set_temp_variable = {
+ 		            var = income_var_temp
+					value = -40
+ 		        }
+				   	add_income = yes
+		    hidden_effect = {
+ 		        add_income = yes
+			    add_to_variable = {
+				    var = PRC_pla_max_planning_factor_dynamic_var #计划加成上限系数
+				    value = 0.05
+			    }
+			    add_to_variable = {
+				    var = PRC_speed_factor_dynamic_var #陆军师速度
+				    value = 0.05
+			    }
+			    add_to_variable = {
+				    var = PRC_pla_recon_factor_dynamic_var #侦察
+				    value = 0.05
+			    }
+				add_to_variable = {
+				    var = PRC_pla_army_attack_factor_dynamic_var  #陆军师攻击
+				    value = 0.05
+			    }
+			    add_to_variable = {
+				    var = PRC_plaaf_ground_attack_factor_dynamic_var #对地攻击系数
+				    value = 0.05
+			    }
+		    }
+		}
+     	ai_will_do = {
+			base = 1
+		}
+	}
+
+	PRC_suborbital_vehicle_support = { #亚轨道飞行器支援
+		icon = PRC_Electronic_Warfare_System_Jamming
+		fire_only_once = no	
+		cost = 30
+		days_remove = 60
+		allowed = {
+			tag = PRC
+		}
+		available = {
+			has_war = yes
+		}
+		visible = {
+			has_completed_focus = PRC_embrace_the_future_1
+		}
+		complete_effect = {
+				add_timed_idea= {
+					idea = PRC_suborbital_vehicle_support_idea
+					days = 30
+				}
+		}
+     	ai_will_do = {
+			base = 1
+		}
+	}
+
+	PRC_cyber_hacking_and_intrusion = { #网络黑客入侵
+		icon = PRC_Electronic_Warfare_System_Jamming
+		fire_only_once = no	
+		cost = 30
+		days_remove = 100
+		allowed = {
+			tag = PRC
+		}
+		available = {
+			has_war = yes
+		}
+		visible = {
+			has_completed_focus = PRC_cybersecurity_assurance
+		}
+		complete_effect = {
+			every_country = {
+	 			limit = { 
+	 				has_war_with = PRC 
+	 			}
+				add_timed_idea= {
+					idea = PRC_cyber_hacking_and_intrusion_idea
+					days = 60
+				}
+	 		}
+		}
+     	ai_will_do = {
+			base = 1
+		}
+	}
+}

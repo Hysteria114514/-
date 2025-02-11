@@ -1,0 +1,63 @@
+leader_traits = {
+	integrated_information_and_firepower = { #信火一体
+		type = land
+		trait_type = personality_trait
+		
+		modifier = {
+			recon_factor = 0.2 #侦察
+			air_cas_efficiency = 0.2 #密接支援任务效率
+			army_defence_factor = 0.2 #防御
+			breakthrough_factor  = 0.2 #突破
+		}
+		equipment_bonus = {
+			modern_tank_artillery_chassis = {
+				soft_attack = 0.2 自行火炮攻击
+			}
+		}
+		
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+	 integration_air_ground = { #空地一体化指挥链
+		type = land
+		trait_type = personality_trait
+		
+		modifier = {
+			recon_factor = 0.1 #侦察
+			air_cas_efficiency = 0.1 #密接支援任务效率
+			air_attack_factor = 0.1 #对空攻击
+			air_defence_factor = 0.1#对空防御
+		}
+		
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+
+	 unified_sea_air_information_chain = { #海空信息链统一
+		type = land
+		trait_type = personality_trait
+		
+		modifier = {
+			navy_anti_air_attack_factor= 0.1 #海军对空攻击
+			air_defence_factor = 0.1 #对空防御
+		}
+		
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+	modern_joint_staff_department = { #现代联合参谋
+		type = land
+		trait_type = personality_trait
+		
+		modifier = {
+			max_army_group_size = 1
+		}
+		
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+}

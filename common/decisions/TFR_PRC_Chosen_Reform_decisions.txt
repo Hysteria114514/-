@@ -1,0 +1,369 @@
+TFR_PRC_Chosen_Reform_cat = { #朝鲜改革决议组
+
+    PRC_support_chosen_reform_officers = { #扶持改革派
+        icon = GFX_PRC_liberal_decision
+        visible = {
+            PRC = {
+                has_completed_focus = PRC_Chosen_Reform
+            }
+        }
+        available = {
+            PRK = {
+                has_idea = PRK_Chosen_Reform_idea
+            }
+        }
+
+        cost = 20 
+        days_remove = 30
+        fire_only_once = yes
+        remove_effect = {
+            PRK = {
+                swap_ideas = {
+                    remove_idea = PRK_Chosen_Reform_idea
+                    add_idea = PRK_Chosen_Reform_idea_1
+                }
+            }
+        }
+        ai_will_do = {
+			base = 10
+		}
+    }
+
+    PRC_invest_chosen = { #投资朝鲜
+        icon = GFX_PRC_liberal_decision
+        visible = {
+            PRC = {
+                has_completed_focus = PRC_Chosen_Reform
+            }
+        }
+        available = {
+            PRK = {
+                has_idea = PRK_Chosen_Reform_idea_1
+            }
+        }
+
+        cost = 20 
+        days_remove = 30
+        fire_only_once = yes
+        remove_effect = {
+            PRK = {
+				set_temp_variable = {
+					var = military_development_var_temp
+					value = 0.3
+				}
+				add_military_development = yes
+				set_temp_variable = {
+					var = poverty_development_var_temp
+					value = 0.3
+				}
+				add_poverty_development = yes
+				set_temp_variable = {
+					var = society_development_var_temp
+					value = 0.3
+				}
+				add_society_development = yes
+				set_temp_variable = {
+					var = industrial_development_var_temp
+					value = 0.3
+				}
+				add_industrial_development = yes
+                swap_ideas = {
+                    remove_idea = PRK_Chosen_Reform_idea_1
+                    add_idea = PRK_Chosen_Reform_idea_2
+                }
+            }
+        }
+ 		ai_will_do = {
+			base = 10
+		}       
+    }
+
+    PRC_assist_chosen_reform = { #协助朝鲜改革
+        icon = GFX_PRC_liberal_decision
+        visible = {
+            PRC = {
+                has_completed_focus = PRC_Chosen_Reform
+            }
+        }
+        available = {
+            PRK = {
+                has_idea = PRK_Chosen_Reform_idea_2
+            }
+            PRC = {
+                num_of_civilian_factories_available_for_projects > 4
+            }
+        }
+
+        cost = 20 
+        days_remove = 30
+        fire_only_once = yes
+
+        modifier = {
+            civilian_factory_use = 5
+        }
+        remove_effect = {
+            PRK = {
+                add_offsite_building = {type = industrial_complex level = 5}
+                swap_ideas = {
+                    remove_idea = PRK_Chosen_Reform_idea_2
+                    add_idea = PRK_Chosen_Reform_idea_3
+                }
+            }
+        }
+        ai_will_do = {
+			base = 10
+		}
+    }
+
+    PRC_invest_chosen_1 = { #加大对朝投资
+		icon = GFX_PRC_liberal_decision
+        visible = {
+            PRC = {
+                has_completed_focus = PRC_Chosen_Reform
+            }
+        }
+        available = {
+            PRC = {
+                has_completed_focus = PRC_Chosen_Reform
+            }
+        }
+
+		cost = 15
+
+
+		fire_only_once = yes
+		days_remove = 30
+		complete_effect = {
+			PRC = {
+				set_temp_variable = {
+			   		var = debt_var_temp
+			    	value = 50
+		    	}
+           		add_debt = yes	
+			}
+		}
+		remove_effect = {	
+			PRK = {
+				set_temp_variable = {
+					var = income_var_temp
+					value = 50
+				}
+				add_income = yes
+				add_idea = ETH_total_companion
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+    } 
+
+    PRC_chosen_social_reform = { #促进朝鲜社会改革
+		icon = GFX_PRC_liberal_decision
+        visible = {
+            PRC = {
+                has_completed_focus = PRC_Unsucceed_Thing
+            }
+        }
+        available = {
+            PRC = {
+                has_completed_focus = PRC_Unsucceed_Thing
+            }
+        }
+		cost = 50
+		fire_only_once = yes
+		days_remove = 100
+		remove_effect = {				
+            hidden_effect = {
+				if = {
+					limit = {
+						PRC = {
+							has_country_leader_ideology = market_socialism
+						}
+					}
+					PRK = {
+						add_country_leader_role = {
+							character = PRK_kim_jongun
+							promote_leader = yes
+							country_leader = {
+								ideology = market_socialism
+								expire="1.1.1.1"
+							}
+						}
+						set_portraits = {
+							character = PRK_kim_jongun
+							civilian = { large = "GFX_portrait_PRK_slim_kim" }
+						}
+					}
+				}
+				else = {
+					PRK = {
+						set_portraits = {
+							character = PRK_kim_jongun
+							civilian = { large = "GFX_portrait_PRK_slim_kim" }
+						}
+					}
+				}
+            }  
+            PRK = {
+                set_politics = {
+				    ruling_party = communist
+				    elections_allowed = no
+				} 
+            } 
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+    PRC_support_prk_army = { #支援朝鲜军队
+		icon = GFX_PRC_new_left_decision
+        visible = {
+            PRC = {
+                has_completed_focus = PRC_Unsucceed_Thing
+            }
+        }
+        available = {
+            PRC = {
+                has_completed_focus = PRC_Unsucceed_Thing
+            }
+        }
+		cost = 30
+        fire_only_once = yes
+		complete_effect = {
+			PRK = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 100000
+					producer = PRC
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 2000
+					producer = PRC
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = 2000
+					producer = PRC
+				}
+				add_equipment_to_stockpile = {
+					type = mechanized_equipment
+					amount = 2000
+					producer = PRC
+				}
+				add_equipment_to_stockpile = {
+					type = modern_tank_equipment
+					amount = 2000
+					producer = PRC
+				}
+				add_equipment_to_stockpile = {
+					type = train_equipment
+					amount = 100
+					producer = PRC
+				}
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}	
+    	PRC_reform_prk_army = { #朝鲜联合军事演习和纪律改造
+		icon = GFX_PRC_new_left_decision
+        visible = {
+            PRC = {
+                has_completed_focus = PRC_Unsucceed_Thing
+            }
+        }
+        available = {
+            PRC = {
+                has_completed_focus = PRC_Unsucceed_Thing
+            }
+        }
+		cost = 10
+		days_remove = 60
+		fire_only_once = yes
+		remove_effect = {
+		    army_experience = 50
+		    set_temp_variable = {
+			    var = PRC_army_reform_progress_temp
+			    value = 0.05
+			}
+			set_temp_variable = {
+				var = military_development_var_temp
+				value = 0.1
+			}
+			PRK = {
+			    army_experience = 50
+				set_temp_variable = {
+					var = military_development_var_temp
+					value = 0.1
+				}
+				add_military_development = yes
+			}
+		add_military_development = yes
+		PRC_add_army_reform_progress = yes
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	PRC_ease_korean_economic_burden = { #减轻经济负担
+		icon = GFX_PRC_new_left_decision
+		available = {
+			has_completed_focus = PRC_Chosen_Reform
+		}
+		visible = {
+			has_completed_focus = PRC_Chosen_Reform
+			PRK = {
+				OR = {
+					has_idea = PRK_heavy_sanctions_idea
+					has_idea = PRK_heavy_sanctions_idea2
+					has_idea = PRK_heavy_sanctions_idea3
+				}
+			}
+		}
+		cost = 50
+		days_remove = 15
+		remove_effect = {
+			PRK = {
+				if = {
+					limit = {
+						has_idea = PRK_heavy_sanctions_idea
+					}
+					swap_ideas = {
+						remove_idea = PRK_heavy_sanctions_idea
+						add_idea = PRK_heavy_sanctions_idea2
+					}
+				}		
+				else_if = {
+					limit = {
+						has_idea = PRK_heavy_sanctions_idea2
+					}
+					swap_ideas = {
+						remove_idea = PRK_heavy_sanctions_idea2
+						add_idea = PRK_heavy_sanctions_idea3
+					}
+				}	
+				else = {
+					remove_ideas = PRK_heavy_sanctions_idea3
+				}
+				set_temp_variable = {
+					var = industrial_development_var_temp
+					value = 0.125
+				}
+				add_industrial_development = yes
+				set_temp_variable = {
+					var = poverty_development_var_temp
+					value = 0.125
+				}
+				add_poverty_development = yes
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+}

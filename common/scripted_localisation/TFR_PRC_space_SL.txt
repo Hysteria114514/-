@@ -1,0 +1,385 @@
+defined_text = {
+	name = PRC_space_dengyue
+	text = {
+		trigger = {
+			has_country_flag = PRC_space_dengyue_complete_flag
+		}
+		localization_key = PRC_space_dengyue_complete
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = PRC_space_dengyue_complete_flag
+			}
+			has_country_flag = PRC_space_dengyue_inprogress_flag
+		}
+		localization_key = PRC_space_dengyue_inprogress
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = PRC_space_dengyue_complete_flag
+			}
+		}
+		localization_key = PRC_space_dengyue_uncomplete
+	}
+}
+
+defined_text = {
+	name = PRC_space_taikongdianti
+	text = {
+		trigger = {
+			has_country_flag = PRC_space_taikongdianti_complete_flag
+		}
+		localization_key = PRC_space_taikongdianti_complete
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = PRC_space_taikongdianti_complete_flag
+			}
+			has_country_flag = PRC_space_taikongdianti_inprogress_flag
+		}
+		localization_key = PRC_space_taikongdianti_inprogress
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = PRC_space_taikongdianti_complete_flag
+			}
+		}
+		localization_key = PRC_space_taikongdianti_uncomplete
+	}
+}
+
+defined_text = {
+	name = PRC_space_juxingkongjianzhan
+	text = {
+		trigger = {
+			has_country_flag = PRC_space_juxingkongjianzhan_complete_flag
+		}
+		localization_key = PRC_space_juxingkongjianzhan_complete
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = PRC_space_juxingkongjianzhan_complete_flag
+			}
+			has_country_flag = PRC_space_juxingkongjianzhan_inprogress_flag
+		}
+		localization_key = PRC_space_juxingkongjianzhan_inprogress
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = PRC_space_juxingkongjianzhan_complete_flag
+			}
+		}
+		localization_key = PRC_space_juxingkongjianzhan_uncomplete
+	}
+}
+
+defined_text = {
+	name = PRC_space_dengluhuoxing
+	text = {
+		trigger = {
+			has_country_flag = PRC_space_dengluhuoxing_complete_flag
+		}
+		localization_key = PRC_space_dengluhuoxing_complete
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = PRC_space_dengluhuoxing_complete_flag
+			}
+			has_country_flag = PRC_space_dengluhuoxing_inprogress_flag
+		}
+		localization_key = PRC_space_dengluhuoxing_inprogress
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = PRC_space_dengluhuoxing_complete_flag
+			}
+		}
+		localization_key = PRC_space_dengluhuoxing_uncomplete
+	}
+}
+
+defined_text = {
+	name = PRC_space_yuemianjidi
+	text = {
+		trigger = {
+			has_country_flag = PRC_space_yuemianjidi_complete_flag
+		}
+		localization_key = PRC_space_yuemianjidi_complete
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = PRC_space_yuemianjidi_complete_flag
+			}
+			has_country_flag = PRC_space_yuemianjidi_inprogress_flag
+		}
+		localization_key = PRC_space_yuemianjidi_inprogress
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = PRC_space_yuemianjidi_complete_flag
+			}
+		}
+		localization_key = PRC_space_yuemianjidi_uncomplete
+	}
+}
+
+defined_text = {
+	name = PRC_space_plan_decisitions_picture
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = TFR_PRC_taikongdianti_1_flag
+				has_country_flag = TFR_PRC_taikongdianti_2_flag
+				has_country_flag = TFR_PRC_taikongdianti_3_flag
+				has_country_flag = TFR_PRC_juxingkongjianzhan_1_flag
+				has_country_flag = TFR_PRC_juxingkongjianzhan_2_flag
+				has_country_flag = TFR_PRC_yuemianjidi_1_flag
+				has_country_flag = TFR_PRC_yuemianjidi_2_flag
+				has_country_flag = TFR_PRC_yuemianjidi_3_flag
+				has_country_flag = TFR_PRC_yuemianjidi_4_flag
+				has_country_flag = TFR_PRC_yuemianjidi_5_flag
+				has_country_flag = TFR_PRC_yuemianjidi_6_flag
+				has_country_flag = TFR_PRC_yuemianjidi_7_flag
+			}
+		}
+		localization_key = PRC_space_plan_decisitions_picture1
+	}
+	text = {
+		trigger = {
+			has_country_flag = TFR_PRC_taikongdianti_1_flag
+			NOT = {
+				has_country_flag = TFR_PRC_taikongdianti_2_flag
+				has_country_flag = TFR_PRC_taikongdianti_3_flag
+				has_country_flag = TFR_PRC_juxingkongjianzhan_1_flag
+				has_country_flag = TFR_PRC_juxingkongjianzhan_2_flag
+				has_country_flag = TFR_PRC_yuemianjidi_1_flag
+				has_country_flag = TFR_PRC_yuemianjidi_2_flag
+				has_country_flag = TFR_PRC_yuemianjidi_3_flag
+				has_country_flag = TFR_PRC_yuemianjidi_4_flag
+				has_country_flag = TFR_PRC_yuemianjidi_5_flag
+				has_country_flag = TFR_PRC_yuemianjidi_6_flag
+				has_country_flag = TFR_PRC_yuemianjidi_7_flag
+			}
+		}
+		localization_key = PRC_space_plan_decisitions_picture2
+	}
+	text = {
+		trigger = {
+			has_country_flag = TFR_PRC_taikongdianti_2_flag
+			NOT = {
+				has_country_flag = TFR_PRC_taikongdianti_1_flag
+				has_country_flag = TFR_PRC_taikongdianti_3_flag
+				has_country_flag = TFR_PRC_juxingkongjianzhan_1_flag
+				has_country_flag = TFR_PRC_juxingkongjianzhan_2_flag
+				has_country_flag = TFR_PRC_yuemianjidi_1_flag
+				has_country_flag = TFR_PRC_yuemianjidi_2_flag
+				has_country_flag = TFR_PRC_yuemianjidi_3_flag
+				has_country_flag = TFR_PRC_yuemianjidi_4_flag
+				has_country_flag = TFR_PRC_yuemianjidi_5_flag
+				has_country_flag = TFR_PRC_yuemianjidi_6_flag
+				has_country_flag = TFR_PRC_yuemianjidi_7_flag
+			}
+		}
+		localization_key = PRC_space_plan_decisitions_picture3
+	}
+	text = {
+		trigger = {
+			has_country_flag = TFR_PRC_taikongdianti_3_flag
+			NOT = {
+				has_country_flag = TFR_PRC_taikongdianti_1_flag
+				has_country_flag = TFR_PRC_taikongdianti_2_flag
+				has_country_flag = TFR_PRC_juxingkongjianzhan_1_flag
+				has_country_flag = TFR_PRC_juxingkongjianzhan_2_flag
+				has_country_flag = TFR_PRC_yuemianjidi_1_flag
+				has_country_flag = TFR_PRC_yuemianjidi_2_flag
+				has_country_flag = TFR_PRC_yuemianjidi_3_flag
+				has_country_flag = TFR_PRC_yuemianjidi_4_flag
+				has_country_flag = TFR_PRC_yuemianjidi_5_flag
+				has_country_flag = TFR_PRC_yuemianjidi_6_flag
+				has_country_flag = TFR_PRC_yuemianjidi_7_flag
+			}
+		}
+		localization_key = PRC_space_plan_decisitions_picture4
+	}
+	text = {
+		trigger = {
+			has_country_flag = TFR_PRC_juxingkongjianzhan_1_flag
+			NOT = {
+				has_country_flag = TFR_PRC_taikongdianti_1_flag
+				has_country_flag = TFR_PRC_taikongdianti_2_flag
+				has_country_flag = TFR_PRC_taikongdianti_3_flag
+				has_country_flag = TFR_PRC_juxingkongjianzhan_2_flag
+				has_country_flag = TFR_PRC_yuemianjidi_1_flag
+				has_country_flag = TFR_PRC_yuemianjidi_2_flag
+				has_country_flag = TFR_PRC_yuemianjidi_3_flag
+				has_country_flag = TFR_PRC_yuemianjidi_4_flag
+				has_country_flag = TFR_PRC_yuemianjidi_5_flag
+				has_country_flag = TFR_PRC_yuemianjidi_6_flag
+				has_country_flag = TFR_PRC_yuemianjidi_7_flag
+			}
+		}
+		localization_key = PRC_space_plan_decisitions_picture5
+	}
+	text = {
+		trigger = {
+			has_country_flag = TFR_PRC_juxingkongjianzhan_2_flag
+			NOT = {
+				has_country_flag = TFR_PRC_taikongdianti_1_flag
+				has_country_flag = TFR_PRC_taikongdianti_2_flag
+				has_country_flag = TFR_PRC_taikongdianti_3_flag
+				has_country_flag = TFR_PRC_juxingkongjianzhan_1_flag
+				has_country_flag = TFR_PRC_yuemianjidi_1_flag
+				has_country_flag = TFR_PRC_yuemianjidi_2_flag
+				has_country_flag = TFR_PRC_yuemianjidi_3_flag
+				has_country_flag = TFR_PRC_yuemianjidi_4_flag
+				has_country_flag = TFR_PRC_yuemianjidi_5_flag
+				has_country_flag = TFR_PRC_yuemianjidi_6_flag
+				has_country_flag = TFR_PRC_yuemianjidi_7_flag
+			}
+		}
+		localization_key = PRC_space_plan_decisitions_picture6
+	}
+	text = {
+		trigger = {
+			has_country_flag = TFR_PRC_yuemianjidi_1_flag
+			NOT = {
+				has_country_flag = TFR_PRC_taikongdianti_1_flag
+				has_country_flag = TFR_PRC_taikongdianti_2_flag
+				has_country_flag = TFR_PRC_taikongdianti_3_flag
+				has_country_flag = TFR_PRC_juxingkongjianzhan_1_flag
+				has_country_flag = TFR_PRC_juxingkongjianzhan_2_flag
+				has_country_flag = TFR_PRC_yuemianjidi_2_flag
+				has_country_flag = TFR_PRC_yuemianjidi_3_flag
+				has_country_flag = TFR_PRC_yuemianjidi_4_flag
+				has_country_flag = TFR_PRC_yuemianjidi_5_flag
+				has_country_flag = TFR_PRC_yuemianjidi_6_flag
+				has_country_flag = TFR_PRC_yuemianjidi_7_flag
+			}
+		}
+		localization_key = PRC_space_plan_decisitions_picture7
+	}
+	text = {
+		trigger = {
+			has_country_flag = TFR_PRC_yuemianjidi_2_flag
+			NOT = {
+				has_country_flag = TFR_PRC_taikongdianti_1_flag
+				has_country_flag = TFR_PRC_taikongdianti_2_flag
+				has_country_flag = TFR_PRC_taikongdianti_3_flag
+				has_country_flag = TFR_PRC_juxingkongjianzhan_1_flag
+				has_country_flag = TFR_PRC_juxingkongjianzhan_2_flag
+				has_country_flag = TFR_PRC_yuemianjidi_1_flag
+				has_country_flag = TFR_PRC_yuemianjidi_3_flag
+				has_country_flag = TFR_PRC_yuemianjidi_4_flag
+				has_country_flag = TFR_PRC_yuemianjidi_5_flag
+				has_country_flag = TFR_PRC_yuemianjidi_6_flag
+				has_country_flag = TFR_PRC_yuemianjidi_7_flag
+			}
+		}
+		localization_key = PRC_space_plan_decisitions_picture8
+	}
+	text = {
+		trigger = {
+			has_country_flag = TFR_PRC_yuemianjidi_3_flag
+			NOT = {
+				has_country_flag = TFR_PRC_taikongdianti_1_flag
+				has_country_flag = TFR_PRC_taikongdianti_2_flag
+				has_country_flag = TFR_PRC_taikongdianti_3_flag
+				has_country_flag = TFR_PRC_juxingkongjianzhan_1_flag
+				has_country_flag = TFR_PRC_juxingkongjianzhan_2_flag
+				has_country_flag = TFR_PRC_yuemianjidi_1_flag
+				has_country_flag = TFR_PRC_yuemianjidi_2_flag
+				has_country_flag = TFR_PRC_yuemianjidi_4_flag
+				has_country_flag = TFR_PRC_yuemianjidi_5_flag
+				has_country_flag = TFR_PRC_yuemianjidi_6_flag
+				has_country_flag = TFR_PRC_yuemianjidi_7_flag
+			}
+		}
+		localization_key = PRC_space_plan_decisitions_picture9
+	}
+	text = {
+		trigger = {
+			has_country_flag = TFR_PRC_yuemianjidi_4_flag
+			NOT = {
+				has_country_flag = TFR_PRC_taikongdianti_1_flag
+				has_country_flag = TFR_PRC_taikongdianti_2_flag
+				has_country_flag = TFR_PRC_taikongdianti_3_flag
+				has_country_flag = TFR_PRC_juxingkongjianzhan_1_flag
+				has_country_flag = TFR_PRC_juxingkongjianzhan_2_flag
+				has_country_flag = TFR_PRC_yuemianjidi_1_flag
+				has_country_flag = TFR_PRC_yuemianjidi_2_flag
+				has_country_flag = TFR_PRC_yuemianjidi_3_flag
+				has_country_flag = TFR_PRC_yuemianjidi_5_flag
+				has_country_flag = TFR_PRC_yuemianjidi_6_flag
+				has_country_flag = TFR_PRC_yuemianjidi_7_flag
+			}
+		}
+		localization_key = PRC_space_plan_decisitions_picture10
+	}
+	text = {
+		trigger = {
+			has_country_flag = TFR_PRC_yuemianjidi_5_flag
+			NOT = {
+				has_country_flag = TFR_PRC_taikongdianti_1_flag
+				has_country_flag = TFR_PRC_taikongdianti_2_flag
+				has_country_flag = TFR_PRC_taikongdianti_3_flag
+				has_country_flag = TFR_PRC_juxingkongjianzhan_1_flag
+				has_country_flag = TFR_PRC_juxingkongjianzhan_2_flag
+				has_country_flag = TFR_PRC_yuemianjidi_1_flag
+				has_country_flag = TFR_PRC_yuemianjidi_2_flag
+				has_country_flag = TFR_PRC_yuemianjidi_3_flag
+				has_country_flag = TFR_PRC_yuemianjidi_4_flag
+				has_country_flag = TFR_PRC_yuemianjidi_6_flag
+				has_country_flag = TFR_PRC_yuemianjidi_7_flag
+			}
+		}
+		localization_key = PRC_space_plan_decisitions_picture11
+	}
+	text = {
+		trigger = {
+			has_country_flag = TFR_PRC_yuemianjidi_6_flag
+			NOT = {
+				has_country_flag = TFR_PRC_taikongdianti_1_flag
+				has_country_flag = TFR_PRC_taikongdianti_2_flag
+				has_country_flag = TFR_PRC_taikongdianti_3_flag
+				has_country_flag = TFR_PRC_juxingkongjianzhan_1_flag
+				has_country_flag = TFR_PRC_juxingkongjianzhan_2_flag
+				has_country_flag = TFR_PRC_yuemianjidi_1_flag
+				has_country_flag = TFR_PRC_yuemianjidi_2_flag
+				has_country_flag = TFR_PRC_yuemianjidi_3_flag
+				has_country_flag = TFR_PRC_yuemianjidi_4_flag
+				has_country_flag = TFR_PRC_yuemianjidi_5_flag
+				has_country_flag = TFR_PRC_yuemianjidi_7_flag
+			}
+		}
+		localization_key = PRC_space_plan_decisitions_picture12
+	}
+	text = {
+		trigger = {
+			has_country_flag = TFR_PRC_yuemianjidi_7_flag
+			NOT = {
+				has_country_flag = TFR_PRC_taikongdianti_1_flag
+				has_country_flag = TFR_PRC_taikongdianti_2_flag
+				has_country_flag = TFR_PRC_taikongdianti_3_flag
+				has_country_flag = TFR_PRC_juxingkongjianzhan_1_flag
+				has_country_flag = TFR_PRC_juxingkongjianzhan_2_flag
+				has_country_flag = TFR_PRC_yuemianjidi_1_flag
+				has_country_flag = TFR_PRC_yuemianjidi_2_flag
+				has_country_flag = TFR_PRC_yuemianjidi_3_flag
+				has_country_flag = TFR_PRC_yuemianjidi_4_flag
+				has_country_flag = TFR_PRC_yuemianjidi_5_flag
+				has_country_flag = TFR_PRC_yuemianjidi_6_flag
+			}
+		}
+		localization_key = PRC_space_plan_decisitions_picture13
+	}
+}

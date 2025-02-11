@@ -1,0 +1,66 @@
+Specialising_in_design = {
+	name = 设计院合作
+	allowed = {	
+		always = yes
+	}
+	ai_will_do = {
+		factor = 0
+	}
+	available = { 
+                has_mio_size > 1
+                FROM = { tag = PRC }
+		has_dlc = "Arms Against Tyranny" }
+	icon = GFX_idea_jap_supremacy_of_will
+	cost = 50
+	organization_modifier = {
+		military_industrial_organization_design_team_assign_cost = -0.75
+		military_industrial_organization_design_team_change_cost = -0.75
+		military_industrial_organization_industrial_manufacturer_assign_cost = -0.75
+		military_industrial_organization_funds_gain = 0.1
+		military_industrial_organization_policy_cooldown = 0.2
+		military_industrial_organization_size_up_requirement = -0.15
+		military_industrial_organization_research_bonus = 0.2
+		
+	}
+	equipment_bonus = {
+		same_as_mio = {
+			build_cost_ic = -0.15
+			reliability = 0.2
+		}
+	}
+}
+Specialising_in_production = {
+	name = 扩建生产设施
+	allowed = {	
+		always = yes
+	}
+	ai_will_do = {
+		factor = 0
+	}
+	available = { 
+                has_mio_size > 1
+                FROM = { tag = PRC }
+		has_dlc = "Arms Against Tyranny" }
+	icon = GFX_idea_SOV_organize_wreckers
+	cost = 50
+	organization_modifier = {
+		military_industrial_organization_design_team_assign_cost = 1
+		military_industrial_organization_design_team_change_cost = 1
+		military_industrial_organization_policy_cooldown = 0.2
+		military_industrial_organization_funds_gain = 0.1
+	}
+	ai_will_do = {
+		factor = 0
+	}
+	equipment_bonus = {
+		same_as_mio = {
+			production_efficiency_cap_factor=0.05
+			production_efficiency_gain_factor = 0.1
+			production_capacity_factor = 0.15
+			production_conversion_speed_factor=0.25
+			production_resource_need_factor = -0.1
+			production_cost_factor = -0.05
+		}
+	}
+	
+}

@@ -1,0 +1,268 @@
+sub_units = {
+	PLA_heavy_sp_artillery = { #侠炮
+		sprite = heavy_armor
+		map_icon_category = armored
+		priority = 0
+		ai_priority = 0
+		active = no
+		training_time = 80
+		
+		type = {
+			armor
+			artillery
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_all_armor
+			category_army
+			category_artillery
+		}
+
+		combat_width = 0
+
+		essential = { PRC_203_cannon_1 }
+        need = { PRC_203_cannon_1 = 6 }
+		manpower = 200
+		max_organisation = 0
+		default_morale = 0.1
+		max_strength = 0.1
+		weight = 0.75
+		supply_consumption = 0.3
+		can_be_parachuted = no
+		
+		#support unit nerf
+		armor_value = 0.5
+		battalion_mult = {
+			category = category_artillery
+			max_strength = 0.1
+			max_organisation = 0.1
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+	}
+	PLA_unmanned_combat_unit_support_company = { #无人作战单位支援连
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		training_time = 30
+		
+		type = {
+			motorized
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_support_battalions
+			category_army
+		}
+
+		combat_width = 0
+
+		essential = { UAV_support_equipment }
+        need = { 
+		    UAV_support_equipment = 25 
+			support_equipment = 20
+			motorized_equipment = 20
+		}
+		manpower = 500
+		max_organisation = 80
+		default_morale = 0.1
+		max_strength = 0.5
+		weight = 0.1
+		can_be_parachuted = yes
+		fuel_consumption_factor = 0.015
+		max_strength = 0.5
+		max_organisation = 0.2
+	}
+	joint_logistics_support_company= { #联勤保障支援连
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+		type = {
+			infantry
+			support
+		}
+		group = support
+		categories = {
+			category_front_line
+			category_support_battalions
+			category_army
+		}
+		combat_width = 0
+
+		max_strength = 25
+		max_organisation = 5
+		default_morale = 0.3
+		manpower = 200
+		training_time = 100
+		#Misc Abilities
+		weight = 0.1
+		supply_consumption = 0.02
+		suppression = 3.5
+		entrenchment = 13 #堑壕
+		defense = 0.5
+		breakthrough = 0.5
+		supply_consumption_factor = -0.4 #补给消耗
+		fuel_consumption_factor = -0.2 #燃油消耗
+		reliability_factor = 0.2 #可靠性加成
+		equipment_capture_factor = 0.2 #缴获装备
+		essential = {
+			infantry_equipment
+		}
+		need = {
+			infantry_equipment = 25
+			support_equipment = 50
+		}
+		can_be_parachuted = yes
+		plains = {
+			attack = 0.2
+			defence = 0.2
+			movement = 0.2
+		}
+		desert = {
+			attack = 0.2
+			defence = 0.2
+			movement = 0.2
+		}
+		mountain = {
+			attack = 0.2
+			defence = 0.2
+			movement = 0.2
+		}
+		forest = {
+			attack = 0.2
+			defence = 0.45
+			movement = 0.25
+		}
+		hills = {
+			attack = 0.2
+			defence = 0.3
+			movement = 0.2
+		}
+		jungle = {
+			attack = 0.2
+			defence = 0.45
+			movement = 0.2
+		}
+		marsh = {
+			attack = 0.2
+			defence = 0.45
+			movement = 0.4
+		}
+		fort = {
+			attack = 0.4
+			defence = 0.55
+			movement = 0.2
+		}
+		river = {
+			attack = 0.3
+			defence = 0.55
+			movement = 0.45
+		}
+		amphibious = {
+			attack = 0.45
+			defence = 0.2
+			movement = 0.2
+		}
+		urban = {
+			attack = 0.3
+			defence = 0.3
+			movement = 0.2
+			}
+		battalion_mult = {
+			category = category_all_infantry
+			entrenchment = 0.1
+			add = yes
+		}
+	}
+
+	cooking_squad = { #炊事班
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+		type = {
+			infantry
+			support
+		}
+		group = support
+		categories = {
+			category_front_line
+			category_support_battalions
+			category_army
+		}
+		combat_width = 0
+		weight = 0.1 #运输重量
+		supply_consumption = 0.1 #补给使用
+		fuel_capacity = 60 #燃油容量
+		essential = {
+			infantry_equipment
+		}
+		need = {
+			support_equipment = 10 #消耗10支援装备
+			motorized_equipment = 30 #消耗30卡车
+		}
+		can_be_parachuted = yes
+		battalion_mult = {
+			category = category_all_infantry
+			max_strength = 0.1 
+			max_organisation = 0.1
+			default_morale = 0.1
+		}
+	}
+	UAV_support_team = { #无人机支援连
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+		type = {
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_support_battalions
+			category_army
+		}
+		essential = {
+			UAV_support_equipment
+		}
+	
+		combat_width = 0
+	
+		defense = 0.3 #防御
+		breakthrough = 0.7 #突破
+		soft_attack = 0.5 #软攻
+		hard_attack = 0.5 #硬攻
+		recon = 20 #侦察
+		max_organisation = 200 #组织度
+		max_strength = 5 #HP
+		weight = 0.1 #运输重量
+		fuel_capacity = 60 #燃油容量
+		fuel_consumption = 1.5 #燃油使用
+		manpower = 500 #人力
+		training_time = 100 #训练时间		
+		need = {
+			UAV_support_equipment = 25
+			support_equipment = 40 #消耗40支援装备
+			motorized_equipment = 20 #消耗20卡车
+
+		}
+		can_be_parachuted = yes
+	}
+}	

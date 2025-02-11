@@ -1,0 +1,133 @@
+scripted_gui = {
+	TFR_PRC_military_gui = {
+		context_type = decision_category
+		window_name = "TFR_PRC_military"
+		properties = {
+		}
+		triggers = {
+			#陆军
+			military_iron_great_wall_visible = {
+				NOT = {
+					has_completed_focus = PRC_iron_great_wall
+				}
+			}
+			military_mobile_warfare_nat_1_visible = {
+				NOT = {
+					has_completed_focus = PRC_mobile_warfare_nat_1
+				}
+			}
+			military_expand_the_thunder_gods_1_visible = {
+				NOT = {
+					has_completed_focus = PRC_expand_the_thunder_gods_1
+				}
+			}
+			military_artillery_project_1_visible = {
+				NOT = {
+					has_completed_focus = PRC_artillery_project_1
+				}
+			}
+			military_artillery_informatization_visible = {
+				NOT = {
+					has_completed_focus = PRC_artillery_informatization
+				}
+			}
+			#海军
+			military_resurrect_the_battleship_1_visible = {
+				NOT = {
+					has_completed_focus = PRC_resurrect_the_battleship_1
+				}
+			}
+			military_rain_fire_from_above_1_visible = {
+				NOT = {
+					has_completed_focus = PRC_rain_fire_from_above_1
+				}
+			}
+			military_carrier_primacy_1_visible = {
+				NOT = {
+					has_completed_focus = PRC_carrier_primacy_1
+				}
+			}
+			military_rain_fire_from_above_2_visible = {
+				NOT = {
+					has_completed_focus = PRC_rain_fire_from_above_2
+				}
+			}
+			military_next_generation_warships_1_visible = {
+				NOT = {
+					has_completed_focus = PRC_next_generation_warships_1
+				}
+			}
+			#空军
+			military_Early_Warning_System_visible = {
+				NOT = {
+					has_completed_focus = PRC_Early_Warning_System
+				}
+			}
+			military_Project_Advanced_Aircraft_visible = {
+				NOT = {
+					has_completed_focus = PRC_Project_Advanced_Aircraft
+				}
+			}
+			military_Project_trust_in_the_pilot_1_visible = {
+				NOT = {
+					has_completed_focus = PRC_trust_in_the_pilot_1
+				}
+			}
+			military_Electronic_Warfare_System_visible = {
+				NOT = {
+					has_completed_focus = PRC_Electronic_Warfare_System
+				}
+			}
+			military_integrated_Reconnaissance_Strike_UAV_visible = {
+				NOT = {
+					has_completed_focus = PRC_integrated_Reconnaissance_Strike_UAV
+				}
+			}
+			#战支
+			military_advanced_joint_logistics_support_system_visible = {
+				NOT = {
+					has_completed_focus = PRC_advanced_joint_logistics_support_system
+				}
+			}
+			military_military_satellite_network_upgrade_visible = {
+				NOT = {
+					has_completed_focus = PRC_military_satellite_network_upgrade
+				}
+			}
+			military_comprehensive_support_unit_visible = {
+				NOT = {
+					has_completed_focus = PRC_comprehensive_support_unit
+				}
+			}
+			military_embrace_the_future_1_visible = {
+				NOT = {
+					has_completed_focus = PRC_embrace_the_future_1
+				}
+			}
+			military_cybersecurity_assurance_visible = {
+				NOT = {
+					has_completed_focus = PRC_cybersecurity_assurance
+				}
+			}
+
+			#军改完成
+			military_dragon_soaring_to_the_skies_visible = {#龙腾九天
+				has_completed_focus = PRC_dragon_soaring_to_the_skies
+			}
+			military_dominate_the_skies_1_visible = {#空军
+				has_completed_focus = PRC_dominate_the_skies_1
+			}
+			military_supremacy_above_and_below_waters_1_visible = {#海军
+				has_completed_focus = PRC_supremacy_above_and_below_waters_1
+			}
+			military_tank_primacy_nat_1_visible = {#陆军
+				has_completed_focus = PRC_tank_primacy_nat_1
+			}
+			military_unmovable_like_mountain_goodness_like_water_visible = {#战支
+				has_completed_focus = PRC_unmovable_like_mountain_goodness_like_water
+			}
+
+
+		}
+	}
+}	

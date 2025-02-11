@@ -1,0 +1,2009 @@
+#军改国策树
+	
+shared_focus = { #华夏日升
+	id = PRC_chinas_spot_in_the_sun_1
+	icon = GFX_focus_PRC_chinas_spot_in_the_sun
+	x = -6
+	y = 0
+	cost = 0.5
+	available_if_capitulated = yes
+	ai_will_do = {
+		factor = 1
+	}
+	prerequisite = {
+	}
+	available = {
+		has_country_flag = PRC_military_tree_available
+	}
+	completion_reward = {
+		army_experience = 50
+		navy_experience = 50
+		air_experience = 50
+	}
+}
+shared_focus = { #人民军队为人民
+	id = PRC_pla_fight_for_people
+	icon = GFX_focus_PRC_pla_fight_for_people
+	x = -1
+	y = 1
+	cost = 0.5
+	available_if_capitulated = yes
+	relative_position_id = PRC_chinas_spot_in_the_sun_1
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_chinas_spot_in_the_sun_1
+	}
+	available = {
+
+	}
+	completion_reward = {
+		effect_tooltip = {
+		    swap_ideas = {					
+			   remove_idea = PRC_communist_party_of_china_dummy
+			   add_idea = PRC_pla_fight_for_people
+		    }
+		}
+		country_event = { 
+			id = china.10001
+			days = 1
+		}
+		hidden_effect = {
+			set_variable = {
+				var = PRC_cpc_1_stability_weekly_dynamic_var #每周稳定度增长
+				value = 0.01
+			}
+			add_to_variable = {
+				var = PRC_cpc_society_development_monthly_dynamic_var #月度社会发展
+				value = 0.01
+			}
+		}
+	}
+}
+shared_focus = { #团结紧张、严肃活泼
+	id = PRC_nervous_but_lively
+	icon = GFX_focus_PRC_nervous_but_lively
+	x = 1
+	y = 1
+	cost = 0.5
+	available_if_capitulated = yes
+	relative_position_id = PRC_chinas_spot_in_the_sun_1
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_chinas_spot_in_the_sun_1
+	}
+	available = {
+	}
+	completion_reward = {
+	    effect_tooltip = {
+			swap_ideas = {					
+				remove_idea = PRC_communist_party_of_china_dummy
+				add_idea = PRC_nervous_but_lively
+			}
+		}
+		country_event = { 
+			id = china.10002
+			days = 1
+		}
+		hidden_effect = {
+			set_variable = {
+				var = PRC_cpc_1_war_support_weekly_dynamic_var #每周战争支持度增长
+				value = 0.01
+			}
+			set_variable = {
+				var = PRC_cpc_1_military_development_monthly_dynamic_var #月度军事发展
+				value = 0.01
+			}
+		}
+	}
+}
+shared_focus = { #现代军改
+	id = PRC_modern_military_reforms
+	icon = GFX_focus_PRC_prepare_for_the_next_war
+	x = 0
+	y = 2
+	cost = 1
+	available_if_capitulated = yes
+	relative_position_id = PRC_chinas_spot_in_the_sun_1
+	ai_will_do = {
+		factor = 1
+	}
+	prerequisite = {
+		focus = PRC_pla_fight_for_people
+	}
+		prerequisite = {
+		focus = PRC_nervous_but_lively
+	}
+	available = {
+	}
+	completion_reward = {
+
+		custom_effect_tooltip = PRC_modern_military_reforms_tt
+		unlock_decision_category_tooltip = PRC_pla_reformation_1
+		unlock_decision_tooltip = PRC_conduct_army_exercises
+		unlock_decision_tooltip = PRC_naval_exercises_decision
+		unlock_decision_tooltip = PRC_conduct_air_exercises
+		country_event = { 
+			id = china.10003
+			days = 1
+		}
+		hidden_effect = {
+		scoped_play_song = "pla15"
+		remove_ideas = {
+			PRC_wei_fenghe
+		    PRC_li_shangfu
+		}
+		add_ideas = PRC_li_zuocheng
+		}
+	}
+}
+
+
+shared_focus = {
+	id = PRC_Sortie_Of_Eagle #雄鹰出击
+	icon = GFX_focus_PRC_Sortie_Of_Eagle
+	x = -9
+	y = 1
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_modern_military_reforms
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_modern_military_reforms
+	}
+	available = {
+	}
+	completion_reward = {
+		assign_advisor = PRC_Chang_Dingqiu
+		effect_tooltip = {
+			add_ideas = PRC_plaaf_1
+		}
+		country_event = { 
+			id = china.10004
+			days = 1
+		}
+		hidden_effect = {
+			add_dynamic_modifier = {
+				modifier = PRC_pla_zair_dynamic
+			}	
+			set_variable = {
+				var = PRC_plaaf_air_mission_efficiency_dynamic_var #空军任务效率
+				value = 0.1
+			}
+			set_variable = {
+				var = PRC_plaaf_air_attack_factor_dynamic_var #对空攻击
+				value = 0.1
+			}
+			set_variable = {
+				var = PRC_plaaf_air_agility_factor_dynamic_var #空军机动
+				value = 0.1
+			}
+			set_variable = {
+				var = PRC_plaaf_air_defence_factor_dynamic_var #空中防御
+				value = 0.1
+			}
+		}
+    }
+ }
+
+shared_focus = {
+	id = PRC_Early_Warning_System #卓越雷达预警体系
+	icon = GFX_focus_PRC_Early_Warning_System
+	x = -2
+	y = 1
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_Sortie_Of_Eagle
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_Sortie_Of_Eagle
+	}
+	available = {
+	}
+	completion_reward = {
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = PRC_plaaf
+				add_idea = PRC_Early_Warning_System
+			}
+		}
+	add_tech_bonus = {
+		ahead_reduction = 4
+		uses = 2
+		category = radar_tech 
+	}
+		set_technology = { next_generation_radar_system_tech = 1 }   #增加飞机配件"次世代雷达系统"
+		country_event = { 
+			id = china.10005
+			days = 1
+		}
+		hidden_effect = {
+			set_variable = {
+				var = PRC_plaaf_air_superiority_detect_factor #战斗机探测
+				value = 0.2
+			}
+			set_variable = {
+				var = PRC_plaaf_naval_strike_targetting_factor_dynamic_var #对海瞄准
+				value = 0.2
+			}
+			add_to_variable = {
+				var = PRC_plaaf_air_defence_factor_dynamic_var #空中防御
+				value = 0.2
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = PRC_Project_Advanced_Aircraft  #超世代战机计划
+	icon = GFX_focus_PRC_Project_Advanced_Aircraft
+	x = 0
+	y = 1
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_Sortie_Of_Eagle
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_Sortie_Of_Eagle
+	}
+	available = {
+	}
+	completion_reward = {
+	custom_effect_tooltip = PRC_Project_Advanced_Aircraft_tt
+	set_technology = { modern_small_airframe = 1 }
+	set_technology = { modern_large_airframe = 1 }
+	set_technology = { engines_4 = 1 }
+	set_technology = { aa_hmg2 = 1 }
+	set_technology = { aa_cannon_2 = 1 }
+	set_technology = { radio_navigation_3_tech = 1 } #增加飞机配件"未来翼面布局"
+	country_event = { 
+		id = china.10007
+		days = 1
+	}
+	hidden_effect = {
+		create_equipment_variant = {
+			name = "轰-20" 
+			type = large_plane_airframe_4
+			modules = {
+				fixed_main_weapon_slot = aircraft_cannon_2_1x
+				fixed_auxiliary_weapon_slot_1 = aircraft_cannon_2_1x
+				fixed_auxiliary_weapon_slot_2 = aircraft_cannon_2_1x
+				engine_type_slot = engine_4_6x
+			}
+			design_team = mio:PRC_cosic_organization
+	}
+	create_equipment_variant = {
+			name = "J-36"
+			type = small_plane_airframe_4
+			modules = {
+				fixed_main_weapon_slot = aircraft_cannon_1_1x
+				fixed_auxiliary_weapon_slot_1 = aircraft_cannon_1_1x
+				fixed_auxiliary_weapon_slot_2 = aircraft_cannon_1_1x
+				fixed_auxiliary_weapon_slot_3 = aircraft_cannon_1_1x
+				fixed_auxiliary_weapon_slot_4 = aircraft_cannon_1_1x 
+				engine_type_slot = engine_4_1x
+			}
+			design_team = mio:PRC_avic_organization
+			icon = "gfx/interface/technologies/aircraft/PRC_fighter6.dds"
+		}
+		create_equipment_variant = {
+			name = "J-50"
+			type = cv_small_plane_airframe_4
+			modules = {
+				fixed_main_weapon_slot = aircraft_cannon_1_1x
+				fixed_auxiliary_weapon_slot_1 = torpedo_mounting
+				fixed_auxiliary_weapon_slot_2 = torpedo_mounting
+				engine_type_slot = engine_4_1x
+			}
+			design_team = mio:PRC_avic_organization
+			icon = "gfx/interface/technologies/aircraft/PRC_CAS2.dds"
+		}
+	}
+    }
+}
+
+shared_focus = {
+	id = PRC_trust_in_the_pilot_1 #无人机战争
+	icon = GFX_focus_PRC_trust_in_the_pilot
+	x = 2
+	y = 1
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_Sortie_Of_Eagle
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_Sortie_Of_Eagle
+	}
+	available = {
+	}
+	completion_reward = {
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = PRC_plaaf
+				add_idea = PRC_trust_in_the_pilot
+			}
+		}
+		unlock_decision_tooltip = PRC_project_dark_sword_1_dec #暗剑
+		country_event = { 
+			id = china.1000811
+			days = 1
+		}
+		hidden_effect = {
+			set_variable = {
+				var = PRC_plaaf_ground_attack_factor_dynamic_var #对地攻击	
+				value = 0.2
+			}
+			set_variable = {
+				var = PRC_plaaf_naval_strike_attack_factor_dynamic_var #对海攻击
+				value = 0.2
+			}
+			add_to_variable = {
+				var = PRC_plaaf_air_defence_factor_dynamic_var #空中防御
+				value = 0.2
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = PRC_Electronic_Warfare_System #全方位电子战体系
+	icon = GFX_focus_PRC_Electronic_Warfare_System
+	x = -2
+	y = 2
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_Sortie_Of_Eagle
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_Early_Warning_System
+	}
+	available = {
+	}
+	completion_reward = {
+		set_technology = { advanced_electronic_war_system_tech = 1 }  #增加飞机配件"先进电子战系统"
+		unlock_decision_tooltip = PRC_Electronic_Warfare_System_Jamming #解锁电子战决议
+		country_event = { 
+			id = china.10006
+			days = 1
+		}
+	}
+}
+
+shared_focus = {
+	id = PRC_streamline_aircraft_production_1 #飞机生产流水线
+	icon = GFX_focus_PRC_streamline_aircraft_production
+	x = 0
+	y = 2
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_Sortie_Of_Eagle
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_Project_Advanced_Aircraft
+	}
+	available = {
+	}
+	completion_reward = {
+		add_ideas = PRC_streamline_aircraft_production_1_idea
+		country_event = { 
+			id = china.100081
+			days = 1
+		}
+	}
+}
+
+shared_focus = {
+	id = PRC_integrated_Reconnaissance_Strike_UAV  #无人机察打一体化
+	icon = GFX_focus_PRC_integrated_Reconnaissance_Strike_UAV
+	x = 2
+	y = 2
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_Sortie_Of_Eagle
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_trust_in_the_pilot_1
+	}
+	available = {
+	}
+	completion_reward = {
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = PRC_plaaf
+				add_idea = PRC_integrated_Reconnaissance_Strike_UAV
+			}
+		}
+		set_technology = { UAV_support_equipment = 1 } #解锁无人机支援连
+		set_technology = { next_generation_photoelectricity_locking_system_tech = 1 }#增加飞机配件"次世代光电锁定系统"
+		country_event = { 
+			id = china.10009
+			days = 1
+		}
+		hidden_effect = {
+			add_to_variable = {
+				var = PRC_plaaf_ground_attack_factor_dynamic_var #对地攻击
+				value = 0.2
+			}
+			add_to_variable = {
+				var = PRC_plaaf_air_agility_factor_dynamic_var #空军机动
+				value = 0.2
+			}
+			add_to_variable = {
+				var = PRC_plaaf_air_defence_factor_dynamic_var #空中防御
+				value = 0.2
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = PRC_dominate_the_skies_1 #统御天空，俯瞰大地
+	icon = GFX_focus_PRC_dominate_the_skies
+	x = 0
+	y = 3	
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_Sortie_Of_Eagle
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_Electronic_Warfare_System
+	}
+	prerequisite = {
+		focus = PRC_streamline_aircraft_production_1
+	}
+	prerequisite = {
+		focus = PRC_integrated_Reconnaissance_Strike_UAV
+	}
+	available = {
+	}
+	completion_reward = {
+		custom_effect_tooltip = PRC_dominate_the_skies_1_tt
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = PRC_plaaf
+				add_idea = PRC_dominate_the_skies
+			}
+		}
+		set_technology = { next_generation_avionics_system_tech = 1 } #增加飞机配件"次世代航电系统"
+		country_event = { 
+			id = china.10010
+			days = 1
+		}
+		hidden_effect = {
+			scoped_play_song = "pla18"
+			remove_dynamic_modifier = { 
+				modifier = PRC_pla_zair_dynamic
+			}
+			add_dynamic_modifier = {
+				modifier = PRC_pla_zair_1_dynamic
+			}
+			add_to_variable = {
+				var = PRC_plaaf_air_mission_efficiency_dynamic_var #空军任务效率
+				value = 0.2
+			}
+			add_to_variable = {
+				var = PRC_plaaf_air_superiority_detect_factor #战斗机探测
+				value = 0.2
+			}
+			add_to_variable = {
+				var = PRC_plaaf_air_attack_factor_dynamic_var #对空攻击
+				value = 0.2
+			}
+			add_to_variable = {
+				var = PRC_plaaf_air_agility_factor_dynamic_var #空军机动
+				value = 0.2
+			}
+			set_variable = {
+				var = PRC_plaaf_army_bonus_air_superiority_factor_dynamic_var #制空权
+				value = 0.2
+			}
+		}
+	}
+}
+
+
+shared_focus = { #先进海军
+	id = PRC_a_blue_water_navy_1
+	icon = GFX_focus_PRC_a_blue_water_navy
+	x = -3
+	y = 1
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_modern_military_reforms
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_modern_military_reforms
+		focus = PRC_lessons_from_the_taiwan_war
+	}
+	available = {
+	}
+	completion_reward = {
+		assign_advisor = PRC_Dong_Jun
+	    add_ideas = naval_academy_spirit
+		effect_tooltip = {
+			add_ideas = PRC_plan_dummy_1
+		}
+		country_event = { 
+			id = china.10012
+			days = 1
+		}
+		hidden_effect = {
+			add_dynamic_modifier = {
+				modifier = PRC_plan_navy_dynamic
+			}	
+			set_variable = {
+				var = PRC_experience_gain_navy_factor_dynamic_var #海军经验增长
+				value = 0.15
+			}
+			set_variable = {
+				var = PRC_navy_screen_attack_factor_dynamic_var #屏卫舰攻击
+				value = 0.2
+			}
+			set_variable = {
+				var = PRC_navy_screen_defence_factor_dynamic_var #屏卫舰防御
+				value = 0.2
+			}
+			set_variable = {
+				var = PRC_plan_naval_damage_factor_dynamic_var #海军伤害
+				value = 0.2
+			}
+			set_variable = {
+				var = PRC_plan_naval_defense_factor_dynamic_var #海军防御
+				value = 0.2
+			}
+		}
+    }
+}
+shared_focus = { #武库舰计划
+	id = PRC_resurrect_the_battleship_1
+	icon = GFX_focus_PRC_resurrect_the_battleship
+	x = -2
+	y = 1
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_a_blue_water_navy_1
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_a_blue_water_navy_1
+	}
+	available = {
+	}
+	completion_reward = {
+	add_tech_bonus = {
+		ahead_reduction = 4
+		uses = 10
+		category = cat_ship_light_battery
+		category = cat_ship_medium_battery 
+		category = cat_ship_heavy_battery
+		category = cat_torpedoes  
+	}
+	effect_tooltip = {
+		swap_ideas = {
+				remove_idea = PRC_plan_dummy
+				add_idea = PRC_resurrect_the_battleship_idea
+		}
+	}
+	unlock_decision_tooltip = PRC_project_impulse_1_dec
+	country_event = { 
+		id = china.10013
+		days = 1
+	}
+		hidden_effect = {
+			set_variable = {
+				var = PRC_plan_navy_capital_ship_attack_factor_dynamic_var #主力舰攻击
+				value = 0.2
+			}
+			set_variable = {
+				var = PRC_plan_navy_capital_ship_defence_factor_dynamic_var #主力舰装甲
+				value = 0.2
+			}
+		}
+    }
+}
+shared_focus = { #精英海军陆战队
+	id = PRC_rain_fire_from_above_1
+	icon = GFX_focus_PRC_rain_fire_from_above
+	x = 0
+	y = 1
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_a_blue_water_navy_1
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_a_blue_water_navy_1
+	}
+	available = {
+	}
+	completion_reward = {
+		add_tech_bonus = {
+		ahead_reduction = 5
+		uses = 1
+		category = tp_tech
+	}
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = PRC_plan_dummy
+				add_idea = PRC_rain_fire_from_above
+			}
+		}
+		unlock_decision_tooltip = PRC_project_swimmer_1_dec
+		country_event = { 
+			id = china.10015
+			days = 1
+		}
+		hidden_effect = {
+			add_to_variable = {
+				var = PRC_plan_amphibious_invasion_dynamic_var #两栖登陆速度
+				value = 0.3
+			}
+			add_to_variable = {
+				var = PRC_plan_naval_invasion_prep_speed_dynamic_var #登陆准备速度
+				value = 0.3
+			}
+		}
+	}
+}
+shared_focus = { #重视海军生产
+	id = PRC_increase_naval_production_1
+	icon = GFX_focus_PRC_increase_naval_production
+	x = 2
+	y = 1
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_a_blue_water_navy_1
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_a_blue_water_navy_1
+	}
+	available = {
+	}
+	completion_reward = {
+		add_ideas = pay_attention_to_naval_production
+		country_event = { 
+			id = china.10017
+			days = 1
+		}
+	}
+}
+shared_focus = { #强化航母打击
+	id = PRC_carrier_primacy_1
+	icon = GFX_focus_PRC_carrier_primacy
+	x = 0
+	y = 1
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_resurrect_the_battleship_1
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_resurrect_the_battleship_1
+	}
+	available = {
+	}
+	completion_reward = {
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = PRC_plan_dummy
+				add_idea = PRC_carrier_primacy
+			}
+		}
+		country_event = { 
+			id = china.10014
+			days = 1
+		}
+		hidden_effect = {
+			scoped_play_song = "pla12"
+			add_to_variable = {
+				var = PRC_plan_navy_carrier_air_targetting_factor_dynamic_var #舰载机瞄准
+				value = 0.2
+			}
+			add_to_variable = {
+				var = PRC_plan_sortie_efficiency_dynamic_var #出击效率
+				value = 0.2
+			}
+			add_to_variable = {
+				var = PRC_spotting_chance_dynamic_var #索敌速度
+				value = 0.2
+			}
+		}
+	}
+}
+shared_focus = { #先进两栖作战体系
+	id = PRC_rain_fire_from_above_2
+	icon = GFX_focus_PRC_rain_fire_from_above_1
+	x = 0
+	y = 1
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_rain_fire_from_above_1
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_rain_fire_from_above_1
+	}
+	available = {
+	}
+	completion_reward = {
+		every_army_leader = {
+			add_trait = {
+				trait = naval_invader #获得侵袭指挥官
+			}
+		}
+		unlock_decision_tooltip = PRC_large_scale_amphibious_manoeuvre #大规模两栖演习决议
+		country_event = { 
+			id = china.10016
+			days = 1
+		}
+	}
+}
+shared_focus = { #次世代战舰
+	id = PRC_next_generation_warships_1
+	icon = GFX_focus_PRC_next_generation_warships
+	x = 0
+	y = 1
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_increase_naval_production_1
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_increase_naval_production_1
+	}
+	available = {
+	}
+	completion_reward = {
+	set_technology = { ship_phased_array_radar_tech = 1 }   #增加战舰配件"先进相控阵雷达"
+	set_technology = { carrier_ship_nuclear_engine_1_tech = 1 }   #增加战舰配件"航母核反应堆"
+	custom_effect_tooltip = PRC_next_generation_warships_1_tt	
+	add_tech_bonus = {
+		ahead_reduction = 4
+		uses = 4
+		category = dd_tech
+		category = cl_tech
+		category = ca_tech
+		category = cv_tech
+		category = bc_tech
+		category = bb_tech
+	    }
+		country_event = { 
+			id = china.10018
+			days = 1
+		}
+		hidden_effect = {
+			create_equipment_variant = { 
+				name = "008型核动力航空母舰"
+				type = ship_hull_carrier_3
+				name_group = PRC_HANGMU
+				parent_version = 0
+				modules = {
+					fixed_ship_deck_slot_1 = ship_deck_space
+					fixed_ship_deck_slot_2 = ship_deck_space
+					fixed_ship_anti_air_slot = ship_anti_air_4
+					fixed_ship_radar_slot = ship_phased_array_radar
+					fixed_ship_engine_slot = carrier_ship_nuclear_engine_1
+					fixed_ship_secondaries_slot = ship_secondaries_2
+					front_1_custom_slot = ship_deck_space
+					mid_1_custom_slot = ship_deck_space
+					mid_2_custom_slot = ship_deck_space
+				}
+				design_team = mio:PRC_chsic_organization
+			}
+		create_equipment_variant = {
+				name = "057"
+				type = ship_hull_heavy_4
+				name_group = PRC_BEI
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_heavy_battery_4
+					fixed_ship_anti_air_slot = ship_anti_air_3
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_3
+					fixed_ship_radar_slot = ship_phased_array_radar
+					fixed_ship_engine_slot = heavy_ship_engine_4
+					fixed_ship_secondaries_slot = ship_secondaries_2
+					fixed_ship_armor_slot = ship_armor_bc_3
+					front_1_custom_slot = ship_heavy_battery_4
+					mid_1_custom_slot = ship_heavy_battery_4
+					mid_2_custom_slot = ship_heavy_battery_4
+					mid_3_custom_slot = ship_heavy_battery_4 
+					rear_1_custom_slot = ship_airplane_launcher_2
+				}
+				design_team = mio:PRC_jiangnan_organization
+			}
+			create_equipment_variant = {
+				name = "058"
+				type = ship_hull_cruiser_4
+				name_group = PRC_ZHONG
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_medium_battery_4
+					fixed_ship_anti_air_slot = ship_anti_air_4
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_3
+					fixed_ship_radar_slot = ship_phased_array_radar
+					fixed_ship_engine_slot = cruiser_ship_engine_4
+					fixed_ship_secondaries_slot = ship_secondaries_2
+					front_1_custom_slot = ship_medium_battery_4
+					mid_1_custom_slot = ship_medium_battery_4
+					mid_2_custom_slot = ship_medium_battery_4
+					rear_1_custom_slot = ship_medium_battery_4
+					rear_2_custom_slot = ship_airplane_launcher_2
+				}
+				design_team = mio:PRC_csic_organization
+			}
+			create_equipment_variant = {
+				name = "059"
+				type = ship_hull_light_4
+				name_group = PRC_RIVER_MOUNTAIN
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_light_battery_4
+					fixed_ship_anti_air_slot = ship_anti_air_4
+					fixed_ship_fire_control_system_slot = ship_sonar_2
+					fixed_ship_radar_slot = ship_phased_array_radar
+					fixed_ship_engine_slot = light_ship_engine_4
+					fixed_ship_torpedo_slot = ship_torpedo_4
+					front_1_custom_slot = ship_depth_charge_4
+					mid_1_custom_slot = ship_torpedo_4
+					mid_2_custom_slot = ship_torpedo_4
+					rear_1_custom_slot = ship_torpedo_4
+				}
+				design_team = mio:PRC_csic_organization
+			}
+		}
+	}
+}
+shared_focus = { #海上海下，唯我独尊
+	id = PRC_supremacy_above_and_below_waters_1
+	icon = GFX_focus_PRC_supremacy_above_and_below_waters
+	x = 0
+	y = 1
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_rain_fire_from_above_2
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_carrier_primacy_1
+	}
+	prerequisite = {
+		focus = PRC_rain_fire_from_above_2
+	}
+	prerequisite = {
+		focus = PRC_next_generation_warships_1
+	}
+	available = {
+	}
+	completion_reward = {
+		custom_effect_tooltip = PRC_supremacy_above_and_below_waters_1_tt
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = PRC_plan_dummy
+				add_idea = PRC_supremacy_above_and_below_waters_idea
+			}
+		}
+		navy_experience = 100
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.75
+			uses = 3
+			category = naval_doctrine
+		}
+		add_tech_bonus = {
+		ahead_reduction = 6
+		uses = 5
+		category = cat_ship_light_battery
+		category = cat_ship_medium_battery 
+		category = cat_ship_heavy_battery
+		category = cat_torpedoes  
+	}
+	country_event = { 
+		id = china.10019
+		days = 1
+	}
+		hidden_effect = {
+			scoped_play_song = "pla14"
+			remove_dynamic_modifier = { 
+				modifier = PRC_plan_navy_dynamic
+			}
+			add_dynamic_modifier = {
+				modifier = PRC_plan_navy_1_dynamic
+			}
+			add_to_variable = {
+				var = PRC_navy_screen_attack_factor_dynamic_var #屏卫舰攻击
+				value = 0.3
+			}
+			add_to_variable = {
+				var = PRC_navy_screen_defence_factor_dynamic_var #屏卫舰防御
+				value = 0.3
+			}
+			add_to_variable = {
+				var = PRC_plan_navy_capital_ship_attack_factor_dynamic_var #主力舰攻击
+				value = 0.3
+			}
+			add_to_variable = {
+				var = PRC_plan_navy_capital_ship_defence_factor_dynamic_var #主力舰装甲
+				value = 0.3
+			}
+			set_variable = {
+				var =  PRC_plan_naval_coordination_dynamic_var #舰队协同性
+				value = 0.3
+			}
+		}
+	}
+}
+
+shared_focus = { #合成化陆军
+	id = PRC_modernized_army
+	icon = GFX_focus_PRC_modernized_army
+	x = 3
+	y = 1
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_modern_military_reforms
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_modern_military_reforms
+	}
+	available = {
+	}
+	completion_reward = {
+		assign_advisor = PRC_Li_Qiaoming
+		army_experience = 100
+		air_experience = 25
+		navy_experience = 25
+			effect_tooltip = {
+			add_ideas = PRC_pla_idea_1
+		}
+		country_event = { 
+			id = china.100201
+			days = 1
+		}
+		country_event = { 
+			id = china.10020
+			days = 3
+		}
+		hidden_effect = {
+			add_dynamic_modifier = {
+				modifier = PRC_pla_land_dynamic
+			}
+			set_variable = {
+				var = PRC_pla_experience_gain_army_factor_dynamic_var #陆军经验增长
+				value = 0.15
+			}
+			set_variable = {
+				var = PRC_pla_army_attack_factor_dynamic_var #陆军师攻击
+				value = 0.1
+			}
+			set_variable = {
+				var = PRC_pla_army_defence_factor_dynamic_var #陆军师防御
+				value = 0.1
+			}
+			set_variable = {
+				var = PRC_pla_military_development_monthly_dynamic_var #月度军事发展
+				value = 0.05
+			}
+			remove_ideas = {
+				PRC_insufficient_understanding_of_modern_warfare_idea
+				PRC_insufficient_understanding_of_modern_warfare_idea2
+				PRC_insufficient_understanding_of_modern_warfare_idea3
+				PRC_insufficient_understanding_of_modern_warfare_idea4
+				PRC_insufficient_understanding_of_modern_warfare_idea5
+			}
+		}
+    }
+}
+shared_focus = {
+	id = PRC_expand_the_thunder_gods_1 #瞄准实战，开始演习
+	icon = GFX_focus_PRC_expand_the_thunder_gods
+	x = 0
+	y = 1
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_modernized_army
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_modernized_army
+	}
+	available = {
+	}
+	completion_reward = {
+	effect_tooltip = {
+		swap_ideas = {
+				remove_idea = PRC_pla_dummy_idea
+				add_idea = PRC_expand_the_thunder_gods_idea
+		}
+	}
+		log = "[GetDateText]: [Root.GetName]: focus PRC_expand_the_thunder_gods completion_reward"
+		unlock_decision_tooltip = PRC_thunder_god_program_mountain
+		unlock_decision_tooltip = PRC_thunder_god_program_jungle
+		unlock_decision_tooltip = PRC_zhurihe #朱日和实战演习
+		unlock_decision_tooltip = PRC_command_trait #极端地形指挥训练
+		add_tech_bonus = {
+			name = PRC_thunder
+			bonus = 0.5
+			uses = 2
+			category = para_tech
+		}
+		add_tech_bonus = {
+			name = PRC_thunder
+			bonus = 0.5
+			uses = 1
+			category = mountaineers_tech
+		}
+		country_event = { 
+			id = china.10023
+			days = 1
+		}
+		hidden_effect = {
+			scoped_play_song = "pla5"	
+			add_to_variable = {
+				var = PRC_pla_army_org_factor_dynamic_var   #组织度
+				value = 0.2
+			}
+			add_to_variable = {
+				var = PRC_pla_army_org_regain_dynamic_var  #组织度恢复
+				value = 0.2
+			}
+			set_variable = {
+				var = PRC_pla_experience_loss_factor #有经验的士兵损失
+				value = -0.4
+			}
+		}
+	}
+}
+shared_focus = {
+	id = PRC_iron_great_wall #钢铁长城
+	icon = GFX_focus_PRC_tank_primacy_nat
+	x = -2
+	y = 1
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_modernized_army
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_modernized_army
+	}
+	available = {
+	}
+	completion_reward = {
+		custom_effect_tooltip = PRC_iron_great_wall_tt
+		add_tech_bonus = {
+			ahead_reduction = 5
+			uses = 2
+			category = cat_medium_armor
+			category = cat_light_armor
+		}
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = PRC_pla_dummy_idea
+				add_idea = PRC_iron_great_wall_idea
+			}
+		}
+		unlock_decision_tooltip = PRC_command_tank #现代装甲作战指挥训练
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = PRC_centrist_win
+					has_country_flag = PRC_nationalist_win
+				}
+			}
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = PRC_wu_yanan_high_command 
+		}
+		country_event = { 
+			id = china.10021
+			days = 1
+		}
+		hidden_effect = {
+			create_equipment_variant = {
+				name = "ZTZ-25"
+				type = modern_tank_chassis_4
+				parent_version = 0
+				modules = {
+					main_armament_slot = tank_high_velocity_cannon_3
+					turret_type_slot = tank_unmanned_tank_turret
+					suspension_type_slot = tank_torsion_bar_suspension
+					armor_type_slot = tank_cast_armor
+					engine_type_slot = tank_gas_turbine_engine
+					special_type_slot_1 = tank_radio_3
+					special_type_slot_2 = wet_ammo_storage
+					special_type_slot_3 = electronic_warfare_system
+					special_type_slot_4 = sloped_armor
+					special_type_slot_5 = gunner_thermal_2
+					special_type_slot_6 = auto_loader
+					special_type_slot_7 = turret_mounted_atgm
+				}
+				design_team = mio:PRC_norinco_organization
+				upgrades = {
+					tank_nsb_engine_upgrade = 17
+					tank_nsb_armor_upgrade = 0
+				}
+			}
+			create_equipment_variant = {
+				name = "ZTQ-28"
+				type = light_tank_chassis_3
+				parent_version = 0
+				modules = {
+					main_armament_slot = tank_small_cannon_3
+					turret_type_slot = tank_light_three_man_tank_turret
+					suspension_type_slot = tank_interleaved_suspension
+					armor_type_slot = tank_riveted_armor
+					engine_type_slot = tank_gas_turbine_engine
+					special_type_slot_1 = tank_radio_3
+					special_type_slot_2 = electronic_warfare_system
+					special_type_slot_3 = auto_loader
+					special_type_slot_4 = turret_mounted_atgm
+					special_type_slot_5 = gunner_thermal_2
+				}
+				design_team = mio:PRC_norinco_organization
+				upgrades = {
+					tank_nsb_engine_upgrade = 17
+					tank_nsb_armor_upgrade = 0
+				}
+			}
+			create_equipment_variant = {
+				name = "ZTQ-28H"
+				type = light_tank_flame_chassis_3
+				parent_version = 0
+				modules = {
+					main_armament_slot = flamethrower
+					turret_type_slot = tank_light_three_man_tank_turret
+					suspension_type_slot = tank_interleaved_suspension
+					armor_type_slot = tank_riveted_armor
+					engine_type_slot = tank_gas_turbine_engine
+					special_type_slot_1 = tank_radio_3
+					special_type_slot_2 = electronic_warfare_system
+					special_type_slot_3 = auto_loader
+					special_type_slot_4 = turret_mounted_atgm
+					special_type_slot_5 = gunner_thermal_2
+				}
+				design_team = mio:PRC_norinco_organization
+				upgrades = {
+					tank_nsb_engine_upgrade = 17
+					tank_nsb_armor_upgrade = 0
+				}
+			}
+			add_to_variable = {
+				var = PRC_pla_breakthrough_factor_dynamic_var  #突破
+				value = 0.1
+			}
+			add_to_variable = {
+				var = PRC_army_armor_attack_factor_dynamic_var #装甲师攻击
+				value = 0.1
+			}
+			add_to_variable = {
+				var = PRC_army_armor_defence_factor_dynamic_var #装甲师防御
+				value = 0.1
+			}
+		}
+	}
+}
+shared_focus = {
+	id = PRC_mobile_warfare_nat_1 #其疾如风
+	icon = GFX_focus_PRC_mobile_warfare
+	x = 0
+	y = 1
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_iron_great_wall
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_iron_great_wall
+	}
+	available = {
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			ahead_reduction = 9
+			uses = 3
+			category = cat_mechanized_equipment
+			category = motorized_equipment
+			category = motorized_equipment
+		}
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = PRC_pla_dummy_idea
+				add_idea = PRC_mobile_warfare_nat_idea
+			}
+		}
+		country_event = { 
+			id = china.10022
+			days = 1
+		}
+		hidden_effect = {
+			set_variable = {
+				var = PRC_speed_factor_dynamic_var  #陆军师速度
+				value = 0.1
+			}
+			add_to_variable = {
+				var = PRC_pla_army_org_factor_dynamic_var   #组织度
+				value = 0.1
+			}
+			add_to_variable = {
+				var = PRC_pla_army_org_regain_dynamic_var  #组织度恢复
+				value = 0.1
+			}
+		}
+	}
+}
+shared_focus = {
+	id = PRC_general_trait_1 #将领再培训
+	icon = GFX_focus_PRC_general_trait
+	x = 0
+	y = 2
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_modernized_army
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_expand_the_thunder_gods_1
+	}
+	available = {
+	}
+	completion_reward = {
+	    army_group_leader_max_army_size = 2
+		every_army_leader = {
+			add_attack = 1
+			add_defense = 1
+			add_planning = 1
+			add_logistics = 1
+			add_skill_level = 1
+			add_unit_leader_trait = organizer
+			add_unit_leader_trait = skilled_staffer
+		}		
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = PRC_pla_dummy_idea
+				add_idea = PRC_general_trait_idea
+			}
+		}
+		country_event = { 
+			id = china.10027
+			days = 1
+		}
+		hidden_effect = {
+			set_variable = {
+				var = PRC_pla_planning_speed_dynamic_var #计划速度
+				value = 0.3
+			}
+			set_variable = {
+				var = PRC_pla_max_planning_factor_dynamic_var #计划加成上限系数
+				value = 0.3
+			}
+			set_variable = {
+				var = PRC_pla_land_reinforce_rate_dynamic_var #增援率
+				value = 0.3
+			}
+			set_variable = {
+				var = PRC_pla_initiative_factor_dynamic_var #主动性
+				value = 0.3
+			}
+		}
+	}
+}
+shared_focus = {
+	id = PRC_artillery_project_1 #次时代陆军
+	icon = GFX_focus_PRC_artillery_project
+	x = 2
+	y = 1
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_modernized_army
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_modernized_army
+	}
+	available = {
+	}
+	completion_reward = {
+		unlock_decision_tooltip = PRC_artillery_project_2 #203口径自行火炮
+		unlock_decision_tooltip = PRC_project_ghost_1_dec
+		unlock_decision_tooltip = PRC_project_nib_1_dec
+		unlock_decision_tooltip = PRC_project_flash_1_dec
+		add_tech_bonus = {
+				ahead_reduction = 5
+				uses = 3
+				category = artillery 
+	}
+ }
+}
+shared_focus = {
+	id = PRC_artillery_informatization #信火一体体系建设
+	icon = GFX_focus_PRC_artillery_informatization
+	x = 0
+	y = 1
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_artillery_project_1
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_artillery_project_1
+	}
+	available = {
+	}
+	completion_reward = {
+		custom_effect_tooltip = PRC_artillery_informatization_tt
+		PRC_Zhang_Youxia = {
+			add_unit_leader_trait = integrated_information_and_firepower #信火一体
+			}	
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = PRC_pla_dummy_idea
+				add_idea = PRC_artillery_informatization_idea
+			}
+			swap_ideas = {
+				remove_idea = PRC_plaaf
+				add_idea = PRC_artillery_informatization_idea_2
+			}
+		}
+		country_event = { 
+			id = china.10029
+			days = 1
+		}
+		hidden_effect = {
+			remove_trait = {
+     			character = PRC_Zhang_Youxia
+     			slot = high_command
+				trait = army_chief_shellfire_determine_victory
+			}
+			add_trait = {
+     			character = PRC_Zhang_Youxia
+     			slot = high_command
+     			trait = chief_shellfire_determine_victory 
+			}
+			set_variable = {
+				var = PRC_pla_recon_factor_dynamic_var  #侦察
+				value = 0.2
+			}
+			add_to_variable = {
+				var = PRC_plaaf_ground_attack_factor_dynamic_var #对地攻击系数
+				value = 0.2
+			}
+			swap_ideas = {
+				remove_idea = PRC_complacent_officers_spirit
+				add_idea = artillery_informatization_idea
+			}
+		}
+	}
+}
+shared_focus = {
+	id = PRC_tank_primacy_nat_1 #优质战士，钢铁洪流
+	icon = GFX_focus_PRC_infantry_primacy
+	x = 0
+	y = 1
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_general_trait_1
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_general_trait_1
+	}
+	prerequisite = {
+		focus = PRC_artillery_informatization
+	}
+	prerequisite = {
+		focus = PRC_mobile_warfare_nat_1
+	}
+	available = {
+	}
+	completion_reward = {
+		custom_effect_tooltip = PRC_tank_primacy_nat_1_tt
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = PRC_pla_dummy_idea
+				add_idea = PRC_infantry_primacy_nat_idea
+			}
+		}
+		every_army_leader = {
+			add_unit_leader_trait = panzer_expert
+		}		
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = PRC_centrist_win
+					has_country_flag = PRC_nationalist_win
+				}
+			}
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = PRC_wu_yanan_high_command 
+		}
+		country_event = { 
+			id = china.10030
+			days = 1
+		}
+		hidden_effect = {
+			scoped_play_song = "pla10"
+			remove_dynamic_modifier = { 
+				modifier = PRC_pla_land_dynamic
+			}
+			add_dynamic_modifier = {
+				modifier = PRC_pla_land_1_dynamic
+			}
+			set_variable = {
+				var = PRC_pla_training_time_factor_dynamic_var #训练时间
+				value = 0.2
+			}
+			set_variable = {
+				var = PRC_pla_xp_gain_army_unit_dynamic_var #陆军师经验获取
+				value = 0.2
+			}
+			add_to_variable = {
+				var = PRC_speed_factor_dynamic_var #陆军师速度
+				value = 0.2
+			}
+			add_to_variable = {
+				var = PRC_pla_army_attack_factor_dynamic_var #陆军师攻击
+				value = 0.2
+			}
+			add_to_variable = {
+				var = PRC_pla_army_defence_factor_dynamic_var #陆军师防御
+				value = 0.2
+			}
+			add_to_variable = {
+				var = PRC_pla_breakthrough_factor_dynamic_var  #突破
+				value = 0.2
+			}
+			add_to_variable = {
+				var = PRC_army_armor_attack_factor_dynamic_var #装甲师攻击
+				value = 0.2
+			}
+			add_to_variable = {
+				var = PRC_army_armor_defence_factor_dynamic_var #装甲师防御
+				value = 0.2
+			}
+			set_variable = {
+				var = PRC_battalion_upkeep_factor_dynamic_var #陆军维护费
+				value = -0.1
+			}
+		}
+	}
+}
+
+shared_focus = { #战略支援部队改组
+	id = PRC_reorganization_of_the_strategic_support_force
+	icon = GFX_focus_PRC_reorganization_of_the_strategic_support_force
+	x = 9
+	y = 1
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_modern_military_reforms
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_modern_military_reforms
+	}
+	available = {
+	}
+	completion_reward = {
+		add_tech_bonus = {
+		bonus = 2
+		uses = 2
+		category = electronics 
+	}
+	country_event = { 
+		id = china.10032
+		days = 1
+	}
+    }
+}
+shared_focus = { #先进联勤保障体系
+	id = PRC_advanced_joint_logistics_support_system
+	icon = GFX_focus_PRC_advanced_joint_logistics_support_system
+	x = -2
+	y = 1
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_reorganization_of_the_strategic_support_force
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_reorganization_of_the_strategic_support_force
+	}
+	available = {
+	}
+	completion_reward = {
+	effect_tooltip = {
+		swap_ideas = {
+				remove_idea = PRC_pla_dummy_idea
+				add_idea = PRC_advanced_joint_logistics_support_system_idea
+		}
+	}
+	country_event = { 
+		id = china.10033
+		days = 1
+	}
+		hidden_effect = {
+			set_variable = {
+				var = PRC_army_strength_factor_dynamic_var  #hp
+				value = 0.2
+			}
+			add_to_variable = {
+				var = PRC_pla_army_org_factor_dynamic_var #陆军师组织度
+				value = 0.2
+			}
+			add_to_variable = {
+				var = PRC_pla_army_org_regain_dynamic_var #陆军组织度恢复
+				value = 0.2
+			}
+			set_variable = {
+				var = PRC_pla_attrition_dynamic_var #陆军师损耗
+				value = -0.4
+			}			
+			set_variable = {
+				var = PRC_supply_consumption_factor_dynamic_var  #补给消耗
+				value = -0.2
+			}
+			set_variable = {
+				var = PRC_no_supply_grace_dynamic_var #携行补给
+				value = 240
+			}			
+		}
+    }
+}
+shared_focus = { #军事卫星网络升级
+	id = PRC_military_satellite_network_upgrade
+	icon = GFX_focus_PRC_military_satellite_network_upgrade
+	x = 0
+	y = 1
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_reorganization_of_the_strategic_support_force
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_reorganization_of_the_strategic_support_force
+	}
+	available = {
+	}
+	completion_reward = {
+	    unlock_decision_tooltip = PRC_military_satellite_launch #发射军事卫星
+		country_event = { 
+			id = china.10035
+			days = 1
+		}
+	}
+}
+shared_focus = { #数字化信息支援
+	id = PRC_digital_information_support
+	icon = GFX_focus_PRC_digital_information_support
+	x = 2
+	y = 1
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_reorganization_of_the_strategic_support_force
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_reorganization_of_the_strategic_support_force
+	}
+	available = {
+	}
+	completion_reward = {
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = PRC_pla_dummy_idea
+				add_idea = PRC_digital_information_support_1
+			}
+			swap_ideas = {
+				remove_idea = PRC_plan_dummy
+				add_idea = PRC_digital_information_support_2
+			}
+			swap_ideas = {
+				remove_idea = PRC_plaaf
+				add_idea = PRC_digital_information_support_3
+			}
+		}
+		hidden_effect = {
+			add_to_variable = {
+				var = PRC_pla_army_org_factor_dynamic_var #陆军师组织度
+				value = 0.1
+			}
+			add_to_variable = {
+				var = PRC_pla_recon_factor_dynamic_var #侦察
+				value = 0.1
+			}
+			add_to_variable = {
+				var = PRC_pla_initiative_factor_dynamic_var #主动性
+				value = 0.1
+			}
+			set_variable = {
+				var = PRC_positioning_dynamic_var #阵位
+				value = 0.3
+			}
+			add_to_variable = {
+				var = PRC_plan_naval_coordination_dynamic_var #舰队协同性
+				value = 0.2
+			}
+			add_to_variable = {
+				var = PRC_spotting_chance_dynamic_var #索敌速度
+				value = 0.2
+			}
+			add_to_variable = {
+				var = PRC_plaaf_air_mission_efficiency_dynamic_var #空军任务效率 
+				value = 0.2
+			}
+			set_variable = {
+				var = PRC_plaaf_air_superiority_efficiency_dynamic_var #制空权效率
+				value = 0.2
+			}
+			set_variable = {
+				var = PRC_plaaf_air_intercept_efficiency_dynamic_var #空军拦截效率
+				value = 0.2
+			}
+			set_variable = {
+				var = PRC_plaaf_air_cas_efficiency_dynamic_var #空中支援任务效率
+				value = 0.2
+			}
+		}
+	}
+}
+shared_focus = { #综合支援单位
+	id = PRC_comprehensive_support_unit
+	icon = GFX_focus_PRC_comprehensive_support_unit
+	x = 0
+	y = 1
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_advanced_joint_logistics_support_system
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_advanced_joint_logistics_support_system
+	}
+	available = {
+	}
+	completion_reward = {
+		set_technology = { joint_logistics_support_company_tech = 1 } #联勤保障支援连
+		set_technology = { cooking_squad_tech = 1 } #炊事班
+		country_event = { 
+			id = china.10034
+			days = 1
+		}
+	}
+}
+shared_focus = { #未来军队计划
+	id = PRC_embrace_the_future_1
+	icon = GFX_focus_PRC_embrace_the_future_1
+	x = 0
+	y = 1
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_military_satellite_network_upgrade
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_military_satellite_network_upgrade
+	}
+	available = {
+	}
+	completion_reward = {
+		set_technology = { PLA_unmanned_combat_unit_support_company_tech = 1 } #无人作战支援连
+		add_research_slot = 1
+		if = {
+			limit = {
+				has_tech = body_armor6
+			}
+			set_technology = {
+			    body_armor8 = 1
+			}
+			custom_effect_tooltip = JAP_wide_application_of_exoskeletons_tt2
+		hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = exoskeleton_equipment_1
+					amount = 750
+					producer = PRC
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_tech = body_armor6
+				}
+			}
+			set_technology = {
+			    body_armor6 = 1
+			}
+			custom_effect_tooltip = JAP_wide_application_of_exoskeletons_tt
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = exoskeleton_equipment_1
+					amount = 350
+					producer = PRC
+				}
+			}
+		}
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.75
+			uses = 1
+			category = land_doctrine
+		}
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.75
+			uses = 1
+			category = air_doctrine
+		}
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.75
+			uses = 1
+			category = naval_doctrine
+		}
+		set_temp_variable = {
+    	var = income_var_temp
+   		value = -50
+   	    }
+   	    add_income = yes
+   	    unlock_decision_tooltip = PRC_suborbital_vehicle_support #亚轨道飞行器支援决议
+		country_event = { 
+				id = china.10036
+				days = 1
+			}
+			country_event = { 
+				id = china.10028
+				days = 2
+			}
+			country_event = { 
+				id = china.100281
+				days = 3
+			}
+	}
+}
+shared_focus = { #网络安全保障
+	id = PRC_cybersecurity_assurance
+	icon = GFX_focus_PRC_cybersecurity_assurance
+	x = 0
+	y = 1
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_digital_information_support
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_digital_information_support
+	}
+	available = {
+		has_completed_focus = PRC_Secret_Sabotage
+	}
+	completion_reward = {
+   	    unlock_decision_tooltip = PRC_cyber_hacking_and_intrusion #网络黑客入侵决议
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = PRC_security_bureau_dummy
+				add_idea = PRC_cybersecurity_assurance_idea
+			}
+		}
+		country_event = { 
+			id = china.10038
+			days = 1
+		}
+		hidden_effect = {
+			set_variable = {
+				var = PRC_security_bureau_intel_network_gain_factor_dynamic_var #情报网强度增长率
+				value = 0.2
+			}
+			set_variable = {
+				var = PRC_security_bureau_decryption_power_dynamic_var #破译能力
+				value = 100
+			}
+		}	
+	}
+}
+shared_focus = { #不动如山，上善若水
+	id = PRC_unmovable_like_mountain_goodness_like_water
+	icon = GFX_focus_PRC_unmovable_like_mountain_goodness_like_water
+	x = 0
+	y = 1
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_embrace_the_future_1
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_comprehensive_support_unit
+	}
+	prerequisite = {
+		focus = PRC_embrace_the_future_1
+	}
+	prerequisite = {
+		focus = PRC_cybersecurity_assurance
+	}
+	available = {
+	}
+	completion_reward = {
+		custom_effect_tooltip = PRC_unmovable_like_mountain_goodness_like_water_tt
+		add_ideas = PRC_comprehensive_support_and_assurance_system #全方位综合保障支援体系
+		country_event = { 
+			id = china.10039
+			days = 1
+		}
+		hidden_effect = {
+		    scoped_play_song = "pla17"
+		}
+	}
+}
+
+
+shared_focus = { #三军一体化协同建设
+	id = PRC_integrated_joint_construction_of_the_three_services
+	icon = GFX_focus_PRC_integrated_joint_construction_of_the_three_services
+	x = 0
+	y = 5
+	cost = 5
+	available_if_capitulated = yes
+	relative_position_id = PRC_modern_military_reforms
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_dominate_the_skies_1
+	}
+	prerequisite = {
+		focus = PRC_supremacy_above_and_below_waters_1
+	}
+	prerequisite = {
+		focus = PRC_tank_primacy_nat_1
+	}
+	prerequisite = {
+		focus = PRC_unmovable_like_mountain_goodness_like_water
+	}
+	available = {
+	}
+	completion_reward = {
+		every_army_leader = {
+			add_attack = 1 #增加攻击
+ 			add_defense = 1 #增加防御
+			add_logistics = 1 #增加后勤
+ 			add_planning = 1 #增加计划
+			add_skill_level = 1 #增加等级
+			add_trait = {
+				trait = trickster #获得诡谋指挥官
+			}
+			add_trait = {
+				trait = expert_improviser #获得巧变专家
+
+			}
+			add_trait = {
+				trait = integration_air_ground  #获得空地一体化指挥链
+			}
+		}
+		every_navy_leader = {
+			add_attack = 1 #增加攻击
+ 			add_defense = 1 #增加防御
+			add_maneuver = 1 #增加机动
+ 			add_coordination = 1 #增加协同
+			add_skill_level = 1 #增加等级
+			add_trait = {
+				trait = air_controller #获得制空者
+			}
+			add_trait = {
+				trait = flight_deck_manager #获得飞行甲板管控者
+			}
+			add_trait = {
+				trait = dive_bomber #获得俯冲轰炸高手
+			}
+			add_trait = {
+				trait = superior_tactician #获得高级战术专家
+			}
+			add_trait = {
+				trait = spotter #获得索敌追踪者
+			}
+			add_trait = {
+				trait = unified_sea_air_information_chain  #获得空海一体化指挥链
+			}
+			#country_event = { 
+				#id = china.10041
+				#days = 1
+		    #}
+		}
+	}
+}
+shared_focus = { #现代联合参谋部
+	id = PRC_modern_joint_staff_department
+	icon = GFX_focus_PRC_modern_joint_staff_department
+	x = 0
+	y = 1
+	cost = 3
+	available_if_capitulated = yes
+	relative_position_id = PRC_integrated_joint_construction_of_the_three_services
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_integrated_joint_construction_of_the_three_services
+	}
+	available = {
+	}
+	completion_reward = {
+		add_ideas = PRC_modern_joint_staff_department_idea 	#现代联合参谋部精神
+		every_army_leader = {
+			add_unit_leader_trait = expert_delegator
+		}
+		every_army_leader = {
+			add_unit_leader_trait = modern_joint_staff_department
+		}
+		country_event = { 
+			id = china.10042
+			days = 1
+		}	
+	}
+}
+shared_focus = { #龙腾九天
+	id = PRC_dragon_soaring_to_the_skies
+	icon = GFX_focus_PRC_dragon_soaring_to_the_skies
+	x = 0
+	y = 1
+	cost = 1
+	available_if_capitulated = yes
+	relative_position_id = PRC_modern_joint_staff_department
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = PRC_modern_joint_staff_department
+	}
+	available = {
+	}
+	completion_reward = {
+		add_ideas = PRC_roar_of_dragon
+		country_event = { 
+			id = china.10043
+			days = 1
+		}
+		hidden_effect = {
+		    scoped_play_song = "pla13"
+		}
+	}
+}

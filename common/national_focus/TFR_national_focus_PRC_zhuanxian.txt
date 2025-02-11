@@ -1,0 +1,358 @@
+﻿	#和平转线
+focus_tree = {
+	id = PRC_zhuanxian_tree
+	country = {
+		factor = 0
+	}
+	#紧急会议
+	focus = {
+	    id = PRC_jinjihuiyi
+	    icon = GFX_focus_PRC_prepare_the_new_congress
+	    available = {
+			has_country_flag = PRC_tebiebaogao_x
+			}
+		allow_branch = {
+			has_country_flag = PRC_tebiebaogao_x
+			}
+		relative_position_id = PRC_the_final_opportunity
+	    x = 3
+	    y = 0
+		
+	    cost = 1
+		
+		ai_will_do = {
+	    	factor = 10
+	    }
+	    completion_reward = {	
+			country_event = { id = china.5150 days = 3 }	
+			country_event = { id = china.5149 days = 5 }		
+			country_event = { id = china.5148 days = 7 }
+		}
+	}
+
+	focus = {
+	    id = PRC_zzjkuodahuiyi
+	    icon = GFX_focus_PRC_overall_process_peoples_demorcracy
+	    available = {
+			has_country_flag = PRC_tebiebaogao_x
+        }
+		relative_position_id = PRC_jinjihuiyi
+	    x = -2
+	    y = 1
+		
+	    cost = 1
+		prerequisite = {
+			focus = PRC_jinjihuiyi
+		}
+		ai_will_do = {
+	    	factor = 10
+	    }
+	    completion_reward = {
+			add_political_power = 100
+			country_event = { id = china.5151 hours = 10 }
+		}
+	}		
+
+	focus = {
+	    id = PRC_wending_dangzuzhi
+	    icon = GFX_focus_PRC_stabilize_the_political_sphere
+	    available = {
+			has_country_flag = PRC_tebiebaogao_x
+        }
+		relative_position_id = PRC_jinjihuiyi
+	    x = 2
+	    y = 1
+		prerequisite = {
+			focus = PRC_jinjihuiyi
+		}
+	    cost = 1
+		
+		ai_will_do = {
+	    	factor = 10
+	    }
+	    completion_reward = {
+			add_stability = 0.05
+		}
+	}	
+	focus = {
+	    id = PRC_wending_jundui
+	   	icon = {
+			trigger = {
+				PRC = {
+					NOT = {
+						has_country_flag = PRC_wendingjundui_flag
+					}
+				}
+			}
+			value = GFX_focus_PRC_salvage_the_situation
+		} 		
+		icon = {
+			trigger = {
+				PRC = {
+					has_country_flag = PRC_wendingjundui_flag
+				}
+			}
+			value = GFX_focus_PRC_military_restores_order
+		}
+
+		select_effect = {
+			hidden_effect = {
+				country_event = { id = china.5167 days = 2 hours = 1 }
+				country_event = { id = china.5037 days = 5 hours = 1 }
+			}
+		}
+		
+	    available = {
+				has_country_flag = PRC_tebiebaogao_x
+        }
+		relative_position_id = PRC_zzjkuodahuiyi
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = PRC_zzjkuodahuiyi
+		}	
+		prerequisite = {
+			focus = PRC_wending_dangzuzhi
+		}
+	    cost = 1
+		
+		ai_will_do = {
+	    	factor = 10
+	    }
+	    completion_reward = {
+			add_stability = 0.1
+			focus_unlock = yes			
+		}
+	}		
+	focus = {
+	    id = PRC_minzupai
+	    icon = GFX_focus_PRC_put_an_end_to_weakness
+		
+	    available = {
+				has_country_flag = PRC_tebiebaogao_x
+        }
+		allow_branch = {
+			has_country_flag = PRC_wendingjundui_flag
+		}
+		relative_position_id = PRC_wending_jundui
+	    x = -1
+	    y = 1
+		prerequisite = {
+			focus = PRC_wending_jundui
+		}	
+	    cost = 2
+		mutually_exclusive = {
+			focus = PRC_xinyijiedangdaihui
+		}
+		ai_will_do = {
+	    	factor = 5
+			modifier = {
+				factor = 9999
+				has_game_rule = { rule = PRC_ai_behavior option = NATIONALIST_AI_BEHAVIOR }
+			}
+	    }
+	    completion_reward = {
+			custom_effect_tooltip = characters_will_be_retired
+			show_ideas_tooltip = PRC_li_keqiang_hog
+			show_ideas_tooltip = PRC_yang_jiechi_for
+			show_ideas_tooltip = PRC_liu_he_eco
+			show_ideas_tooltip = PRC_zhao_leji_sec
+			show_ideas_tooltip = PRC_guo_shengkun_int
+			hidden_effect = {
+				remove_ideas = PRC_li_keqiang_hog
+				remove_ideas = PRC_yang_jiechi_for
+				remove_ideas = PRC_liu_he_eco
+				remove_ideas = PRC_zhao_leji_sec
+				remove_ideas = PRC_guo_shengkun_int
+			}
+			add_ideas = PRC_zhang_youxia_hog
+			add_ideas = PRC_he_weidong_for
+			add_ideas = PRC_gao_jin_eco
+			add_ideas = PRC_zhang_shengmin_sec
+			add_ideas = PRC_wang_renhua_int
+			add_ideas = PRC_liu_zhenli_def
+			
+			add_popularity = {
+				ideology = totalitarian_socialist
+				popularity = 0.05
+			}	
+			add_popularity = {
+				ideology = nationalist
+				popularity = 0.05
+			}
+			add_war_support = 0.15
+			focus_unlock = yes
+			hidden_effect = {
+				country_event = { id = china.21 hours = 6 }
+				#clr_country_flag = PRC_internal_factions_enabled_flag #removes in events .18 .19 .21
+			}
+		}
+	}	
+	focus = {
+	    id = PRC_xinyijiedangdaihui
+	    icon = GFX_focus_PRC_prepare_the_new_congress
+		
+	    available = {
+				has_country_flag = PRC_tebiebaogao_x
+        }
+		allow_branch = {
+			has_country_flag = PRC_wendingjundui_flag
+		}
+		prerequisite = {
+			focus = PRC_wending_jundui
+		}	
+		mutually_exclusive = {
+			focus = PRC_minzupai
+		}
+		relative_position_id = PRC_wending_jundui
+	    x = 1
+	    y = 1
+		
+	    cost = 1
+		ai_will_do = {
+	    	factor = 5
+			modifier = {
+				factor = 9999
+				OR = {
+					has_game_rule = { rule = PRC_ai_behavior option = NEW_LEFT_AI_BEHAVIOR }
+					has_game_rule = { rule = PRC_ai_behavior option = LIBERAL_AI_BEHAVIOR }
+				}
+			}
+	    }
+	    completion_reward = {
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.05
+			}	
+			add_popularity = {
+				ideology = communist
+				popularity = 0.04
+			}		
+			add_popularity = {
+				ideology = libertarian_socialist
+				popularity = 0.05
+			}	
+			add_popularity = {
+				ideology = totalitarian_socialist
+				popularity = 0.04
+			}
+			add_stability = 0.1
+			add_political_power = 100
+		}
+	}		
+	focus = {
+	    id = PRC_xinzuopai
+	    icon = GFX_focus_PRC_consolidate_hu_chunhua_support
+		
+	    available = {
+				has_country_flag = PRC_tebiebaogao_x
+        }
+		prerequisite = {
+			focus = PRC_xinyijiedangdaihui
+		}	
+		relative_position_id = PRC_xinyijiedangdaihui
+	    x = -1
+	    y = 1
+		mutually_exclusive = {
+			focus = PRC_ziyoupai
+		}
+	    cost = 2
+		ai_will_do = {
+	    	factor = 5
+			modifier = {
+				factor = 9999
+				has_game_rule = { rule = PRC_ai_behavior option = NEW_LEFT_AI_BEHAVIOR }
+			}
+	    }
+	    completion_reward = {
+			add_popularity = {
+				ideology = communist
+				popularity = 0.02
+			}		
+			add_popularity = {
+				ideology = libertarian_socialist
+				popularity = 0.03
+			}	
+			add_popularity = {
+				ideology = totalitarian_socialist
+				popularity = 0.03
+			}
+		}
+	}	
+	focus = {
+	    id = PRC_ziyoupai
+	    icon = GFX_focus_PRC_wang_yang_connections
+		
+	    available = {
+				has_country_flag = PRC_tebiebaogao_x
+        }
+		relative_position_id = PRC_xinyijiedangdaihui
+	    x = 1
+	    y = 1
+		
+	    cost = 2
+		prerequisite = {
+			focus = PRC_xinyijiedangdaihui
+		}	
+		mutually_exclusive = {
+			focus = PRC_xinzuopai
+		}
+		ai_will_do = {
+	    	factor = 5
+			modifier = {
+				factor = 9999
+				has_game_rule = { rule = PRC_ai_behavior option = LIBERAL_AI_BEHAVIOR }
+			}
+	    }
+	    completion_reward = {
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.05
+			}		
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.03
+			}	
+			add_popularity = {
+				ideology = conservative
+				popularity = 0.03
+			}
+		}
+	}	
+	focus = {
+	    id = PRC_dangdaihuijieshu
+	    icon = GFX_focus_PRC_begin_the_session_of_cpc
+		
+	    available = {
+				has_country_flag = PRC_tebiebaogao_x
+        }
+		relative_position_id = PRC_xinyijiedangdaihui
+	    x = 0
+	    y = 2
+		prerequisite = {
+			focus = PRC_xinzuopai
+			focus = PRC_ziyoupai
+		}	
+	    cost = 2
+		ai_will_do = {
+	    	factor = 10
+	    }
+	    completion_reward = {
+			custom_effect_tooltip = PRC_begin_the_session_of_cpc_tt
+			hidden_effect = {
+				if = { 
+					limit = {
+						has_completed_focus = PRC_xinzuopai
+					}
+					country_event = { id = china.5018 hours = 3 }
+				}		
+				if = { 
+					limit = {
+						has_completed_focus = PRC_ziyoupai
+					}
+					country_event = { id = china.19 hours = 3 }
+				}
+			}
+		}
+	}
+}

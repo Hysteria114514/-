@@ -1,0 +1,46 @@
+@tier1 = 30
+@tier2 = 20
+@tier3 = 10
+
+leader_traits = {
+	hos_red_dragon_rider = {
+		random = no
+		political_power_gain = 0.1
+		war_support_factor = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	hos_red_dragon_rider_1 = {
+		name = hos_red_dragon_rider
+		random = no
+		political_power_gain = 0.20
+		war_support_factor = 0.15
+		production_factory_efficiency_gain_factor = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PRC_new_great_helmsman_trait = {
+		random = no
+		stability_factor = 0.025
+		war_support_factor = 0.025
+		party_popularity_stability_factor = 0.05
+		political_power_factor = -0.05
+		production_speed_buildings_factor = 0.07
+		production_factory_max_efficiency_factor = 0.1
+	}
+	PRC_new_chief_designer_trait = {
+		random = no
+		political_power_gain = 0.1
+		income_growth_factor = 0.05
+		production_factory_max_efficiency_factor = 0.1
+		consumer_goods_factor = -0.05
+	}
+	sec_xiism_theorist = {
+        political_power_gain = 0.15
+        production_speed_buildings_factor = 0.10
+        personal_value = 0.10
+        random = no
+    }
+}

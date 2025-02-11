@@ -1,0 +1,2435 @@
+hidden_ideas ={
+	country = {
+		chinese_military_service = {
+			removal_cost = -1
+			picture = PRC_chinese_military_advisors
+			allowed = {
+				always = no
+			}
+			modifier = {
+				conscription_factor = -0.33
+				mobilization_speed = -0.7
+			}
+		}
+	}
+}
+
+
+ideas = {
+	country = {
+
+		
+
+
+
+		weaken_china_1_idea = {#你国药丸
+			picture = weaken_china_1_picture
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.4
+				war_support_factor = -0.4
+				party_popularity_stability_factor = -0.3
+				army_core_defence_factor = -0.1
+				army_core_attack_factor = -0.1
+				political_power_gain = -0.5
+				society_development_monthly = -0.05 #月度社会发展
+				academic_development_monthly = -0.05#月度教育水平发展
+				industrial_development_monthly = -0.05 #月度工业发展
+				farming_development_monthly = -0.05 #月度农业发展
+				military_development_monthly = -0.05 #月度军事发展
+				society_development_monthly = -0.05 #社会发展度
+				business_value_factor = -0.2
+				personal_expense_factor = 0.2
+			}
+		}
+
+		weaken_china_2_idea = {#黄汉，撅起！
+			picture = weaken_china_2_picture
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				army_core_defence_factor = -0.1
+				army_core_attack_factor = -0.1
+				political_power_gain = -0.5
+				compliance_growth_factor = -0.3
+				resistance_growth_factor = 0.3
+				monthly_population = -0.4
+				conscription_factor = -0.3
+
+			}
+		}
+
+		weaken_china_3_idea = {#凯申附体
+			picture = weaken_china_3_picture
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = -0.3
+				army_defence_factor = -0.3
+				max_planning_factor = -0.2
+				planning_speed = -0.2
+				initiative_factor = -0.2
+				army_org_factor = -0.3
+				army_org_regain = -0.3
+				breakthrough_factor = -0.3
+				terrain_penalty_reduction = -0.1
+				
+				reliability_factor = -0.3
+
+			}
+		}
+
+		weaken_china_4_idea = {#工业明猪
+			picture = weaken_china_4_picture
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				line_change_production_efficiency_factor = -0.3
+				industrial_capacity_factory = -0.5
+				production_speed_buildings_factor = -0.5
+				production_factory_efficiency_gain_factor = -0.4
+				production_factory_max_efficiency_factor = -0.3
+			}
+		}
+
+		weaken_china_5_idea = {#不再开源
+			picture = weaken_china_5_picture
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = -0.6
+
+			}
+		}
+
+
+		strength_pdo_1 = { #加强太约1
+			picture = JAP_red_menace
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				global_building_slots = 2
+				production_speed_buildings_factor = 0.5
+				industrial_capacity_factory = 0.5
+				weekly_manpower = 1919
+				conscription = 0.1
+				dig_in_speed_factor = 0.25
+				planning_speed = 0.25
+				supply_consumption_factor = -0.1
+				army_morale_factor = 0.15
+				land_reinforce_rate = 0.02
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				attrition = -0.075
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.25
+				industrial_capacity_dockyard = 0.2
+				political_power_gain = 0.25
+				research_speed_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.3
+				army_fuel_consumption_factor = -0.2
+				air_fuel_consumption_factor = -0.2
+				navy_fuel_consumption_factor = -0.2
+				experience_gain_air_factor = 0.25
+				experience_gain_army_factor = 0.25
+				experience_gain_navy_factor = 0.25
+				air_mission_xp_gain_factor = 0.25
+				experience_gain_army_unit_factor = 0.10
+				experience_gain_navy_unit_factor = 0.10
+				}
+		}
+
+		strength_pdo_2 = { #加强太约2
+			picture = JAP_red_menace
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				global_building_slots = 5
+				production_speed_buildings_factor = 1
+				industrial_capacity_factory = 1
+				weekly_manpower = 114514
+				conscription = 0.2
+				dig_in_speed_factor = 0.5
+				planning_speed = 1
+				supply_consumption_factor = -0.3
+				army_morale_factor = 0.3
+				land_reinforce_rate = 0.05
+				army_core_attack_factor = 0.3
+				army_core_defence_factor = 0.3
+				army_attack_factor = 0.3
+				army_defence_factor = 0.3
+				attrition = -0.5
+				production_factory_max_efficiency_factor = 0.5
+				production_factory_efficiency_gain_factor = 0.75
+				industrial_capacity_dockyard = 0.5
+				political_power_gain = 1
+				research_speed_factor = 0.3
+				production_lack_of_resource_penalty_factor = -0.5
+				army_fuel_consumption_factor = -0.4
+				air_fuel_consumption_factor = -0.4
+				navy_fuel_consumption_factor = -0.4
+				experience_gain_air_factor = 0.5
+				experience_gain_army_factor = 0.5
+				experience_gain_navy_factor = 0.5
+				air_mission_xp_gain_factor = 0.5
+				experience_gain_army_unit_factor = 0.30
+				experience_gain_navy_unit_factor = 0.30
+				air_mission_efficiency = 0.2
+				air_superiority_efficiency = 0.2
+				air_cas_efficiency = 0.2
+				air_range_factor = 0.2
+				air_agility_factor = 0.2
+				air_defence_factor = 0.2
+				air_attack_factor = 0.2
+				naval_damage_factor = 0.2
+				naval_defense_factor = 0.2
+				naval_invasion_penalty = -0.2
+				sortie_efficiency = 0.2
+				naval_coordination = 0.2
+				COMBAT_WIDTH_FACTOR = -0.2
+				CAS_DAMAGE_REDUCTION = 0.1
+				SURRENDER_LIMIT = 1
+			}
+		}
+
+
+		strength_pdo_3 = { #加强太约3
+			picture = JAP_red_menace
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				global_building_slots = 50
+				production_speed_buildings_factor = 2
+				industrial_capacity_factory = 2
+				weekly_manpower = 1919810
+				conscription = 0.4
+				dig_in_speed_factor = 1
+				planning_speed = 2
+				supply_consumption_factor = -0.6
+				army_morale_factor = 0.6
+				land_reinforce_rate = 0.1
+				army_core_attack_factor = 1
+				army_core_defence_factor = 1
+				army_attack_factor = 0.6
+				army_defence_factor = 0.6
+				attrition = -1
+				production_factory_max_efficiency_factor = 0.6
+				production_factory_efficiency_gain_factor = 1.0
+				industrial_capacity_dockyard = 1
+				political_power_gain = 2
+				research_speed_factor = 0.6
+				production_lack_of_resource_penalty_factor = -1
+				army_fuel_consumption_factor = -0.8
+				air_fuel_consumption_factor = -0.8
+				navy_fuel_consumption_factor = -0.8
+				experience_gain_air_factor = 1
+				experience_gain_army_factor = 1
+				experience_gain_navy_factor = 1
+				air_mission_xp_gain_factor = 1
+				experience_gain_army_unit_factor = 0.6
+				experience_gain_navy_unit_factor = 0.6
+				air_mission_efficiency = 0.4
+				air_superiority_efficiency = 0.4
+				air_cas_efficiency = 0.4
+				air_range_factor = 0.4
+				air_agility_factor = 0.4
+				air_defence_factor = 0.4
+				air_attack_factor = 0.4
+				naval_damage_factor = 0.4
+				naval_defense_factor = 0.4
+				naval_invasion_penalty = -0.4
+				sortie_efficiency = 0.4
+				naval_coordination = 0.4
+				COMBAT_WIDTH_FACTOR = -0.4
+				AI_FOCUS_AGGRESSIVE_FACTOR = 1
+				AI_FOCUS_WAR_PRODUCTION_FACTOR = 1
+				SURRENDER_LIMIT = 1
+				CAS_DAMAGE_REDUCTION = 0.4
+				AI_DESIRED_DIVISIONS_FACTOR = 3
+			}
+		}
+
+		strength_pdo_4 = { #知耻而后勇
+			picture = JAP_red_menace
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				global_building_slots = 50
+				production_speed_buildings_factor = 2
+				industrial_capacity_factory = 2
+				weekly_manpower = 1919810
+				conscription = 0.4
+				dig_in_speed_factor = 1
+				planning_speed = 2
+				supply_consumption_factor = -0.6
+				army_morale_factor = 0.6
+				land_reinforce_rate = 0.1
+				army_core_attack_factor = 1
+				army_core_defence_factor = 1
+				army_attack_factor = 0.6
+				army_defence_factor = 0.6
+				attrition = -1
+				production_factory_max_efficiency_factor = 0.6
+				production_factory_efficiency_gain_factor = 1.0
+				industrial_capacity_dockyard = 1
+				political_power_gain = 2
+				research_speed_factor = 0.6
+				production_lack_of_resource_penalty_factor = -1
+				army_fuel_consumption_factor = -0.8
+				air_fuel_consumption_factor = -0.8
+				navy_fuel_consumption_factor = -0.8
+				experience_gain_air_factor = 1
+				experience_gain_army_factor = 1
+				experience_gain_navy_factor = 1
+				air_mission_xp_gain_factor = 1
+				experience_gain_army_unit_factor = 0.6
+				experience_gain_navy_unit_factor = 0.6
+				
+				
+				air_cas_efficiency = 0.4
+				air_range_factor = 0.4
+				air_agility_factor = 0.4
+				air_defence_factor = 0.4
+				air_attack_factor = 0.4
+				naval_damage_factor = 0.4
+				naval_defense_factor = 0.4
+				naval_invasion_penalty = -0.4
+				sortie_efficiency = 0.4
+				naval_coordination = 0.4
+				
+				AI_FOCUS_AGGRESSIVE_FACTOR = 1
+				AI_FOCUS_WAR_PRODUCTION_FACTOR = 1
+				SURRENDER_LIMIT = 1
+				CAS_DAMAGE_REDUCTION = 0.4
+				AI_DESIRED_DIVISIONS_FACTOR = 3
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+		PRC_made_in_china_dummy_idea_edit1 = {
+			picture = GFX_idea_PRC_made_in_china
+			name = PRC_made_in_china_idea
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_nuclear_reactor_factor = 0.25
+				production_speed_energy_farm_factor = 0.25
+				production_speed_power_plant_factor = 0.25
+			}
+		}
+
+		PRC_made_in_china_dummy_idea_edit2 = {
+			picture = GFX_idea_PRC_made_in_china
+			name = PRC_made_in_china_idea
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+
+		PRC_operation_houyi_idea = {
+			picture = PRC_pla
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = 0.15
+			}
+
+			modifier = {
+				max_planning_factor = 0.2
+				amphibious_invasion = 0.2
+				invasion_preparation = -0.5
+				naval_damage_factor = 0.2
+				initiative_factor  = 0.15
+			}
+		}
+
+		PRC_operation_yalu_idea = {
+			picture = PRC_pla
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			targeted_modifier = {
+				tag = KOR
+				attack_bonus_against = 0.15
+			}
+
+			modifier = {
+				max_planning_factor = 0.15
+				coordination_bonus = 0.1
+				army_org_factor = 0.1
+			}
+		}
+
+		PRC_operation_chuge_idea = {
+			picture = PRC_pla
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			targeted_modifier = {
+				tag = RAJ
+				attack_bonus_against = 0.1
+			}
+
+			modifier = {
+				terrain_penalty_reduction = 0.1
+				planning_speed = 0.1
+			}
+		}
+
+		PRC_operation_blind_idea = {
+			picture = PRC_pla
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			targeted_modifier = {
+				tag = AST
+				attack_bonus_against = 0.15
+			}
+
+			modifier = {
+				max_planning_factor = 0.2
+				amphibious_invasion = 0.2
+				invasion_preparation = -0.5
+				naval_damage_factor = 0.25
+				initiative_factor  = 0.15
+				army_speed_factor = 0.15
+			}
+		}
+		strength_pdo = { #加强太约
+			picture = JAP_red_menace
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				global_building_slots = 20
+				production_speed_buildings_factor = 1.5
+				industrial_capacity_factory = 1.5
+				weekly_manpower = 5000
+				conscription = 0.15
+				dig_in_speed_factor = 0.25
+				planning_speed = 0.25
+				supply_consumption_factor = -0.25
+				army_morale_factor = 0.15
+				land_reinforce_rate = 0.02
+				army_core_attack_factor = 0.25
+				army_core_defence_factor = 0.25
+				army_attack_factor = 0.25
+				army_defence_factor = 0.25
+				attrition = -0.075
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.25
+				industrial_capacity_dockyard = 0.2
+				political_power_gain = 0.25
+				research_speed_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.3
+				army_fuel_consumption_factor = -0.40
+				air_fuel_consumption_factor = -0.40
+				navy_fuel_consumption_factor = -0.40
+				experience_gain_air_factor = 0.25
+				experience_gain_army_factor = 0.25
+				experience_gain_navy_factor = 0.25
+				air_mission_xp_gain_factor = 0.25
+				experience_gain_army_unit_factor = 0.10
+				experience_gain_navy_unit_factor = 0.10
+				}
+		}
+
+		PRC_pla_idea_1 = { #人民解放军陆军
+			picture = PRC_pla
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_army_factor = 0.15 #陆军经验增长
+				military_development_monthly = 0.05 #月度军事发展
+				army_attack_factor = 0.1 #陆军师攻击
+				army_defence_factor = 0.1 #陆军师防御
+							 
+			}
+		}
+
+		PRC_pla_dummy_idea = { #人民解放军陆军
+			picture = PRC_pla
+			name = PRC_pla_idea
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
+		PRC_advanced_joint_logistics_support_system_idea = { #先进联勤保障体系
+			picture = PRC_pla
+			name = PRC_pla_idea
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_strength_factor = 0.2  
+				army_org_factor = 0.2
+				army_org_regain = 0.2
+				attrition = -0.4
+				supply_consumption_factor = -0.2 
+				no_supply_grace = 240
+			}
+		}
+
+		PRC_advanced_joint_logistics_support_system_idea_1 = { #发射军事卫星
+			picture = PRC_pla
+			name = PRC_pla_idea
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				max_planning_factor = 0.05 #计划加成上限系数
+				army_speed_factor = 0.05 #陆军师速度
+				recon_factor = 0.05 #侦察
+				army_attack_factor = 0.05 #陆军师攻击
+			}
+		}
+
+		PRC_advanced_joint_logistics_support_system_idea_2 = { #发射军事卫星
+			picture = PRC_pla
+			name = PRC_plaaf_1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				ground_attack_factor = 0.05 #对地攻击系数
+						
+							  
+			}
+		}
+
+		PRC_digital_information_support_1 = { #数字化信息支援
+			picture = PRC_pla
+			name = PRC_pla_idea
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.1 #陆军师组织度
+				recon_factor = 0.1 #侦察
+				initiative_factor = 0.1 #主动性
+			}
+		}
+
+		PRC_digital_information_support_2 = { #数字化信息支援
+			picture = PRC_pla
+			name = PRC_plan_dummy_1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				positioning = 0.3 #阵位
+				naval_coordination = 0.2 #舰队协同性
+				spotting_chance = 0.2 #索敌速度
+			}
+		}
+
+		PRC_digital_information_support_3 = { #数字化信息支援
+			picture = PRC_pla
+			name = PRC_plaaf_1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				air_mission_efficiency = 0.2 #空军任务效率
+				air_superiority_efficiency = 0.2 #制空权效率
+				air_intercept_efficiency = 0.2 #空军拦截效率
+				air_cas_efficiency = 0.2 #空中支援任务效率
+			}
+		}
+
+		PRC_suborbital_vehicle_support_idea = { #亚轨道飞行器支援
+			picture = PRC_suborbital_vehicle_support
+			name = PRC_suborbital_vehicle_support_idea 
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				air_mission_efficiency = 1 #空军任务效率
+				air_superiority_efficiency = 1 #制空权效率
+				air_intercept_efficiency = 1 #空军拦截效率
+				air_cas_efficiency = 1 #空中支援任务效率
+			}
+		}
+
+		PRC_cyber_hacking_and_intrusion_idea= { #黑客入侵
+			picture = PRC_cyber_hacking_and_intrusion
+			name = PRC_cyber_hacking_and_intrusion_idea
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.2 
+			}
+		}
+
+		PRC_comprehensive_support_and_assurance_system = { #全方位综合保障支援体系
+			picture = PRC_comprehensive_support_and_assurance_system 
+			name = PRC_comprehensive_support_and_assurance_system 
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				reliability_factor = 0.2 #可靠性加成
+				terrain_penalty_reduction = 0.3 #地形惩罚降低
+				navy_org_factor = 0.2 #海军组织度
+				repair_speed_factor = 0.2 #船只修理速度
+				critical_receive_chance= -0.4 #遭受致命一击的几率
+				naval_critical_effect_factor = -0.4 #持续致命一击的效果
+				air_range_factor = 0.2 #空军最大航程
+				army_fuel_consumption_factor = -0.15 #陆军燃料使用
+				navy_fuel_consumption_factor = -0.4 #海军燃料使用
+				air_fuel_consumption_factor = -0.4 #空军燃料使用
+			}
+			equipment_bonus = {
+				motorized_equipment = { #卡车
+					build_cost_ic = -0.15 instant = yes 
+				}
+				train_equipment = { #火车
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+		}
+		PRC_modern_joint_staff_department_idea = { #现代联合参谋部
+			picture = PRC_modern_joint_staff_department_idea
+			name = PRC_modern_joint_staff_department_idea
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				air_doctrine_cost_factor = -0.15 #空军学说花费
+				land_doctrine_cost_factor = -0.15 #陆军学说花费
+				naval_doctrine_cost_factor = -0.15 #海军学说花费
+				initiative_factor = 0.2 #主动性
+				recon_factor = 0.2 #侦察
+				naval_coordination= 0.2 #舰队协同性
+				positioning = 0.2 #阵位
+				air_attack_factor = 0.2 #对空攻击
+				ground_attack_factor= 0.2 #对地攻击
+				air_power_projection_factor = 0.2 #跨空域力量投射修正系数
+			}
+		}
+		PRC_roar_of_dragon = { #龙腾九天
+			picture = PRC_roar_of_dragon 
+			name = PRC_roar_of_dragon  
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_core_attack_factor = 0.2 #陆军师核心领土攻击
+				army_core_defence_factor= 0.2 #陆军师核心领土防御
+				unit_upkeep_attrition_factor= 0.05 #部队维护费
+				army_attack_factor = 0.2 #陆军攻击
+				army_defence_factor = 0.2 #陆军防御
+				air_attack_factor = 0.2 #对空攻击
+				air_defence_factor = 0.2 #空中防御
+				naval_damage_factor  = 0.2 #海军伤害
+				naval_defense_factor = 0.2 #海军防御
+				research_speed_factor = 0.1 #研究速度
+				
+			}
+		}
+		PRC_pla_fight_for_people = { #人民军队为人民
+			name = PRC_chinese_communist_party_idea
+			picture = PRC_chinese_communist_party
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = 0.01 #每周稳定度增长
+				society_development_monthly = 0.01 #月度社会发展
+			}
+		}
+		PRC_nervous_but_lively = { #团结紧张、严肃活泼
+			name = PRC_chinese_communist_party_idea
+			picture = PRC_chinese_communist_party
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_weekly = 0.01 #每周战争支持度增长
+				military_development_monthly = 0.01 #月度军事发展
+			}
+		}
+		PRC_plaaf = { #人民解放军空军
+			picture = USB_air_force_domination
+			name = PRC_plaaf_1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+
+			}
+		}
+
+		PRC_plaaf_1 = { #雄鹰出击
+			picture = USB_air_force_domination
+			name = PRC_plaaf_1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				air_mission_efficiency = 0.1
+				air_attack_factor = 0.1
+				air_agility_factor = 0.1
+				air_defence_factor = 0.1
+			}
+		}
+
+		PRC_Early_Warning_System = { #卓越雷达预警体系
+			picture = USB_air_force_domination
+			name = PRC_plaaf_1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				air_superiority_detect_factor = 0.2
+				naval_strike_targetting_factor = 0.2
+				air_defence_factor = 0.2
+			}
+		}
+		PRC_trust_in_the_pilot = { #无人机战争
+			picture = USB_air_force_domination
+			name = PRC_plaaf_1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				ground_attack_factor = 0.2
+				naval_strike_attack_factor = 0.2
+				air_defence_factor = 0.2
+			}
+		}
+		PRC_streamline_aircraft_production = { #飞机生产流水线
+			picture = USB_air_force_domination
+			name = PRC_plaaf_1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.2
+				production_factory_efficiency_gain_factor = 0.2
+			}
+		}
+		PRC_integrated_Reconnaissance_Strike_UAV = { #无人机察打一体化
+			picture = USB_air_force_domination
+			name = PRC_plaaf_1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				ground_attack_factor = 0.2
+				air_agility_factor = 0.2
+				air_defence_factor = 0.2
+			}
+		}
+		PRC_dominate_the_skies = { #统御天空，俯瞰大地
+			picture = USB_air_force_domination
+			name = PRC_plaaf_1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				air_mission_efficiency = 0.2
+				air_attack_factor = 0.2
+				air_agility_factor = 0.2
+				air_superiority_detect_factor = 0.2
+				army_bonus_air_superiority_factor =  0.4
+			}
+		}
+
+		PRC_electronic_warfare_system_jamming = { #电子战干扰
+			picture = PRC_electronic_warfare_system_jamming
+			name = PRC_electronic_warfare_system_jamming
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				air_attack_factor = -0.2 #空中攻击
+				air_defence_factor = -0.2 #空中防御
+				naval_damage_factor = -0.2 #海军攻击
+				naval_defense_factor = -0.2 #海军防御
+				army_attack_factor = -0.2 #陆军攻击
+				army_defence_factor = -0.2 #陆军防御
+				army_speed_factor =-0.2 #陆军师速度
+				army_org_factor = -0.2 #陆军组织度
+				initiative_factor = -0.2 #主动性
+				land_reinforce_rate = -0.2  #增援率
+			}
+		}
+
+		PLA_experience = { #朱日和实战演习
+			    picture = generic_victors_of_ww1
+				allowed = { always = yes }
+				available = { 
+     			   }
+        		   modifier = {
+					experience_gain_army_unit = 99999
+					experience_gain_navy_unit = 99999
+     		      }
+   		   }
+
+		PRC_streamline_aircraft_production_1_idea = { #飞机流水线生产
+			picture = SOV_stakhanovite_movement
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.2
+				production_factory_efficiency_gain_factor = 0.2
+			}
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.2 instant = yes
+				}
+				medium_plane_airframe = {
+					build_cost_ic = -0.2 instant = yes
+				}
+				large_plane_airframe = {
+					build_cost_ic = -0.2 instant = yes
+				}
+				small_plane_cas_airframe = {
+					build_cost_ic = -0.2 instant = yes
+				}
+				small_plane_naval_bomber_airframe = {
+					build_cost_ic = -0.2 instant = yes
+				}
+				cv_small_plane_cas_airframe = {
+					build_cost_ic = -0.2 instant = yes
+				}
+				cv_small_plane_naval_bomber_airframe = {
+					build_cost_ic = -0.2 instant = yes
+				}
+				small_plane_suicide_airframe = {
+					build_cost_ic = -0.2 instant = yes
+				}
+				cv_small_plane_suicide_airframe = {
+					build_cost_ic = -0.2 instant = yes
+				}
+				medium_plane_fighter_airframe = {
+					build_cost_ic = -0.2 instant = yes
+				}
+				medium_plane_scout_plane_airframe = {
+					build_cost_ic = -0.2 instant = yes
+				}
+				large_plane_maritime_patrol_plane_airframe = {
+					build_cost_ic = -0.2 instant = yes
+				}
+
+			}
+		}
+
+		PRC_plan_dummy = { #人民解放军海军
+			picture = USB_air_force_domination
+			name = PRC_plan_dummy_1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
+		
+		PRC_plan_dummy_1 = { #先进海军
+			picture = USB_air_force_domination
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_navy_factor  = 0.15 #海军经验增长
+				navy_screen_attack_factor = 0.2 #屏卫舰攻击
+				navy_screen_defence_factor = 0.2 #屏卫舰防御
+				naval_damage_factor = 0.2 #海军伤害
+				naval_defense_factor = 0.2 #海军防御
+			}
+		}
+
+		PRC_resurrect_the_battleship_idea = { #武库舰计划
+			picture = USB_air_force_domination
+			name = PRC_plan_dummy_1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				navy_capital_ship_attack_factor = 0.2  #主力舰攻击
+				navy_capital_ship_defence_factor = 0.2  #主力舰装甲
+								  
+			}
+		}
+		
+		PRC_rain_fire_from_above = { #精英海军陆战队
+			picture = USB_air_force_domination
+			name = PRC_plan_dummy_1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				amphibious_invasion = 0.3
+				naval_invasion_prep_speed = 0.3
+			}
+		}
+
+		pay_attention_to_naval_production = { #重视海军生产
+			picture = SOV_stakhanovite_movement
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_dockyard_factor  = 0.2 #船坞建造速度
+				industrial_capacity_dockyard  = 0.2 #船坞产出
+			}
+			equipment_bonus = {
+				submarine = { #潜艇
+					build_cost_ic = -0.2 instant = yes 
+				}
+				destroyer = { #小型护卫舰
+					build_cost_ic = -0.2 instant = yes
+				}
+				light_cruiser = { #护卫舰
+					build_cost_ic = -0.2 instant = yes
+				}
+				heavy_cruiser = { #驱逐舰
+					build_cost_ic = -0.2 instant = yes
+				}
+				carrier = { #航母
+					build_cost_ic = -0.2 instant = yes
+				}
+				convoy = { #运输船
+					build_cost_ic = -0.2 instant = yes
+				} 
+				floating_harbor = { #浮动港口
+					build_cost_ic = -0.2 instant = yes
+				}
+				battleship = { #导弹巡洋舰
+					build_cost_ic = -0.4 instant = yes
+				}
+			}
+		}
+
+		PRC_carrier_primacy = { #强化航母打击
+			picture = USB_air_force_domination
+			name = PRC_plan_dummy_1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				navy_carrier_air_targetting_factor = 0.2 #舰载机瞄准
+				sortie_efficiency = 0.2 #出击效率
+				spotting_chance = 0.2 #索敌速度
+			}
+		}
+
+		PRC_rain_fire_from_above_1 = { #先进两栖作战体系
+			picture = USB_air_force_domination
+			name = PRC_plan_dummy_1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				naval_invasion_penalty  = -0.2 #登陆惩罚
+				naval_invasion_capacity  = 200 #登陆作战上限
+			}
+		}
+		
+		PRC_next_generation_warships = { #次世代战舰
+			picture = USB_air_force_domination
+			name = PRC_plan_dummy_1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				naval_equipment_research = 0.1 #海军研究速度
+									  
+										  
+										  
+			}
+		}
+		
+		PRC_supremacy_above_and_below_waters_idea = { #海上海下，唯我独尊
+			picture = USB_air_force_domination
+			name = PRC_plan_dummy_1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			modifier = {
+				navy_screen_attack_factor = 0.3 #屏卫舰攻击
+				navy_screen_defence_factor = 0.3 #屏卫舰防御
+				navy_capital_ship_attack_factor = 0.3 #主力舰攻击
+				navy_capital_ship_defence_factor = 0.3 #主力舰装甲
+				naval_coordination = 0.3 #舰队协同性
+			}
+		}
+		
+		PRC_expand_the_thunder_gods_idea = { #瞄准实战，开展演习
+			picture = USB_air_force_domination
+			name = PRC_pla_idea
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			modifier = {
+				experience_loss_factor = -0.4
+				army_org_factor = 0.2
+				army_morale_factor = 0.2
+			}
+		}
+		
+		PRC_iron_great_wall_idea = { #钢铁长城
+			picture = PRC_pla
+			name = PRC_pla_idea
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_armor_attack_factor = 0.1
+				army_armor_defence_factor = 0.1
+				breakthrough_factor = 0.1
+			}
+		}
+		
+		PRC_mobile_warfare_nat_idea = { #其疾如风
+			picture = PRC_pla
+			name = PRC_pla_idea
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_speed_factor = 0.1
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+			} 
+		}
+		
+		PRC_general_trait_idea = { #将领再培训
+			picture = PRC_pla
+			name = PRC_pla_idea
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				planning_speed = 0.3
+				max_planning = 0.3
+				initiative_factor = 0.3
+				land_reinforce_rate = 0.3
+			} 
+		}
+		
+		PRC_artillery_informatization_idea = { #信火一体体系建设
+			picture = PRC_pla
+			name = PRC_pla_idea
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				recon_factor = 0.2
+			} 
+		}
+		
+		PRC_artillery_informatization_idea_2 = { #信火一体体系建设
+			picture = USB_air_force_domination
+			name = PRC_plaaf_1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				ground_attack_factor = 0.2
+			}
+		}
+		
+		PRC_infantry_primacy_nat_idea = { #优质战士，钢铁洪流
+			picture = PRC_pla
+			name = PRC_pla_idea
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				training_time_factor = 0.2 #训练时间
+				xp_gain_army_unit= 0.2 #陆军师经验获取
+				army_speed_factor = 0.2 #陆军师速度
+				army_attack_factor = 0.2 #陆军师攻击
+				army_defence_factor = 0.2 #陆军师防御
+				breakthrough_factor = 0.2 #突破
+				army_armor_attack_factor = 0.2 #装甲师攻击
+				army_armor_defence_factor = 0.2 #装甲师防御
+				battalion_upkeep_factor = -0.1 #陆军维护费
+			}
+		}
+		PRC_insufficient_understanding_of_modern_warfare_idea4 = {
+			name = PRC_insufficient_understanding_of_modern_warfare_idea
+			picture = PRC_insufficient_understanding_of_modern_warfare_idea
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available =  {
+				has_war_with = CHI
+				has_war = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_defence_factor = -0.1
+				air_cas_efficiency = -0.1
+				experience_loss_factor = 0.05
+			}
+		}
+
+		PRC_insufficient_understanding_of_modern_warfare_idea5 = {
+			name = PRC_insufficient_understanding_of_modern_warfare_idea
+			picture = PRC_insufficient_understanding_of_modern_warfare_idea
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available =  {
+				has_war_with = CHI
+				has_war = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				air_cas_efficiency = -0.1
+				experience_loss_factor = 0.025
+			}
+		}
+
+		PRC_chinese_exceptionalism_idea = {
+			picture = PRC_chinese_exceptionalism_idea
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.1
+				war_support_weekly = 0.002
+				army_attack_factor = 0.1
+				army_org_regain = 0.15
+					
+				stability_factor = -0.1
+				non_core_manpower = -0.75
+				production_factory_efficiency_gain_factor = 0.15
+				society_development_monthly = 0.005
+			}
+		}
+
+
+		PRC_socialist_chinese_dream_idea1 = {
+			picture = PRC_socialist_chinese_dream_idea
+			name = PRC_socialist_chinese_dream_idea
+			allowed = { tag = PRC }
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.04
+				academic_development_monthly = 0.005
+				production_factory_max_efficiency_factor = 0.05
+				industrial_capacity_factory = 0.05
+				income_growth_factor = 0.075
+				business_value_factor = 0.15
+				personal_value_factor = 0.15
+			}
+		}
+		PRC_blockade_of_trade_routes_idea = {
+			picture = PRC_blockade_of_trade_routes
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available =  {
+				has_war_with = CHI
+				has_war = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.15
+				production_speed_buildings_factor = -0.1
+				income_growth_factor = -0.2
+				business_value_factor = -0.15
+				industrial_development_monthly = -0.05
+				poverty_development_monthly = -0.025
+				society_development_monthly = -0.025
+			}
+		}
+		PRC_blockade_of_trade_routes_idea2 = {
+			name = PRC_blockade_of_trade_routes_idea
+			picture = PRC_blockade_of_trade_routes
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available =  {
+				has_war_with = CHI
+				has_war = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.075
+				production_speed_buildings_factor = -0.05
+				income_growth_factor = -0.1
+				business_value_factor = -0.075
+				industrial_development_monthly = -0.025
+				poverty_development_monthly = -0.015
+				society_development_monthly = -0.015
+			}
+		}
+		PRC_kmt_anti_imperialist_nationalism_idea = {
+			name = PRC_kmt_anti_imperialist_nationalism_idea
+			picture = PRC_kmt_anti_imperialist_nationalism_idea
+			allowed = {
+				original_tag = PRC
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = 0.065
+				defense_bonus_against = 0.065
+			}	
+			targeted_modifier = {
+				tag = RAJ
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}	
+			targeted_modifier = {
+				tag = AST
+				attack_bonus_against = 0.035
+				defense_bonus_against = 0.035
+			}	
+			targeted_modifier = {
+				tag = CHI
+				attack_bonus_against = 0.025
+				defense_bonus_against = 0.025
+			}
+			modifier = {
+				war_stability_factor = 0.1
+				war_support_factor = 0.05
+				army_morale_factor = 0.05
+				army_org_factor = 0.025
+			}
+		}
+		PRC_kmt_anti_imperialist_nationalism_idea = {
+			name = PRC_kmt_anti_imperialist_nationalism_idea
+			picture = PRC_kmt_anti_imperialist_nationalism_idea
+			allowed = {
+				original_tag = PRC
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = 0.065
+				defense_bonus_against = 0.065
+			}	
+			targeted_modifier = {
+				tag = RAJ
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}	
+			targeted_modifier = {
+				tag = AST
+				attack_bonus_against = 0.035
+				defense_bonus_against = 0.035
+			}	
+			targeted_modifier = {
+				tag = CHI
+				attack_bonus_against = 0.025
+				defense_bonus_against = 0.025
+			}
+			modifier = {
+				war_stability_factor = 0.1
+				war_support_factor = 0.05
+				army_morale_factor = 0.05
+				army_org_factor = 0.025
+			}
+		}		
+		
+		PRC_air_navy_coordination_idea = {
+			picture = USB_air_force_domination
+			name = PRC_plan_dummy_1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				spotting_chance = 0.15
+				navy_carrier_air_agility_factor = 0.1
+				sortie_efficiency = 0.15
+			}
+		}
+				
+
+		
+		TFR_PRC_space_idea1 = {
+			picture = GFX_idea_PRC_chinese_space_age
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			remove_cost = -1
+			modifier = {
+				political_power_factor = 0.025
+				industrial_capacity_dockyard = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		TFR_PRC_space_idea2 = {
+			picture = GFX_idea_PRC_chinese_space_age
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			remove_cost = -1
+			modifier = {
+				local_resources_factor = 0.05
+				income_growth_factor = 0.1
+				industrial_capacity_factory = 0.075
+				consumer_goods_factor = 0.1
+			}
+		}
+		TFR_PRC_space_idea3 = {
+			picture = GFX_idea_PRC_chinese_space_age
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			remove_cost = -1
+			modifier = {
+				society_development_monthly = 0.01
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		TFR_PRC_space_idea4 = {
+			picture = GFX_idea_PRC_chinese_space_age
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			remove_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				industrial_development_monthly = 0.01
+				expense_growth_factor = 0.05
+			}
+		}
+		TFR_PRC_space_idea5 = {
+			picture = GFX_idea_PRC_chinese_space_age
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			remove_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_factory = 0.075
+			}
+		}
+		TFR_PRC_space_idea6 = {
+			picture = GFX_idea_PRC_chinese_space_age
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			remove_cost = -1
+			modifier = {
+				supply_node_range = 0.15
+				business_value_factor = 0.05
+				expense_growth_factor = 0.1
+			}
+		}
+		TFR_PRC_space_idea7 = {
+			picture = GFX_idea_PRC_chinese_space_age
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			remove_cost = -1
+			modifier = {
+				research_speed_factor = 0.35
+				industrial_development_monthly = 0.01
+				production_factory_max_efficiency_factor = 0.1
+				expense_growth_factor = -0.15
+			}
+		}
+		TFR_PRC_space_idea8 = {
+			picture = GFX_idea_PRC_chinese_space_age
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			remove_cost = -1
+			modifier = {
+				political_power_factor = 0.025
+				local_resources_factor = 0.15
+				business_value_factor = 0.1
+				expense_growth_factor = 0.1
+			}
+		}
+		TFR_PRC_space_idea9 = {
+			picture = GFX_idea_PRC_chinese_space_age
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			remove_cost = -1
+			modifier = {
+				political_power_factor = 0.05
+				research_speed_factor = 0.05
+				production_speed_infrastructure_factor = 0.15
+			}
+		}
+		TFR_PRC_space_idea10 = {
+			picture = GFX_idea_PRC_chinese_space_age
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			remove_cost = -1
+			modifier = {
+				research_speed_factor = -0.25
+				expense_growth_factor = 0.15
+			}
+		}
+		TFR_PRC_space_idea11 = {
+			picture = GFX_idea_PRC_chinese_space_age
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			remove_cost = -1
+			modifier = {
+				air_superiority_efficiency = 0.1
+				initiative_factor = 0.15
+				business_value_factor = 0.1
+				income_growth_factor = 0.05
+			}
+		}
+		TFR_PRC_space_idea12 = {
+			picture = GFX_idea_PRC_chinese_space_age
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			remove_cost = -1
+			modifier = {
+				research_speed_factor = 0.1
+				political_power_factor = 0.02
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		TFR_PRC_space_idea13 = {
+			picture = GFX_idea_PRC_chinese_space_age
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			remove_cost = -1
+			modifier = {
+				expense_growth_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+				local_resources_factor = 0.1
+			}
+		}
+		TFR_PRC_space_idea14 = {
+			picture = GFX_idea_PRC_chinese_space_age
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			remove_cost = -1
+			modifier = {
+				production_lack_of_resource_penalty_factor = -0.15
+				consumer_goods_factor = -0.1
+				supply_factor = 0.1
+				income_growth_factor = 0.05
+			}
+		}
+		TFR_PRC_space_idea15 = {
+			picture = GFX_idea_PRC_chinese_space_age
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			remove_cost = -1
+			modifier = {
+				out_of_supply_factor = -0.2
+				production_factory_efficiency_gain_factor = 0.1
+				political_power_factor = 0.03
+			}
+		}
+		TFR_PRC_space_idea16 = {
+			picture = GFX_idea_PRC_chinese_space_age
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			remove_cost = -1
+			modifier = {
+				farming_development_monthly = 0.03
+				consumer_goods_factor = -0.15
+				society_development_monthly = 0.01
+				income_growth_factor = 0.05
+			}
+		}
+		TFR_PRC_space_idea17 = {
+			picture = GFX_idea_PRC_chinese_space_age
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			remove_cost = -1
+			modifier = {
+				research_speed_factor = 0.2
+				expense_growth_factor = 0.1
+			}
+		}
+		TFR_PRC_space_idea18 = {
+			picture = GFX_idea_PRC_chinese_space_age
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			remove_cost = -1
+			modifier = {
+				business_value_factor = 0.15
+				industrial_capacity_factory = 0.1
+				local_resources_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		TFR_PRC_space_idea19 = {
+			picture = GFX_idea_PRC_chinese_space_age
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			remove_cost = -1
+			modifier = {
+				communist_drift = 0.2
+			}
+		}
+		TFR_PRC_space_idea20 = {
+			picture = GFX_idea_PRC_chinese_space_age
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			remove_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				expense_growth_factor = 0.025
+				research_speed_factor = 0.05
+			}
+		}
+		
+		ETH_total_companion = {
+			picture = GFX_idea_ETH_total_companion
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+				
+			modifier = {
+				political_power_gain = -0.3
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.3
+				income_growth_factor = 0.2
+			}
+		}	
+		
+		JAP_chinese_sanctions_idea = { #中国制裁（日本）
+			picture = JAP_chinese_sanctions
+			allowed = { 
+				always = no 
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = -0.05
+				production_speed_buildings_factor = -0.05
+				stability_factor = -0.05
+				income_growth_factor = -0.05
+				poverty_development_monthly = -0.05
+				trade_opinion_factor = -0.40
+			}
+		}
+
+		JAP_chinese_spy_idea = { #被情报渗透
+			picture = JAP_chinese_spy
+			allowed = { 
+				always = no 
+			}
+			removal_cost = -1
+			
+			modifier = {
+                political_power_factor = -0.05
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				civilian_intel_to_others = 10
+				navy_intel_to_others = 10
+				army_intel_to_others = 10
+				airforce_intel_to_others = 10
+			}
+		}
+		
+		JAP_total_embargo_idea = {
+			picture = ETH_total_embargo
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.2
+				production_speed_buildings_factor = -0.15
+				production_factory_efficiency_gain_factor = -0.15
+				stability_factor = -0.15
+				war_support_factor = -0.15
+				income_growth_factor = -0.25
+				poverty_development_monthly = -0.25
+				industrial_development_monthly = -0.25
+				society_development_monthly = -0.25
+				business_value_factor = -0.25
+			}	
+		}
+
+		PRC_security_bureau_dummy = { #显示用国安局
+			picture = PRC_security_bureau
+			name = PRC_security_bureau_idea
+			allowed = { 
+				always = no 
+			}
+			removal_cost = -1
+			
+			modifier = {
+
+
+			}
+		}
+
+		PRC_security_bureau_idea = { #国安局
+			picture = PRC_security_bureau
+			name = PRC_security_bureau_idea 
+			allowed = { 
+				always = no 
+			}
+			removal_cost = -1
+			
+			modifier = {
+				operative_slot = 2
+				civilian_intel_factor = 0.10
+				army_intel_factor = 0.10
+				navy_intel_factor = 0.10
+				airforce_intel_factor = 0.10
+				own_operative_detection_chance = -0.05
+				enemy_operative_capture_chance_factor = 1.00
+			}
+		}
+
+		PRC_cybersecurity_assurance_idea = { #网络安全保障
+			picture = PRC_security_bureau
+			name = PRC_security_bureau_idea 
+			allowed = { 
+				always = no 
+			}
+			removal_cost = -1
+			
+			modifier = {
+				intel_network_gain_factor = 0.2
+				decryption_power = 100
+			}
+		}
+
+		eadi_command_sys_idea = {
+			picture = eadi_command_sys
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.2
+				army_defence_factor = 0.2
+				army_org_factor = 0.2
+				breakthrough_factor = 0.20
+				army_strength_facto = 0.2
+				supply_consumption_factor = -0.15
+
+			}
+		}
+
+		eadi_modernized_army_idea = {
+			picture = eadi_modernized_army
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = 0.10
+				war_support_factor = 0.20
+				stability_factor = 0.2
+				initiative_factor = 0.1
+				military_development_monthly = 0.1
+			}
+		}
+
+		PRC_Rapid_Deploy_idea = {
+			picture = PRC_Rapid_Deploy
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				planning_speed = 1
+				amphibious_invasion = 1
+			}
+
+		}
+
+		
+	}
+	theorist_minister = {
+		PRC_li_zuocheng = {
+			picture = Li_Zuocheng
+			
+			visible = {
+				OR = {
+				has_completed_focus = PRC_reconcile_with_militarists
+				has_completed_focus = PRC_modern_military_reforms
+			    }
+			}
+			
+			allowed = {
+				original_tag = PRC
+			}
+			
+			allowed_to_remove = {
+				always = no
+			}
+			traits = {
+				Chief_of_the_Joint_Staff 
+				army_chief_offensive_3
+			}
+		}
+	}
+	#军官团精神
+	army_spirit = {	
+    	army_for_people_idea = { #人民军队
+			ledger = army
+			picture = army_for_people
+			visible = {
+					tag = PRC
+			}
+			available = {
+		        has_completed_focus = PRC_pla_fight_for_people
+	        }
+			modifier = {
+				conscription_factor = 0.3 #适役人口系数
+				pocket_penalty = -0.5 #包围惩罚
+				land_doctrine_cost_factor = -0.1 #陆军学说花费
+				experience_gain_army_factor = 0.2 #陆军经验增长
+				grant_medal_cost_factor = -0.8 #授勋花费
+			}
+			ai_will_do = {
+				base = 1
+			}
+		}
+	}
+
+	academy_spirit = {
+		nervous_but_lively_idea = { #团结紧张、严肃活泼
+			ledger = army
+			picture = nervous_but_lively
+			visible = {
+					tag = PRC
+			}
+			available = {
+		        has_completed_focus = PRC_nervous_but_lively
+	        }
+			modifier = {
+				custom_modifier_tooltip = bold_attack_spirit_tt_1
+				custom_modifier_tooltip = tenacious_defense_spirit_tt_1
+				custom_modifier_tooltip = meticulous_preparation_spirit_tt_1
+				custom_modifier_tooltip = meticulous_preparation_spirit_tt_2
+				army_strength_factor = 0.1 #hp
+				army_org_factor = 0.1 #陆军组织
+				initiative_factor = 0.1 #主动性
+			}
+			ai_will_do = {
+				base = 1
+			}
+		}
+	}
+
+	division_command_spirit = {
+		artillery_informatization_idea = { #信火一体
+			ledger = army
+			picture = artillery_informatization
+			visible = {
+					tag = PRC
+			}
+			available = {
+		        has_completed_focus = PRC_artillery_informatization
+	        }
+			modifier = {
+				army_org_factor = 0.2 #组织度
+				recon_factor = 0.2 #侦察
+				ground_attack_factor = 0.2 #对地攻击系数
+				intel_from_combat_factor = 1 #从战斗获取的情报
+			}
+			equipment_bonus = {
+			modern_tank_artillery_chassis = {
+				soft_attack = 0.3
+				hard_attack = 0.3
+				build_cost_ic = -0.2 instant = yes
+			}
+			}
+			ai_will_do = {
+				base = 1
+			}
+		}
+	}
+
+	naval_academy_spirit = {
+		dalian_navy_idea = { #献身，严格，图强，求实
+			ledger = navy
+			picture = dalian_navy
+			visible = {
+					tag = PRC
+			}
+	        available = {
+		        has_completed_focus = PRC_a_blue_water_navy_1
+	        }
+			modifier = {
+				custom_modifier_tooltip = instilled_aggression_spirit_tt_1
+				custom_modifier_tooltip = calculated_restraint_spirit_tt_1
+				custom_modifier_tooltip = signals_training_spirit_tt_1
+				custom_modifier_tooltip = signals_training_spirit_tt_2
+				naval_critical_score_chance_factor = 0.2
+				naval_hit_chance = 0.2
+				naval_torpedo_hit_chance_factor = 0.2
+				experience_gain_navy = 0.5
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+	}
+
+	navy_spirit = {
+		marching_toward_the_deep_blue_idea = { #走向深蓝
+			ledger = navy
+			picture = marching_toward_the_deep_blue
+			visible = {
+					tag = PRC
+			}
+			available = {
+		        has_completed_focus = PRC_resurrect_the_battleship_1
+	        }
+			research_bonus = {
+				naval_equipment = 0.20
+			}
+			modifier = {
+				navy_max_range_factor = 0.5 #海军最大航程
+				experience_gain_navy_factor = 0.15 #海军经验增长
+			}
+			ai_will_do = {
+				base = 1
+			}
+		}
+	}
+	naval_command_spirit = {
+		dual_carrier_strike_group_idea = { #双航母战斗群
+			ledger = navy
+			picture = dual_carrier_strike_group
+			visible = {
+					tag = PRC
+			}
+			available = {
+		        has_completed_focus = PRC_carrier_primacy_1
+	        }
+			modifier ={
+				spotting_chance  = 0.2 #索敌速度
+				positioning = 0.2 #阵位
+				sortie_efficiency = 0.3 #出击效率
+			}
+			ai_will_do = {
+				base = 1
+			}
+		}
+	}
+
+	air_force_spirit = {
+		development_of_next_generation_wind_tunnels_idea = { #次世代风洞研发
+			ledger = air
+			picture = development_of_next_generation_wind_tunnels
+			visible = {
+					tag = PRC
+			}
+			available = {
+		        has_completed_focus = PRC_Sortie_Of_Eagle
+	        }
+			research_bonus = {
+				air_equipment = 0.20
+			}
+			modifier = {
+				experience_gain_air_factor = 0.2 #空军经验增长
+				air_training_xp_gain_factor = 0.4 #空军联队训练经验增长
+				air_accidents_factor = -0.4 #空军事故几率
+				air_doctrine_cost_factor = -0.2 #空军学说花费
+			}
+			ai_will_do = {
+				base = 1
+			}
+		}
+	}
+
+		air_force_command_spirit = {
+		outstanding_early_warning_aircraft_and_electronic_warfare_system_idea = { #卓越预警机和电子战体系
+			ledger = air
+			picture = outstanding_early_warning_aircraft_and_electronic_warfare_system
+			visible = {
+					tag = PRC
+			}
+			available = {
+		        has_completed_focus = PRC_dominate_the_skies_1
+	        }
+			modifier = {
+				air_attack_factor = 0.2 #对空攻击
+				ground_attack_factor = 0.2 #对地攻击
+				air_defence_factor = 0.2 #空中防御
+				naval_strike_targetting_factor = 0.2 #对海瞄准
+				air_mission_efficiency = 0.2 #空军任务效率
+			}
+				ai_will_do = {
+					base = 1
+				}
+			}
+    	}
+
+	    
+	}

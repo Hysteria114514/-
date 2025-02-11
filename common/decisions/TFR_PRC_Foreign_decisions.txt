@@ -1,0 +1,2959 @@
+PRC_foreign_policy_category = {
+
+	PRC_foreign_hint = {
+		icon = GFC_fund_manufacturing_improvements
+
+		available = {
+			always = no
+			
+		}
+
+		visible = {
+			PRC = {
+				has_completed_focus = PRC_establish_eadi
+			}
+		}
+	}
+
+	PRC_invite_cambodia_eadi = { #邀请柬埔寨
+		icon = GFX_PRC_new_left_decision	
+		
+		available = {
+			CAM = {
+				is_in_faction = no
+			}			
+			PRC = {
+				has_completed_focus = PRC_establish_eadi
+				NOT = {
+					has_country_flag = strengthen_pdo_no_friends
+				}
+			}
+		}
+		
+		visible = {
+			CAM = {
+				is_in_faction = no
+			}			
+			PRC = {
+				has_completed_focus = PRC_establish_eadi
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove = 15
+		remove_effect = {
+			PRC = {
+				add_to_faction = CAM
+			}
+			CAM = {
+				set_country_flag = eadi_member
+			}
+			news_event = {
+				id = china.93
+			}
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	
+	PRC_invite_sri_lanka_eadi = { #邀请斯里兰卡
+		icon = GFX_PRC_new_left_decision
+		
+		available = {
+			SRL = {
+				is_in_faction = no
+			}			
+			PRC = {
+				has_completed_focus = PRC_establish_eadi
+				NOT = {
+					has_country_flag = strengthen_pdo_no_friends
+				}
+			}
+		}
+		
+		visible = {
+			SRL = {
+				is_in_faction = no
+			}			
+			PRC = {
+				has_completed_focus = PRC_establish_eadi
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove = 15
+		remove_effect = {
+			PRC = {
+				add_to_faction = SRL
+			}
+			SRL = {
+				set_country_flag = eadi_member
+			}
+			news_event = {
+				id = china.94
+			}
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	
+	PRC_invite_laos_eadi = { #邀请老挝
+		icon = GFX_PRC_new_left_decision
+		
+		available = {
+			LAO = {
+				is_in_faction = no
+			}			
+			PRC = {
+				has_completed_focus = PRC_establish_eadi
+			}
+		}
+		
+		visible = {
+			LAO = {
+				is_in_faction = no
+			}			
+			PRC = {
+				has_completed_focus = PRC_establish_eadi
+				NOT = {
+					has_country_flag = strengthen_pdo_no_friends
+				}
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove = 15
+		remove_effect = {
+			PRC = {
+				add_to_faction = LAO
+			}
+			LAO = {
+				set_country_flag = eadi_member
+			}
+			news_event = {
+				id = china.91
+			}
+			LAO = {
+				load_oob = "LAO_2020"
+			}
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	
+	PRC_invite_nepal_eadi = { #邀请尼泊尔
+		icon = GFX_PRC_new_left_decision
+		
+		available = {
+			NEP = {
+				is_in_faction = no
+			}			
+			PRC = {
+				has_completed_focus = PRC_establish_eadi
+				NOT = {
+					has_country_flag = strengthen_pdo_no_friends
+				}
+			}
+		}
+		
+		visible = {
+			NEP = {
+				is_in_faction = no
+			}			
+			PRC = {
+				has_completed_focus = PRC_establish_eadi
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove = 15
+		remove_effect = {
+			PRC = {
+				add_to_faction = NEP
+			}
+			NEP = {
+				set_country_flag = eadi_member
+			}
+			news_event = {
+				id = china.92
+			}
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	
+	PRC_invite_bhutan_eadi = { #邀请不丹
+		icon = GFX_PRC_new_left_decision
+		
+		available = {
+			BHU = {
+				is_in_faction = no
+			}			
+			PRC = {
+				has_completed_focus = PRC_establish_eadi
+				NOT = {
+					has_country_flag = strengthen_pdo_no_friends
+				}
+			}
+		}
+		
+		visible = {
+			BHU = {
+				is_in_faction = no
+			}			
+			PRC = {
+				has_completed_focus = PRC_establish_eadi
+				
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove = 15
+		remove_effect = {
+			country_event = china.235
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	
+	PRC_military_operation_in_bhutan = { #登山旅行 #敬酒不吃吃罚酒
+		icon = GFX_PRC_new_left_decision
+		available = {
+			has_country_flag = PRC_military_operation_in_bhutan_flag
+		}
+		visible = {
+			has_country_flag = PRC_military_operation_in_bhutan_flag
+		}
+		fire_only_once = yes
+		cost = 25
+		days_remove = 50
+		remove_effect = {
+			declare_war_on = {
+				target = BHU
+				type = puppet_wargoal_focus
+			}
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	
+	PRC_invite_myanmar_eadi = { #邀请缅甸 #实际没用
+		icon = GFX_PRC_new_left_decision
+		
+		available = {
+			BRM = {
+				is_in_faction = no
+			}			
+			PRC = {
+				has_completed_focus = PRC_establish_eadi
+				NOT = {
+					has_country_flag = strengthen_pdo_no_friends
+				}
+			}
+		}
+		
+		visible = {
+			BRM = {
+				is_in_faction = no
+			}			
+			PRC = {
+				has_completed_focus = PRC_establish_eadi
+				NOT = {
+					has_country_flag = PRC_myanmar_negotiations_flag
+				}
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove = 15
+		remove_effect = {
+			PRC = {
+				add_to_faction = BRM
+			}
+			BRM = {
+				set_country_flag = eadi_member
+			}
+			hidden_effect = {
+				BRM = {
+					if = {
+						limit = {
+							has_government = authoritarian_democrat
+						}
+						add_popularity = {
+							ideology = totalitarian_socialist
+							popularity = 0.25
+						}
+						add_popularity = {
+							ideology = authoritarian_democrat
+							popularity = -0.35
+						}
+						set_politics = {		
+							ruling_party = totalitarian_socialist
+							election_frequency = 48
+							elections_allowed = no
+						}
+						add_country_leader_role = {
+							character = BRM_min_aung_hlaing_char
+							promote_leader = yes
+							country_leader = {
+								ideology = left_wing_junta
+								expire = "1965.1.1.1"
+								traits = { }
+							}
+						}
+						set_party_name = { ideology = totalitarian_socialist long_name = BRM_authoritarian_democrat_party_long name = BRM_authoritarian_democrat_party }
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	
+	PRC_support_junta = { #干涉缅甸
+		cost = 10
+		days_remove = 60
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 640
+			}
+		}
+		on_map_mode = map_and_decisions_view
+		
+		available = {
+			PRC = {
+				has_completed_focus = PRC_establish_eadi
+			}
+		}
+		
+		visible = {
+			BRM = {
+				is_in_faction = no
+			}
+			PRC = {
+				has_completed_focus = PRC_establish_eadi
+				has_country_flag = PRC_myanmar_negotiations_flag
+			}
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				MND = {
+					country_event = {
+						id = bur.4
+						days = 30
+					}
+				}
+			}
+		}
+		remove_effect = {
+			add_to_faction = MND
+			MND = {
+				set_country_flag = eadi_member
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = KNU
+						tag = CNF
+						tag = PDF
+						tag = SSA
+						tag = MOA
+						tag = BRM
+					}
+				}
+				MND = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+				PRC = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_core_of = BRM
+					}
+					remove_dynamic_modifier = { modifier = BRM_peoples_war }
+				}
+			}
+			news_event = {
+				id = china.233
+				hours = 7
+			}
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	
+	PRC_invest_in_thailand_0 = { #加大对泰投资
+		cost = 15
+		days_remove = 30
+		fire_only_once = yes
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 289
+			}
+		}
+
+		on_map_mode = map_only
+
+		available = {
+			SIA = {
+				has_idea = ETH_chinese_investments
+			}
+			PRC = {
+				has_completed_focus = PRC_secure_south_eastern_asia
+			}
+		}
+		
+		visible = {
+			SIA = {
+				is_in_faction = no
+			}
+			PRC = {
+				has_completed_focus = PRC_secure_south_eastern_asia
+			}
+		}
+
+		complete_effect = {
+			set_temp_variable = {
+				debt_var_temp = 50
+			}
+			add_debt = yes
+		}
+
+		remove_effect = {
+			SIA = {
+				swap_ideas = {
+					remove_idea = ETH_chinese_investments
+					add_idea = ETH_total_companion
+				}
+				set_temp_variable = {
+					income_var_temp = 50
+				}
+				add_income = yes
+			}
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+	
+	PRC_take_over_thailand_construct = { #承接泰国建设
+		cost = 15
+		days_remove = 50
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 5
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 289
+			}
+		}
+		on_map_mode = map_only
+		
+		available = {
+			PRC = {
+				has_completed_focus = PRC_secure_south_eastern_asia
+				num_of_civilian_factories_available_for_projects > 4
+			}
+		}
+		
+		visible = {
+			SIA = {
+				is_in_faction = no
+			}
+			PRC = {
+				has_completed_focus = PRC_secure_south_eastern_asia
+			}
+		}
+		
+		remove_effect = {
+			SIA = {
+				add_offsite_building = {type = industrial_complex level = 5}
+				set_temp_variable = {
+					var = industrial_development_var_temp
+					value = 0.2
+				}	
+				add_industrial_development = yes
+			}
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+	
+	PRC_invite_thailand_eadi = { #邀请泰国
+		icon = GFX_PRC_new_left_decision
+		
+		available = {
+			SIA = {
+				is_in_faction = no
+				has_idea = ETH_total_companion
+			}			
+			PRC = {
+				has_completed_focus = PRC_secure_south_eastern_asia
+				NOT = {
+					has_country_flag = strengthen_pdo_no_friends
+				}
+			}
+		}
+		
+		visible = {
+			SIA = {
+				is_in_faction = no
+			}			
+			PRC = {
+				has_completed_focus = PRC_secure_south_eastern_asia
+			}
+		}
+		days_remove = 15
+		fire_only_once = yes
+		
+		remove_effect = {
+			PRC = {
+				add_to_faction = SIA
+			}
+			SIA = {
+				set_country_flag = eadi_member
+			}
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}	
+
+	PRC_invest_in_vietnam_0 = { #加大对越投资
+		cost = 15
+		days_remove = 30
+		fire_only_once = yes
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 671
+			}
+		}
+		on_map_mode = map_only
+		
+		available = {
+			VIN = {
+				is_in_faction = no
+			}
+			PRC = {
+				has_completed_focus = PRC_secure_south_eastern_asia
+			}
+		}
+		
+		visible = {
+			VIN = {
+				is_in_faction = no
+			}
+			PRC = {
+				has_completed_focus = PRC_secure_south_eastern_asia
+			}
+		}
+
+		complete_effect = {
+			set_temp_variable = {
+				debt_var_temp = 50
+			}
+			add_debt = yes
+		}
+
+		remove_effect = {
+			VIN = {
+				swap_ideas = {
+					remove_idea = ETH_chinese_investments
+					add_idea = ETH_total_companion
+				}
+				set_temp_variable = {
+					income_var_temp = 50
+				}
+				add_income = yes
+			}
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+	
+	PRC_take_over_vietnam_construct = { #承接越南建设
+		cost = 15
+		days_remove = 50
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 5
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 671
+			}
+		}
+		on_map_mode = map_only
+		
+		available = {
+			PRC = {
+				has_completed_focus = PRC_secure_south_eastern_asia
+				num_of_civilian_factories_available_for_projects > 4
+			}
+		}
+		
+		visible = {
+			VIN = {
+				is_in_faction = no
+			}
+			PRC = {
+				has_completed_focus = PRC_secure_south_eastern_asia
+			}
+		}
+		
+		remove_effect = {
+			VIN = {
+				add_offsite_building = {type = industrial_complex level = 5}
+				set_temp_variable = {
+					var = industrial_development_var_temp
+					value = 0.2
+				}	
+				add_industrial_development = yes
+			}
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+	
+	PRC_invite_vietnam_eadi = { #邀请越南
+		icon = GFX_PRC_new_left_decision
+		
+		available = {
+			VIN = {
+				is_in_faction = no
+				has_idea = ETH_total_companion
+			}			
+			PRC = {
+				has_completed_focus = PRC_secure_south_eastern_asia
+				NOT = {
+					has_country_flag = strengthen_pdo_no_friends
+				}
+			}
+		}
+		
+		visible = {
+			VIN = {
+				is_in_faction = no
+			}			
+			PRC = {
+				has_completed_focus = PRC_secure_south_eastern_asia
+			}
+		}
+		days_remove = 15
+		fire_only_once = yes
+		
+		remove_effect= {
+			PRC = {
+				add_to_faction = VIN
+			}
+			VIN = {
+				set_country_flag = eadi_member
+			}
+			news_event = {
+				id = china.89
+			}
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+
+	PRC_invest_pakistan_military = { #投资巴基斯坦军队
+		available = {
+			PAK = {
+				OR = {
+					has_country_flag = PAK_lost_indo_pakistan_war
+					has_country_flag = PAK_won_indo_pakistan_war
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = PRC_aid_pakistan
+		}
+		fire_only_once = no
+		days_remove = 35
+		days_re_enable = 50
+		cost = 50
+		complete_effect = {
+			set_temp_variable = {
+				var = debt_var_temp
+				value = 0.6
+			}
+			add_debt = yes
+			hidden_effect = {
+			}
+			PAK = {
+				set_temp_variable = {
+					var = income_var_temp
+					value = 0.6
+				}
+				add_income = yes
+				set_temp_variable = {
+					var = military_development_var_temp
+					value = 0.05
+				}
+				add_military_development = yes
+				if = {
+					limit = {
+						NOT = {
+							has_idea = PRC_pakistan_military_support
+						}
+					}
+					add_timed_idea = {
+						idea = PRC_pakistan_military_support
+						days = 70
+					}
+				}
+			}
+		}
+	}
+	
+	PRC_invest_pakistan_industry = { #投资巴基斯坦工业
+		available = {
+			PAK = {
+				OR = {
+					has_country_flag = PAK_lost_indo_pakistan_war
+					has_country_flag = PAK_won_indo_pakistan_war
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = PRC_aid_pakistan
+		}
+		fire_only_once = no
+		days_remove = 35
+		days_re_enable = 50
+		cost = 35
+		complete_effect = {
+			set_temp_variable = {
+				var = debt_var_temp
+				value = 0.95
+			}
+			add_debt = yes
+			hidden_effect = {
+				if = {
+					limit = {
+						PRC = { has_country_flag = PRC_nationalist_win }
+					}
+					random_list = {
+						60 = {
+						}
+						40 = {
+							country_event = { id = china.153 days = 10 }
+						}
+					}
+				}
+			}
+			PAK = {
+				set_temp_variable = {
+					var = income_var_temp
+					value = 0.95
+				}
+				random_list = {
+					60 = {
+					}
+					40 = {
+						random_owned_controlled_state = {
+							limit = {
+								is_core_of = ROOT
+								free_building_slots = {
+									building = industrial_complex
+									size > 1
+									include_locked = yes
+								}
+							}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+								type = industrial_complex
+								level = 2
+								instant_build = yes
+							}
+						}
+					}
+				}
+				add_income = yes
+				set_temp_variable = {
+					var = industrial_development_var_temp
+					value = 0.05
+				}
+				add_industrial_development = yes
+				if = {
+					limit = {
+						NOT = {
+							has_idea = PRC_pakistan_industrial_support
+						}
+					}
+					add_timed_idea = {
+						idea = PRC_pakistan_industrial_support
+						days = 70
+					}
+				}
+			}
+		}
+	}
+		
+	PRC_train_pakistan_army = { #重建巴基斯坦军队
+		available = {
+			PAK = {
+				OR = {
+					has_country_flag = PAK_lost_indo_pakistan_war
+					has_country_flag = PAK_won_indo_pakistan_war
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = PRC_aid_pakistan
+		}
+		fire_only_once = no
+		days_remove = 35
+		days_re_enable = 150
+		ai_will_do = {
+			base = 10
+		}
+		cost = 50
+		complete_effect = {
+			PAK = {
+				1321 = {
+					create_unit = {
+						division = "division_template = \"Infantry Division\" start_experience_factor = 0.8 start_equipment_factor = 1.0"
+						owner = PAK
+						count = 5
+					}
+					create_unit = {
+						division = "division_template = \"Armored Division\" start_experience_factor = 0.8 start_equipment_factor = 1.0"
+						owner = PAK
+						count = 2
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 1500
+					producer = PRC
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_1
+					amount = 300
+					producer = PRC
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment_1
+					amount = 300
+					producer = PRC
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 500
+					producer = PRC
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = 500
+					producer = PRC
+				}
+			}
+		}
+	}
+
+		PRC_invite_pakistan_to_eadi = { #邀请巴基斯坦
+		icon = GFX_PRC_new_left_decision
+		available = {
+			PAK = {
+				OR = {
+					has_country_flag = PAK_lost_indo_pakistan_war
+					has_country_flag = PAK_won_indo_pakistan_war
+				}
+			}
+		}
+		
+		visible = {
+			has_completed_focus = PRC_aid_pakistan
+			NOT = {
+				PAK = {
+					is_in_faction = yes
+				}
+			}
+		}
+
+		fire_only_once = yes
+		days_remove = 50
+		cancel_if_not_visible = yes
+		ai_will_do = {
+			base = 10
+		}
+		modifier = {
+		}
+		
+		complete_effect = {
+		
+		}
+		remove_effect = {
+			PRC = {
+				add_to_faction = PAK
+			}
+			PAK = {
+				set_country_flag = eadi_member
+			}
+			hidden_effect = {
+				443= {
+					set_demilitarized_zone = no
+				}
+				1380= {
+					set_demilitarized_zone = no
+				}
+				787= {
+					set_demilitarized_zone = no
+				}
+				1132= {
+					set_demilitarized_zone = no
+				}
+				787= {
+					set_demilitarized_zone = no
+				}
+			}
+		}
+	}
+
+
+	PRC_invest_in_singapore_0 = { #投资新加坡
+		cost = 15
+		days_remove = 30
+		fire_only_once = yes
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 336
+			}
+		}
+		on_map_mode = map_only
+		
+		available = {
+			PRC = {
+				has_completed_focus = PRC_rescure_ASEAN
+			}
+		}
+		
+		visible = {
+			SIG = {
+				is_in_faction = no
+			}
+			PRC = {
+				has_completed_focus = PRC_rescure_ASEAN
+			}
+		}
+
+		remove_effect = {
+			SIG = {
+				add_ideas = ETH_chinese_investments
+			}
+		}
+
+		ai_will_do = {
+			base = 100 
+		}
+	}
+
+	PRC_invest_in_singapore_1 = { #加大对新加坡投资
+		cost = 15
+		days_remove = 30
+		fire_only_once = yes
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 336
+			}
+		}
+		on_map_mode = map_only
+		
+		available = {
+			SIG = {
+				has_idea = ETH_chinese_investments
+			}
+			PRC = {
+				has_completed_focus = PRC_rescure_ASEAN
+			}
+		}
+		
+		visible = {
+			SIG = {
+				is_in_faction = no
+			}
+			PRC = {
+				has_completed_focus = PRC_rescure_ASEAN
+			}
+		}
+
+		complete_effect = {
+			set_temp_variable = {
+				debt_var_temp = 50
+			}
+			add_debt = yes
+		}
+
+		remove_effect = {
+			SIG = {
+				swap_ideas = {
+					remove_idea = ETH_chinese_investments
+					add_idea = ETH_total_companion
+				}
+				set_temp_variable = {
+					income_var_temp = 50
+				}
+				add_income = yes
+			}
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+	
+	PRC_take_over_singapore_construct = { #承接新加坡建设
+		cost = 15
+		days_remove = 50
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 5
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 336
+			}
+		}
+		on_map_mode = map_only
+
+		available = {
+			PRC = {
+				has_completed_focus = PRC_rescure_ASEAN
+				num_of_civilian_factories_available_for_projects > 4
+			}
+		}
+		
+		visible = {
+			SIG = {
+				is_in_faction = no
+			}
+			PRC = {
+				has_completed_focus = PRC_rescure_ASEAN
+			}
+		}
+		
+		remove_effect = {
+			SIG = {
+				add_offsite_building = {type = industrial_complex level = 5}
+				set_temp_variable = {
+					var = industrial_development_var_temp
+					value = 0.2
+				}	
+				add_industrial_development = yes
+			}
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+	
+	PRC_invite_singapore_eadi = { #邀请新加坡
+		icon = GFX_PRC_new_left_decision
+		
+		available = {
+			SIG = {
+				is_in_faction = no
+				has_idea = ETH_total_companion
+			}			
+			PRC = {
+				has_completed_focus = PRC_rescure_ASEAN
+				NOT = {
+					has_country_flag = strengthen_pdo_no_friends
+				}
+			}
+		}
+		
+		visible = {
+			SIG = {
+				is_in_faction = no
+			}			
+			PRC = {
+				has_completed_focus = PRC_rescure_ASEAN
+			}
+		}
+		days_remove = 15
+		fire_only_once = yes
+		
+		remove_effect = {
+			PRC = {
+				add_to_faction = SIG
+			}
+			SIG = {
+				set_country_flag = eadi_member
+			}
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}	
+
+	PRC_invest_in_malaysia_0 = { #投资马来西亚
+		cost = 15
+		days_remove = 30
+		fire_only_once = yes
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1386
+			}
+		}
+		on_map_mode = map_only
+		
+		available = {
+			PRC = {
+				has_completed_focus = PRC_rescure_ASEAN
+			}
+		}
+		
+		visible = {
+			MAL = {
+				is_in_faction = no
+			}
+			PRC = {
+				has_completed_focus = PRC_rescure_ASEAN
+			}
+		}
+
+		remove_effect = {
+			MAL = {
+				add_ideas = ETH_chinese_investments
+			}
+		}
+
+		ai_will_do = {
+			base = 100 
+		}
+	}
+
+	PRC_invest_in_malaysia_1 = { #加大对马来西亚投资
+		cost = 15
+		days_remove = 30
+		fire_only_once = yes
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1386
+			}
+		}
+		on_map_mode = map_only
+
+		available = {
+			MAL = {
+				has_idea = ETH_chinese_investments
+			}
+			PRC = {
+				has_completed_focus = PRC_rescure_ASEAN
+			}
+		}
+		
+		visible = {
+			MAL = {
+				is_in_faction = no
+			}
+			PRC = {
+				has_completed_focus = PRC_rescure_ASEAN
+			}
+		}
+
+		complete_effect = {
+			set_temp_variable = {
+				debt_var_temp = 50
+			}
+			add_debt = yes
+		}
+
+		remove_effect = {
+			MAL = {
+				swap_ideas = {
+					remove_idea = ETH_chinese_investments
+					add_idea = ETH_total_companion
+				}
+				set_temp_variable = {
+					income_var_temp = 50
+				}
+				add_income_with_inflation = yes
+			}
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+	
+	PRC_take_over_malaysia_construct = { #承接马来西亚建设
+		cost = 15
+		days_remove = 50
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 5
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1386
+			}
+		}
+		on_map_mode = map_only
+		
+		available = {
+			PRC = {
+				has_completed_focus = PRC_rescure_ASEAN
+				num_of_civilian_factories_available_for_projects > 4
+			}
+		}
+		
+		visible = {
+			MAL = {
+				is_in_faction = no
+			}
+			PRC = {
+				has_completed_focus = PRC_rescure_ASEAN
+			}
+		}
+		
+		remove_effect = {
+			MAL = {
+				add_offsite_building = {type = industrial_complex level = 5}
+				set_temp_variable = {
+					var = industrial_development_var_temp
+					value = 0.2
+				}	
+				add_industrial_development = yes
+			}
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+	
+	PRC_invite_malaysia_eadi = { #邀请马来西亚
+		icon = GFX_PRC_new_left_decision
+		
+		available = {
+			MAL = {
+				is_in_faction = no
+				has_idea = ETH_total_companion
+			}			
+			PRC = {
+				has_completed_focus = PRC_rescure_ASEAN
+				NOT = {
+					has_country_flag = strengthen_pdo_no_friends
+				}
+			}
+		}
+		
+		visible = {
+			MAL = {
+				is_in_faction = no
+			}			
+			PRC = {
+				has_completed_focus = PRC_rescure_ASEAN
+			}
+		}
+		days_remove = 15
+		fire_only_once = yes
+		
+		remove_effect = {
+			PRC = {
+				add_to_faction = MAL
+			}
+			MAL = {
+				set_country_flag = eadi_member
+			}
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}	
+
+	PRC_invest_in_philippines_0 = { #投资菲律宾
+		cost = 15
+		days_remove = 30
+		fire_only_once = yes
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1274
+			}
+		}
+		on_map_mode = map_only
+		
+		available = {
+			PRC = {
+				has_completed_focus = PRC_rescure_ASEAN
+			}
+		}
+		
+		visible = {
+			PHI = {
+				is_in_faction = no
+			}
+			PRC = {
+				has_completed_focus = PRC_rescure_ASEAN
+			}
+		}
+
+		remove_effect = {
+			PHI = {
+				add_ideas = ETH_chinese_investments
+			}
+		}
+
+		ai_will_do = {
+			base = 100 
+		}
+	}
+
+	PRC_invest_in_philippines_1 = { #加大对菲律宾投资
+		cost = 15
+		days_remove = 30
+		fire_only_once = yes
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1274
+			}
+		}
+		on_map_mode = map_only
+
+		available = {
+			PHI = {
+				has_idea = ETH_chinese_investments
+			}
+			PRC = {
+				has_completed_focus = PRC_rescure_ASEAN
+			}
+		}
+		
+		visible = {
+			PHI = {
+				is_in_faction = no
+			}
+			PRC = {
+				has_completed_focus = PRC_rescure_ASEAN
+			}
+		}
+
+		complete_effect = {
+			set_temp_variable = {
+				debt_var_temp = 50
+			}
+			add_debt= yes
+		}
+
+		remove_effect = {
+			PHI = {
+				swap_ideas = {
+					remove_idea = ETH_chinese_investments
+					add_idea = ETH_total_companion
+				}
+				set_temp_variable = {
+					income_var_temp = 50
+				}
+				add_income = yes
+			}
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+	
+	PRC_take_over_philippines_construct = { #承接菲律宾建设
+		cost = 15
+		days_remove = 50
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 5
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1274
+			}
+		}
+		on_map_mode = map_only
+		
+		available = {
+			PRC = {
+				has_completed_focus = PRC_rescure_ASEAN
+				num_of_civilian_factories_available_for_projects > 4
+			}
+		}
+		
+		visible = {
+			MAL = {
+				is_in_faction = no
+			}
+			PRC = {
+				has_completed_focus = PRC_rescure_ASEAN
+			}
+		}
+		
+		remove_effect = {
+			PHI = {
+				add_offsite_building = {type = industrial_complex level = 5}
+				set_temp_variable = {
+					var = industrial_development_var_temp
+					value = 0.2
+				}	
+				add_industrial_development = yes
+			}
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+	
+	PRC_invite_philippines_eadi = { #邀请菲律宾
+		icon = GFX_PRC_new_left_decision
+		
+		available = {
+			PHI = {
+				is_in_faction = no
+				has_idea = ETH_total_companion
+			}			
+			PRC = {
+				has_completed_focus = PRC_rescure_ASEAN
+				NOT = {
+					has_country_flag = strengthen_pdo_no_friends
+				}
+			}
+		}
+		
+		visible = {
+			PHI = {
+				is_in_faction = no
+			}			
+			PRC = {
+				has_completed_focus = PRC_rescure_ASEAN
+			}
+		}
+		days_remove = 15
+		fire_only_once = yes
+		
+		remove_effect = {
+			PRC = {
+				add_to_faction = PHI
+			}
+			PHI = {
+				set_country_flag = eadi_member
+			}
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}	
+
+	PRC_invest_in_indonesia_0 = { #加大对印尼投资
+		cost = 15
+		days_remove = 30
+		fire_only_once = yes
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 335
+			}
+		}
+
+		on_map_mode = map_only
+
+		available = {
+			INS = {
+				has_idea = ETH_chinese_investments
+			}
+			PRC = {
+				has_completed_focus = PRC_secure_south_eastern_asia
+			}
+		}
+		
+		visible = {
+			INS = {
+				is_in_faction = no
+			}
+			PRC = {
+				has_completed_focus = PRC_secure_south_eastern_asia
+			}
+		}
+
+		complete_effect = {
+			set_temp_variable = {
+				debt_var_temp = 50
+			}
+			add_debt = yes
+		}
+
+		remove_effect = {
+			INS = {
+				swap_ideas = {
+					remove_idea = ETH_chinese_investments
+					add_idea = ETH_total_companion
+				}
+				set_temp_variable = {
+					income_var_temp = 50
+				}
+				add_income = yes
+			}
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+	
+	PRC_take_over_indonesia_construct = { #承接印尼建设
+		cost = 15
+		days_remove = 50
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 5
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 335
+			}
+		}
+		on_map_mode = map_only
+		
+		available = {
+			PRC = {
+				has_completed_focus = PRC_secure_south_eastern_asia
+				num_of_civilian_factories_available_for_projects > 4
+			}
+		}
+		
+		visible = {
+			INS = {
+				is_in_faction = no
+			}
+			PRC = {
+				has_completed_focus = PRC_secure_south_eastern_asia
+			}
+		}
+		
+		remove_effect = {
+			INS = {
+				add_offsite_building = {type = industrial_complex level = 5}
+				set_temp_variable = {
+					var = industrial_development_var_temp
+					value = 0.2
+				}	
+				add_industrial_development = yes
+			}
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+	
+	PRC_invite_indonesia_eadi = { #邀请印尼
+		icon = GFX_PRC_new_left_decision
+		
+		available = {
+			INS = {
+				is_in_faction = no
+				has_idea = ETH_total_companion
+			}			
+			PRC = {
+				has_completed_focus = PRC_secure_south_eastern_asia
+				NOT = {
+					has_country_flag = strengthen_pdo_no_friends
+				}
+			}
+		}
+		
+		visible = {
+			INS = {
+				is_in_faction = no
+			}			
+			PRC = {
+				has_completed_focus = PRC_secure_south_eastern_asia
+			}
+		}
+		days_remove = 15
+		fire_only_once = yes
+		
+		remove_effect = {
+			PRC = {
+				add_to_faction = INS
+			}
+			INS = {
+				set_country_flag = eadi_member
+			}
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}	
+
+	PRC_recover_mongolia = { #向蒙古发送最后通牒
+		icon = GFX_PRC_new_left_decision
+		cost = 50
+		days_remove = 15
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 200
+		}
+		allowed = {
+			original_tag = PRC
+		}
+
+		visible = {
+			MON = {
+				exists = yes
+				is_in_faction = no
+			}
+			PRC = {
+				has_completed_focus = PRC_Regain_Mongolia
+			}
+		}
+
+		available = {
+			MON = {
+				is_in_faction = no 
+			}
+			PRC = {
+				has_completed_focus = PRC_Regain_Mongolia
+			}
+		}	
+
+		remove_effect = {
+			PRC = { 
+				country_event = { 
+					id = recover_mon_PRC.1 
+				}
+			}
+		}
+	}
+
+	PRC_reclaim_Tuva = { #夺取图瓦
+		icon = GFX_PRC_new_left_decision
+		cost = 50
+		days_remove = 15
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			has_completed_focus = PRC_Regain_Mongolia
+			1390 = {
+				is_controlled_by = PRC
+			}
+			1391 = {
+				is_controlled_by = PRC
+			}
+			1389 = {
+				is_controlled_by = PRC
+			}
+			330 = {
+				is_controlled_by = PRC
+			}
+			1388 = {
+				is_controlled_by = PRC
+			}
+		}
+		visible = {
+			has_completed_focus = PRC_Regain_Mongolia
+		}
+
+		remove_effect = {
+			transfer_state = 329
+			329 = {
+				set_state_name = "唐努乌梁海"
+				remove_dynamic_modifier = {
+					modifier = SOV_republic_of_russia
+					
+				}
+			}
+		}
+
+	}
+
+	PRC_enhance_security_bureau = { #加强国安局建设
+		icon = GFX_PRC_centrist_decision
+		available = {
+			has_completed_focus = PRC_Secret_Sabotage
+		}
+		visible = {
+			has_completed_focus = PRC_Secret_Sabotage
+		}
+		cost = 30
+		days_remove = 30
+		fire_only_once = yes
+		remove_effect = {
+		      effect_tooltip = {
+			add_ideas = {
+				PRC_security_bureau_idea
+			}
+		      }
+		      hidden_effect = {
+			add_dynamic_modifier = {
+				modifier = PRC_security_bureau_dynamic
+			}	
+			set_variable = {
+				var = PRC_security_bureau_operative_slot_dynamic_var #特工位
+				value = 2
+			}
+			set_variable = {
+				var = PRC_security_bureau_civilian_intel_factor_dynamic_var #民政情报
+				value = 0.1
+			}
+			set_variable = {
+				var = PRC_security_bureau_army_intel_factor_dynamic_var #陆军情报
+				value = 0.1
+			}
+			set_variable = {
+				var = PRC_security_bureau_navy_intel_factor_dynamic_var #海军情报
+				value = 0.1
+			}
+			set_variable = {
+				var = PRC_security_bureau_airforce_intel_factor_dynamic_var #空军情报
+				value = 0.1
+			}
+			set_variable = {
+				var = PRC_security_bureau_own_operative_detection_chance_dynamic_var #我方特工被发现几率补正
+				value = -0.5
+			}
+			set_variable = {
+				var = PRC_security_bureau_enemy_operative_capture_chance_factor_dynamic_var #敌方特工被发现几率补正
+				value = 1
+			}
+
+		}
+		}
+	}
+
+	PRC_penetrate_jap = { #渗透太约
+		icon = GFX_PRC_new_left_decision
+		available = {
+			has_completed_focus = PRC_Secret_Sabotage
+		}
+		visible = {
+			has_completed_focus = PRC_Secret_Sabotage
+		}
+		cost = 30
+		days_remove = 30
+		fire_only_once = yes
+		remove_effect = {
+			country_event = gaw.101
+		    every_country = {
+			    limit = {
+				    is_ally_with = JAP
+			    }
+			    add_ideas = JAP_chinese_spy_idea
+		    }
+			RAJ = {
+			    add_ideas = JAP_chinese_spy_idea
+			}
+			KOR = {
+			    add_ideas = JAP_chinese_spy_idea
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	PRC_nansha_islands = { #收回南沙群岛
+		icon = GFX_PRC_new_left_decision
+		available = {
+			has_completed_focus = PRC_Stablize_Backyard
+		}
+		visible = {
+			has_completed_focus = PRC_Stablize_Backyard
+		}
+		cost = 30
+		modifier = {
+			civilian_factory_use = 10
+		}
+		days_remove = 30
+		fire_only_once = yes
+		remove_effect = {
+			set_temp_variable = {
+			    var = debt_var_temp
+			    value = 20
+		    }
+            add_debt = yes	
+			PRC = {
+				add_state_core = 1383
+			    add_state_core = 1384
+				
+				transfer_state = 1383
+				transfer_state = 1384
+			}
+			
+			1382 = { 
+				set_state_name = "南沙群岛" 
+				}
+			1383 = { 
+				set_state_name = "南沙群岛"
+				}
+			1384 = {
+				set_state_name = "南沙群岛" 
+				}
+			1382 = {
+			    add_building_construction = {
+				    type = infrastructure
+				    level = 3
+				    instant_build = yes
+			    }
+		    }
+		    1382 = {
+			    add_building_construction = {
+				    type = air_base
+				    level = 5
+				    instant_build = yes
+			    }
+		    }
+		    1382 = {
+			    add_building_construction = {
+				    type = naval_base
+				    level = 5
+				    instant_build = yes
+				    province = 14748
+			    }
+		    }
+		    1383 = {
+			    add_building_construction = {
+				    type = infrastructure
+				    level = 3
+				    instant_build = yes
+			    }
+		    }
+		    1383 = {
+			    add_building_construction = {
+				    type = air_base
+				    level = 5
+				    instant_build = yes
+			    }
+		    }
+		    1383 = {
+			    add_building_construction = {
+				    type = naval_base
+				    level = 5
+				    instant_build = yes
+				    province = 14748
+			    }
+		    }
+		    1384 = {
+			    add_building_construction = {
+				    type = infrastructure
+				    level = 3
+				    instant_build = yes
+			    }
+		    }
+		    1384 = {
+			    add_building_construction = {
+				    type = air_base
+				    level = 5
+				    instant_build = yes
+			    }
+		    }
+		    1384 = {
+			    add_building_construction = {
+				    type = naval_base
+				    level = 5
+				    instant_build = yes
+				    province = 14750
+			    }
+		    }
+		    VIN = {
+			    add_offsite_building = { type = industrial_complex level = 1 }
+				set_temp_variable = {
+					income_var_temp = 50
+				}
+				add_income = yes
+				
+			}
+		    PHI = {
+			    add_offsite_building = { type = industrial_complex level = 1 }
+				set_temp_variable = {
+					income_var_temp = 50
+				}
+				add_income = yes
+			}
+			
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	eadi_modernize_army = {
+		icon = GFX_PRC_new_left_decision
+		available = {
+			has_completed_focus = PRC_eadi_command_system
+		}
+		visible = {
+			has_completed_focus = PRC_eadi_command_system
+		}
+		cost = 40
+		days_re_enable = 100
+		complete_effect = {
+			every_country = {
+				limit = {
+					is_ally_with = PRC
+				}
+				add_timed_idea = {
+					idea = eadi_modernized_army_idea
+					days = 100
+				}
+			}
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	eadi_unblock_jap = {
+		icon = GFX_PRC_sea_blockade
+		allowed = {
+			tag = PRC
+		}
+		visible = {
+			JAP = {
+				has_idea = JAP_total_embargo_idea
+				NOT = {
+					has_war_with = PRC
+				}
+			}
+		}
+		available = {
+			JAP = {
+				OR = {
+					has_idea = JAP_total_embargo_idea
+					has_idea = JAP_chinese_sanctions_idea
+					has_idea = JAP_chinese_spy_idea
+					}	
+				}
+			}
+		
+		fire_only_once = yes
+		complete_effect = {
+			JAP = {
+				remove_ideas = JAP_total_embargo_idea
+				remove_ideas = JAP_chinese_sanctions_idea
+				remove_ideas = JAP_chinese_spy_idea
+			}
+			every_country = {
+				limit = {
+					is_ally_with = ROOT
+				}
+				break_embargo = JAP
+			}
+		}
+		remove_effect = {
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+
+	eadi_unblock_ast = {
+		icon = GFX_PRC_sea_blockade
+		allowed = {
+			tag = PRC
+		}
+		visible = {
+			AST = {
+				has_idea = JAP_total_embargo_idea
+				NOT = {
+					has_war_with = PRC
+				}
+			}
+		}
+		available = {
+			AST = {
+				OR = {
+					has_idea = JAP_total_embargo_idea
+					has_idea = JAP_chinese_sanctions_idea
+					has_idea = JAP_chinese_spy_idea
+					}	
+				}
+			}
+		
+		fire_only_once = yes
+		complete_effect = {
+			AST = {
+				remove_ideas = JAP_total_embargo_idea
+				remove_ideas = JAP_chinese_sanctions_idea
+				remove_ideas = JAP_chinese_spy_idea
+			}
+			every_country = {
+				limit = {
+					is_ally_with = ROOT
+				}
+				break_embargo = JAP
+			}
+		}
+		remove_effect = {
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+
+	eadi_unblock_raj = {
+		icon = GFX_PRC_sea_blockade
+		allowed = {
+			tag = PRC
+		}
+		visible = {
+			RAJ = {
+				has_idea = JAP_total_embargo_idea
+				NOT = {
+					has_war_with = PRC
+				}
+			}
+		}
+		available = {
+			RAJ = {
+				OR = {
+					has_idea = JAP_total_embargo_idea
+					has_idea = JAP_chinese_sanctions_idea
+					has_idea = JAP_chinese_spy_idea
+					}	
+				}
+			}
+		
+		fire_only_once = yes
+		complete_effect = {
+			RAJ = {
+				remove_ideas = JAP_total_embargo_idea
+				remove_ideas = JAP_chinese_sanctions_idea
+				remove_ideas = JAP_chinese_spy_idea
+			}
+			every_country = {
+				limit = {
+					is_ally_with = ROOT
+				}
+				break_embargo = JAP
+			}
+		}
+		remove_effect = {
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+
+	eadi_unblock_nzl = {
+		icon = GFX_PRC_sea_blockade
+		allowed = {
+			tag = PRC
+		}
+		visible = {
+			NZL = {
+				has_idea = JAP_total_embargo_idea
+				NOT = {
+					has_war_with = PRC
+				}
+			}
+		}
+		available = {
+			NZL = {
+				OR = {
+					has_idea = JAP_total_embargo_idea
+					has_idea = JAP_chinese_sanctions_idea
+					has_idea = JAP_chinese_spy_idea
+					}	
+				}
+			}
+		
+		fire_only_once = yes
+		complete_effect = {
+			NZL = {
+				remove_ideas = JAP_total_embargo_idea
+				remove_ideas = JAP_chinese_sanctions_idea
+				remove_ideas = JAP_chinese_spy_idea
+			}
+			every_country = {
+				limit = {
+					is_ally_with = ROOT
+				}
+				break_embargo = JAP
+			}
+		}
+		remove_effect = {
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+	##美人解决议组
+	PRC_recognize_apla_as_a_legitimate_government = {
+		icon = GFX_PRC_new_left_decision
+		available = {
+		}
+		visible = {
+			has_completed_focus = PRC_revolution_beyond_the_ocean
+			country_exists = APA
+			APA = {
+				surrender_progress < 0.1
+			}
+		}
+		fire_only_once = yes
+		cost = 125
+		days_remove = 10
+		complete_effect = {
+		}
+		remove_effect = {
+			country_event = china.466
+			add_opinion_modifier = {
+				target = APA
+				modifier = recognition
+			}
+			APA = {
+				country_event = china.466
+				add_opinion_modifier = {
+					target = PRC
+					modifier = recognition
+				}
+			}
+			news_event = {
+				id = news.422
+				days = 2
+			}
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	PRC_send_apla_weapons = {
+		icon = GFX_decision_category_america_burning_category
+		available = {
+			APA = {
+				has_war = yes
+			}
+		}
+		visible = {
+			has_completed_focus = PRC_revolution_beyond_the_ocean
+			country_exists = APA
+		}
+		fire_only_once = no
+		cost = 30
+		days_remove = 30
+		days_re_enable = 75
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -2500
+			}
+		}
+		remove_effect = {
+			APA = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = PRC
+				}
+			}
+		}
+		ai_will_do = {
+		base = 10
+		}
+	}
+	PRC_train_apla_militia = {
+		icon = GFX_decision_category_america_burning_category
+		available = {
+			APA = {
+				has_war = yes
+			}
+		}
+		visible = {
+			has_completed_focus = PRC_revolution_beyond_the_ocean
+			country_exists = APA
+		}
+		fire_only_once = no
+		cost = 50
+		days_remove = 50
+		days_re_enable = 100
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -5000
+			}
+		}
+		remove_effect = {
+			APA = {
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"Militia\" division_template = \"Militia Brigade\"  start_experience_factor = 0.75"
+						allow_spawning_on_enemy_provs = no
+						owner = APA
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"Militia\" division_template = \"Militia Brigade\"  start_experience_factor = 0.75"
+						allow_spawning_on_enemy_provs = no
+						owner = APA
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"Militia\" division_template = \"Militia Brigade\"  start_experience_factor = 0.75"
+						allow_spawning_on_enemy_provs = no
+						owner = APA
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"Militia\" division_template = \"Militia Brigade\"  start_experience_factor = 0.75"
+						allow_spawning_on_enemy_provs = no
+						owner = APA
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"Militia\" division_template = \"Militia Brigade\"  start_experience_factor = 0.75"
+						allow_spawning_on_enemy_provs = no
+						owner = APA
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"Militia\" division_template = \"Militia Brigade\"  start_experience_factor = 0.75"
+						allow_spawning_on_enemy_provs = no
+						owner = APA
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"Militia\" division_template = \"Militia Brigade\"  start_experience_factor = 0.75"
+						allow_spawning_on_enemy_provs = no
+						owner = APA
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"Militia\" division_template = \"Militia Brigade\"  start_experience_factor = 0.75"
+						allow_spawning_on_enemy_provs = no
+						owner = APA
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"Militia\" division_template = \"Militia Brigade\"  start_experience_factor = 0.75"
+						allow_spawning_on_enemy_provs = no
+						owner = APA
+					}
+				}
+			}
+		}
+		ai_will_do = {
+		base = 10
+		}
+	}
+	PRC_send_pla_advisors_apla = {
+		icon = GFX_PRC_new_left_decision
+		available = {
+		}
+		visible = {
+			has_completed_focus = PRC_revolution_beyond_the_ocean
+			country_exists = APA
+		}
+		fire_only_once = yes
+		cost = 25
+		days_remove = 70
+		remove_effect = {
+			APA = {
+				add_ideas = PRK_chinese_military_advisors
+			}
+		}
+		ai_will_do = {
+		base = 10
+		}
+	}
+	PRC_arm_the_apla_airforce = {
+		icon = GFX_decision_category_america_burning_category
+		available = {
+			APA = {
+				has_war = yes
+			}
+		}
+		visible = {
+			has_completed_focus = PRC_revolution_beyond_the_ocean
+			country_exists = APA
+		}
+		fire_only_once = no
+		cost = 75
+		days_remove = 50
+		days_re_enable = 140
+		remove_effect = {
+			APA = {
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "By Blood Alone"
+						}
+					}
+					add_equipment_to_stockpile = { 
+						type = fighter_equipment_1
+						amount = 75
+						producer = PRC
+					}
+				}
+				else_if = {
+					limit = {
+						has_dlc = "By Blood Alone"
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_country_flag = APA_PRC_fighter_variant_flag
+							}
+						}
+						create_equipment_variant = {
+							name = "大东亚决战机"
+							type = small_plane_airframe_2
+							modules = {
+								fixed_main_weapon_slot = heavy_mg_4x
+								fixed_auxiliary_weapon_slot_1 = bomb_locks
+								fixed_auxiliary_weapon_slot_2 = empty
+								engine_type_slot = engine_1_1x
+								special_type_slot_1 = empty
+							}
+							obsolete = yes
+							icon = "GFX_PRC_j20"
+						}
+						set_country_flag = APA_PRC_fighter_variant_flag
+					}
+					#add_equipment_to_stockpile = { 
+					#	type = small_plane_airframe_1
+					#	amount = 100
+					#	producer = PRC
+					#}
+					add_equipment_to_stockpile = {
+						type = small_plane_airframe_2
+						variant_name = "大东亚决战机"
+						amount = 75
+						producer = PRC
+					}
+				}
+			}	
+		}
+		ai_will_do = {
+		base = 10
+		}
+	}
+	PRC_unify_the_bureaucracy = {
+		icon = generic_industry
+		allowed = {
+			tag = PRC
+		}
+		visible = {
+			#has_country_flag = PRC_PRK_agree_unify
+			always = no
+		}
+		available = {
+			
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 60
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			custom_effect_tooltip = WIP
+		}
+		ai_will_do = {
+			base = 999
+		}
+	}
+	PRC_unity_propaganda = {
+		icon = generic_industry
+		allowed = {
+			tag = PRC
+		}
+		visible = {
+			#has_country_flag = PRC_PRK_agree_unify
+			always = no
+		}
+		available = {
+			
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 60
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			custom_effect_tooltip = WIP
+		}
+		ai_will_do = {
+			base = 999
+		}
+	}
+
+}
+
+PRC_indo_pakistan_war = {#印巴战争
+	PRC_indo_pakistani_war_mission = {
+		priority = 1
+		icon = GFX_PRC_indo_pakistani_war_decision
+		available = {
+			hidden_trigger = {
+				PAK = {
+					controls_state = 443
+					OR = {
+						controls_state = 1379
+						AND = {
+							controls_state = 439
+							controls_state = 1381
+							controls_state = 428
+						}
+					}
+				}
+				NOT = {
+					RAJ = {
+						controls_state = 1373
+						controls_state = 1131
+						controls_state = 441
+					}
+				}
+			}
+		}
+		days_mission_timeout = 900
+		activation = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		visible = {
+		}
+		fire_only_once = no
+		cancel_if_not_visible = no
+		is_good = no
+		cancel_trigger = {
+			hidden_trigger = {
+				PAK = {
+					surrender_progress > 0.8
+				}
+			}
+		}
+		cancel_effect = { 
+			hidden_effect = {
+				RAJ = {
+					white_peace = PAK
+					remove_ideas = RAJ_clash_of_the_millions
+					remove_ideas = RAJ_clash_of_the_millions2
+					transfer_state = 787
+					SAJ = {
+						set_cosmetic_tag = SAJ_indian_military
+						add_state_core = 443
+						add_state_core = 1380
+						transfer_state = 443
+						transfer_state = 1380
+					}
+					puppet = SAJ
+				}
+				SAJ = {
+					set_politics = {
+						ruling_party = authoritarian_democrat
+						elections_allowed = no
+						last_election = "1935.12.17"
+						election_frequency = 48
+					}
+					add_popularity = {
+						ideology = authoritarian_democrat
+						popularity = 0.65
+					}
+					create_country_leader = {
+						name = EGY_mohamed_ahmed_zaki
+						picture = "Mohamed Ahmed Zaki.png"
+						ideology = military_junta
+						traits = {
+						}
+					}
+				}
+				PAK = {
+					set_country_flag = PAK_lost_indo_pakistan_war
+					remove_ideas = PAK_clash_of_the_millions
+					country_event = { id = pak.10 days = 100 }
+					set_variable = {
+						disband_fraction = 0.85
+					}
+					disband_units_fraction = yes
+					clear_variable = disband_fraction
+					if = {
+						limit = {
+							has_character = PRC_Lin_Xiangyang
+						}
+						PAK = {
+							set_nationality = {
+								target_country = PRC
+								character = PRC_Lin_Xiangyang
+							}
+						}
+					}
+				}
+				1324= {
+					set_demilitarized_zone = yes
+				}
+				440 = {
+					set_demilitarized_zone = yes
+				}
+				PRC = {
+					clr_country_flag = PRC_indo_pakistan_war_ongoing
+				}
+				#teleport_armies = {
+				#    limit = {
+				#        tag = PAK
+				#    }
+				#    state = 1323
+				#}
+			}
+		}
+		timeout_effect = {
+			news_event = {
+				id = PAK.13
+				hours = 7
+			}
+			hidden_effect = {
+				PAK = {
+					white_peace = RAJ
+					remove_ideas = PAK_clash_of_the_millions
+					set_country_flag = PAK_lost_indo_pakistan_war
+				}
+				RAJ = {
+					remove_ideas = RAJ_clash_of_the_millions
+					remove_ideas = RAJ_clash_of_the_millions2
+					annex_country = {
+						target = HUL
+						transfer_troops = no
+					}
+				}
+				443= {
+					set_demilitarized_zone = yes
+				}
+				1380= {
+					set_demilitarized_zone = yes
+				}
+				787= {
+					set_demilitarized_zone = yes
+				}
+				441= {
+					set_demilitarized_zone = yes
+				}
+				1131= {
+					set_demilitarized_zone = yes
+				}
+				439= {
+					set_demilitarized_zone = yes
+				}
+				1132= {
+					set_demilitarized_zone = yes
+				}
+				1381= {
+					set_demilitarized_zone = yes
+				}
+				787= {
+					set_demilitarized_zone = yes
+				}
+				428= {
+					set_demilitarized_zone = yes
+				}
+				PRC = {
+					clr_country_flag = PRC_indo_pakistan_war_ongoing
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				PAK = {
+					white_peace = RAJ
+					annex_country = {
+						target = SND
+						transfer_troops = no
+					}
+					transfer_state = 441
+					transfer_state = 1131
+					transfer_state = 443
+					SAJ = {
+						set_cosmetic_tag = SAJ_pakistan_military
+						add_state_core = 1373
+						add_state_core = 439
+						add_state_core = 1381
+						transfer_state = 1373
+						transfer_state = 439
+						transfer_state = 1381
+					}
+					puppet = SAJ
+				}
+				SAJ = {
+					set_politics = {
+						ruling_party = authoritarian_democrat
+						elections_allowed = no
+						last_election = "1935.12.17"
+						election_frequency = 48
+					}
+					add_popularity = {
+						ideology = authoritarian_democrat
+						popularity = 0.65
+					}
+					create_country_leader = {
+						name = EGY_mohamed_ahmed_zaki
+						picture = "Mohamed Ahmed Zaki.png"
+						ideology = military_democracy
+						traits = {
+						}
+					}
+				}
+				PAK = {
+					set_country_flag = PAK_won_indo_pakistan_war
+					if = {
+						limit = {
+							has_character = PRC_Lin_Xiangyang
+						}
+						PAK = {
+							set_nationality = {
+								target_country = PRC
+								character = PRC_Lin_Xiangyang
+							}
+						}
+					}
+				}
+				433 = {
+					set_demilitarized_zone = yes
+				}
+				1379 = {
+					set_demilitarized_zone = yes
+				}
+				437 = {
+					set_demilitarized_zone = yes
+				}
+				428 = {
+					set_demilitarized_zone = yes
+				}
+				PRC = {
+					clr_country_flag = PRC_indo_pakistan_war_ongoing
+				}
+				#teleport_armies = {
+				#    limit = {
+				#        tag = RAJ
+				#    }
+				#    state = 438
+				#}
+			}
+		}
+	}
+
+	PRC_pakistan_defense_strength = {#巴基斯坦防御加强
+		icon = GFX_decision_generic_make_nukes
+		available = {
+			OR = {
+				has_country_flag = strengthen_pdo_3_flag
+				has_country_flag = unimate_difficulty_flag
+						}
+		}
+		visible = {
+			tag = PRC
+		}
+		complete_effect = {
+			PAK = {
+				add_ideas = strength_pdo_3
+				add_equipment_to_stockpile = {type = infantry_equipment_1 amount = 10000 producer = PRC }
+				add_equipment_to_stockpile = {type = support_equipment_1 amount = 2000 producer = PRC }
+				add_equipment_to_stockpile = {type = anti_air_equipment_1 amount = 2000 producer = PRC }
+				add_equipment_to_stockpile = {type = anti_tank_equipment_1 amount = 2000 producer = PRC }
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"平衡性师团\" division_template = \"Infantry Division\"  start_experience_factor = 1"
+						owner = PAK
+						amount = 30
+					}
+				}
+			}
+		}
+		
+		icon = GFX_decision_generic_make_nukes
+		
+		cost = 25
+		fire_only_once = yes
+		remove_effect = {
+			PAK = {
+				remove_ideas = strength_pdo_3
+			}
+		}
+		
+		ai_will_do = {
+			base = 15
+		}
+		days_remove = 900
+
+	}
+
+
+
+
+
+	PRC_host_non_nuclear_negotiations = {
+		available = {
+			
+		}
+		visible = {
+			tag = PRC
+		}
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			RAJ = {
+				country_event = { id = china.140 }
+			}
+			PAK = {
+				country_event = { id = china.140 }
+			}
+		}
+		icon = GFX_decision_generic_make_nukes
+		
+		cost = 25
+		fire_only_once = yes
+		days_remove = 15
+		
+		ai_will_do = {
+			base = 15
+		}
+	}
+	PRC_send_pakistan_planes = {
+		available = {
+			#if = {
+			#	limit = {
+			#		has_dlc = "By Blood Alone"
+			#	}
+			#	has_equipment = {
+			#		small_plane_airframe_1 > 50
+			#	}
+			#}
+			#else_if = {
+			#	limit = {
+			#		NOT = {
+			#			has_dlc = "By Blood Alone"
+			#		}
+			#		has_equipment = {
+			#			fighter_equipment_2 > 50
+			#		}
+			#	}
+			#}
+		}
+		visible = {
+			tag = PRC
+		}
+		complete_effect = {
+			set_temp_variable = {
+				var = income_var_temp
+				value = -20
+			}
+			add_income = yes
+		}
+		remove_effect = {
+			PAK = {
+				if = {
+					limit = {
+						has_dlc = "By Blood Alone"
+					}
+					add_equipment_to_stockpile = {
+						type = small_plane_airframe_1
+						variant_name = "J-16"
+						amount = 75
+						producer = PRC
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							has_dlc = "By Blood Alone"
+						}
+					}
+					add_equipment_to_stockpile = {type = fighter_equipment_2 amount = 50 producer = PRC }
+				}
+			}
+		}
+		icon = GFX_decision_generic_air
+		
+		cost = 50
+		fire_only_once = no
+		days_remove = 1
+		days_re_enable = 60
+		
+		ai_will_do = {
+			base = 25 #dont swamp yourself in debt
+		}
+	}
+	PRC_send_pakistan_weapons = {
+		available = {
+			
+		}
+		visible = {
+			tag = PRC
+		}
+		complete_effect = {
+			set_temp_variable = {
+				var = income_var_temp
+				value = -5
+			}
+			add_income = yes
+		}
+		remove_effect = {
+			PAK = {
+				add_equipment_to_stockpile = {type = infantry_equipment_2 amount = 2500 producer = PRC }
+				add_equipment_to_stockpile = {type = support_equipment_1 amount = 750 producer = PRC }
+				add_equipment_to_stockpile = {type = anti_tank_equipment_1 amount = 500 producer = PRC }
+				add_equipment_to_stockpile = {type = anti_air_equipment_1 amount = 500 producer = PRC }
+			}
+		}
+		icon = GFX_decision_generic_industry
+		
+		cost = 25
+		fire_only_once = no
+		days_remove = 20
+		days_re_enable = 30
+		
+		ai_will_do = {
+			base = 15
+		}
+	}
+	PRC_embed_advisors_pakistan = {
+		available = {
+			
+		}
+		visible = {
+			tag = PRC
+		}
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			PRC_Zhao_Zongqi = {
+				set_nationality = PAK
+			}
+			set_country_flag = PRC_advisors_sent
+			unlock_decision_tooltip = PRC_initiate_operation_gul
+			unlock_decision_tooltip = PRC_initiate_operation_khalid
+		}
+		icon = GFX_decision_generic_military
+		
+		cost = 25
+		fire_only_once = yes
+		days_remove = 20
+		days_re_enable = 20
+		
+		ai_will_do = {
+			base = 15
+		}
+	}
+	PRC_initiate_operation_gul = {
+		available = {
+			has_country_flag = PRC_advisors_sent
+			NOT = {
+				has_country_flag = PRC_ongoing_offensive
+			}
+		}
+		visible = {
+			tag = PRC
+		}
+		complete_effect = {
+			set_country_flag = PRC_ongoing_offensive
+			PAK = {
+				add_timed_idea = {
+					idea = PAK_operation_gul
+					days = 100
+				}
+			}
+		}
+		remove_effect = {
+			hidden_effect = {
+				country_event = { id = china.135 }
+				clr_country_flag = PRC_ongoing_offensive
+			}
+		}
+		icon = GFX_decision_generic_crossed_guns
+		
+		cost = 25
+		fire_only_once = yes
+		days_remove = 100
+		
+		ai_will_do = {
+			base = 100
+		}
+	}
+	
+	PRC_initiate_operation_khalid = {
+		available = {
+			has_country_flag = PRC_advisors_sent
+			NOT = {
+				has_country_flag = PRC_ongoing_offensive
+			}
+		}
+		visible = {
+			tag = PRC
+		}
+		complete_effect = {
+			set_country_flag = PRC_ongoing_offensive
+			PAK = {
+				add_timed_idea = {
+					idea = PAK_operation_khalid
+					days = 100
+				}
+			}
+		}
+		remove_effect = {
+			#country_event = { id = china.141 } ##причем тут этот ивент наху
+			hidden_effect = {
+				clr_country_flag = PRC_ongoing_offensive
+			}
+		}
+		icon = GFX_decision_generic_crossed_guns
+		
+		cost = 25
+		fire_only_once = yes
+		days_remove = 100
+		
+		ai_will_do = {
+			base = 100
+		}
+	}
+}

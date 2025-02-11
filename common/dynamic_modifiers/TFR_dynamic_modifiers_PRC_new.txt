@@ -1,0 +1,493 @@
+PRC_communist_party_of_china_dynamic = { #中国共产党
+	icon = GFX_idea_PRC_chinese_communist_party
+	enable = {
+		always = yes
+	}
+	
+	political_power_cost = PRC_cpc_political_power_cost_dynamic_var #每日政治点消耗
+	political_power_factor = PRC_cpc_political_power_factor_dynamic_var #政治点数(以百分比形式增加)
+	political_power_gain = PRC_cpc_political_power_gain_dynamic_var #每日政治点增加
+	trade_opinion_factor = PRC_cpc_trade_opinion_factor_dynamic_var #贸易协定关系修正
+	send_volunteer_factor = PRC_cpc_send_volunteer_factor_dynamic_var #派遣志愿兵上限
+	stability_factor = PRC_cpc_stability_factor_dynamic_var #稳定度
+	stability_weekly = PRC_cpc_stability_weekly_dynamic_var #每周稳定度增长
+	war_support_factor = PRC_cpc_war_support_factor_dynamic_var #战争支持度
+	war_support_weekly = PRC_cpc_war_support_weekly_dynamic_var #每周战争支持度增长
+	conversion_cost_mil_to_civ_factor = PRC_cpc_conversion_cost_mil_to_civ_factor_dynamic_var
+	army_attack_factor = PRC_cpc_army_attack_factor_dynamic_var #陆军师攻击
+	party_popularity_stability_factor = PRC_cpc_party_popularity_stability_factor_dynamic_var
+	army_core_defence_factor = PRC_cpc_army_core_defence_factor_dynamic_var #陆军核心防御
+	research_speed_factor = PRC_cpc_research_speed_factor_dynamic_var #研究速度
+	line_change_production_efficiency_factor = PRC_cpc_line_change_production_efficiency_factor_dynamic_var #生产效率保持
+	production_oil_factor = PRC_cpc_production_oil_factor_dynamic_var
+	production_speed_office_park_factor = PRC_cpc_production_speed_office_park_factor_dynamic_var
+#办公园区建造速度
+	production_cost_infrastructure_factor = PRC_cpc_production_cost_infrastructure_factor_dynamic_var
+#基础设施建造花费
+	production_speed_arms_factory_factor = PRC_cpc_production_speed_arms_factory_factor_dynamic_var
+#军用工厂建造速度
+	industrial_capacity_factory = PRC_cpc_industrial_capacity_factory_dynamic_var #工厂产出
+	production_speed_industrial_complex_factor = PRC_cpc_production_speed_industrial_complex_factor_dynamic_var #民用工厂建造速度
+	enemy_operative_capture_chance_factor  = PRC_cpc_enemy_operative_capture_chance_factor_dynamic_var #敌方特工被捕几率
+	enemy_operative_intel_extraction_rate = PRC_cpc_enemy_operative_intel_extraction_rate_dynamic_var
+	production_speed_buildings_factor = PRC_cpc_production_speed_buildings_factor_dynamic_var #建造速度
+	production_factory_efficiency_gain_factor = PRC_cpc_production_factory_efficiency_gain_factor_dynamic_var #生产效率增长
+	production_factory_max_efficiency_factor = PRC_cpc_production_factory_max_efficiency_factor_dynamic_var #生产效率上限
+	production_speed_infrastructure_factor = PRC_cpc_production_speed_infrastructure_factor_dynamic_var
+#基础设施建造速度
+	compliance_growth = PRC_cpc_compliance_growth_dynamic_var #顺从度增长速度
+	resistance_growth = PRC_cpc_resistance_growth_dynamic_var #抵抗增长速度
+	communist_drift = PRC_cpc_communist_drift_dynamic_var #每日威权社会主义支持度变化
+	totalitarian_socialist_drift = PRC_cpc_totalitarian_socialist_drift_dynamic_var #意识形态向极权社会主义变化力度
+	social_democrat_drift = PRC_cpc_social_democrat_drift_dynamic_var #意识形态向社会民主主义变化力度
+	social_liberal_drift = PRC_cpc_social_liberal_drift_dynamic_var #意识形态向社会自由主义变化力度
+	authoritarian_democrat_drift = PRC_cpc_authoritarian_democrat_drift_dynamic_var #每日威权民主主义支持度变化
+	libertarian_socialist_drift = PRC_cpc_libertarian_socialist_drift_dynamic_var #意识形态向自由意志社会主义变化力度
+	business_value_factor = PRC_cpc_business_value_factor_dynamic_var #商业产值系数
+	personal_expense_factor = PRC_cpc_personal_expense_factor_dynamic_var #私人消费系数
+	society_development_monthly = PRC_cpc_society_development_monthly_dynamic_var #月度社会发展
+	academic_development_monthly = PRC_cpc_academic_development_monthly_dynamic_var #月度教育水平发展
+	industrial_development_monthly = PRC_cpc_industrial_development_monthly_dynamic_var #月度工业发展
+	military_development_monthly = PRC_cpc_military_development_monthly_dynamic_var #月度军事发展
+	consumer_goods_factor = PRC_cpc_consumer_goods_factor_dynamic_var #生活消费品
+	army_morale_factor = PRC_cpc_army_morale_factor_dynamic_var #组织度恢复
+	income_growth_factor = PRC_cpc_income_growth_factor_dynamic_var #月度收入增长
+	conscription = PRC_cpc_conscription_dynamic_var #适役人口
+	conscription_factor = PRC_cpc_conscription_factor_dynamic_var #适役人口修正
+	personal_value_factor = PRC_cpc_personal_value_factor_dynamic_var #个人产值系数
+	intelligence_agency_defense = PRC_cpc_intelligence_agency_defense_dynamic_var #反间谍
+	experience_gain_army_unit_factor = PRC_cpc_experience_gain_army_unit_factor_dynamic_var
+	max_commander_army_size = PRC_cpc_max_commander_army_size_dynamic_var
+	drift_defence_factor = PRC_cpc_drift_defence_factor_dynamic_var #意识形态抵制力度
+	monthly_population = PRC_cpc_monthly_population_dynamic_var #月度人力(百分比形式 0.1 =10% )
+																  
+	army_chief_cost_factor = PRC_cpc_army_chief_cost_factor_dynamic_var #陆军部长花费 
+    navy_chief_cost_factor = PRC_cpc_navy_chief_cost_factor_dynamic_var	#海军部长花费
+    air_chief_cost_factor = PRC_cpc_air_chief_cost_factor_dynamic_var #空军部长花费	
+    high_command_cost_factor = PRC_cpc_high_command_cost_factor_dynamic_var #总司令花费
+    foreign_minister_cost_factor = PRC_cpc_foreign_minister_cost_factor_dynamic_var #外交部长花费
+    economic_minister_cost_factor = PRC_cpc_economic_minister_cost_factor_dynamic_var #经济部长花费
+    interior_minister_cost_factor = PRC_cpc_interior_minister_cost_factor_dynamic_var #内政部长花费
+    intelligence_minister_cost_factor = PRC_cpc_intelligence_minister_cost_factor_dynamic_var #情报部长花费
+    theorist_minister_cost_factor = PRC_cpc_theorist_minister_cost_factor_dynamic_var #国防部长花费	
+	stability_weekly = PRC_cpc_1_stability_weekly_dynamic_var#每周稳定度增长
+    war_support_weekly = PRC_cpc_1_war_support_weekly_dynamic_var#每周战争支持度增长
+    military_development_monthly = PRC_cpc_1_military_development_monthly_dynamic_var#月度军事发展	
+}
+
+PRC_great_traffic_net_dynamic = {#发达物流网络
+	icon = GFX_great_traffic_net
+	enable = { 
+		always = yes
+	}
+	consumer_goods_factor = PRC_great_traffic_net_consumer_goods_factor_dynamic_var #生活消费品
+	income_growth_factor = PRC_great_traffic_net_income_growth_factor_dynamic_var #月度收入增长
+	industrial_capacity_factory = PRC_great_traffic_net_industrial_capacity_factory_dynamic_var #工厂产出
+	production_factory_max_efficiency_factor = PRC_great_traffic_net_production_factory_max_efficiency_factor_dynamic_var #生产效率上限
+	production_factory_efficiency_gain_factor = PRC_great_traffic_net_production_factory_efficiency_gain_factor_dynamic_var #生产效率增长
+	production_speed_buildings_factor = PRC_great_traffic_net_production_speed_buildings_factor_dynamic_var #建造速度
+
+}
+
+
+
+
+
+
+PRC_security_bureau_dynamic= { #国安局
+	icon = GFX_idea_PRC_security_bureau
+
+	enable = { 
+		always = yes
+	}
+	operative_slot = PRC_security_bureau_operative_slot_dynamic_var #特工位
+	civilian_intel_factor = PRC_security_bureau_civilian_intel_factor_dynamic_var #民政情报
+	army_intel_factor = PRC_security_bureau_army_intel_factor_dynamic_var #陆军情报
+	navy_intel_factor = PRC_security_bureau_navy_intel_factor_dynamic_var #海军情报
+	airforce_intel_factor = PRC_security_bureau_airforce_intel_factor_dynamic_var #空军情报
+	own_operative_detection_chance = PRC_security_bureau_own_operative_detection_chance_dynamic_var #我方特工被发现几率补正
+	enemy_operative_capture_chance_factor = PRC_security_bureau_enemy_operative_capture_chance_factor_dynamic_var #敌方特工被发现几率补正
+	intel_network_gain_factor = PRC_security_bureau_intel_network_gain_factor_dynamic_var #情报网强度增长率
+	decryption_power = PRC_security_bureau_decryption_power_dynamic_var #破译能力
+}
+
+PRC_pla_land_dynamic = { #人民解放军陆军
+	icon = GFX_idea_PRC_pla
+
+	enable = { 
+		always = yes
+	}
+	xp_gain_army_unit= PRC_pla_xp_gain_army_unit_dynamic_var #陆军师经验获取
+	army_core_attack_factor = PRC_pla_army_core_attack_factor_dynamic_var #陆军师核心领土攻击
+	army_attack_factor = PRC_pla_army_attack_factor_dynamic_var #陆军师攻击
+	army_defence_factor = PRC_pla_army_defence_factor_dynamic_var #陆军师防御
+	max_planning_factor = PRC_pla_max_planning_factor_dynamic_var #计划加成上限系数
+	planning_speed = PRC_pla_planning_speed_dynamic_var #计划速度
+	attrition = PRC_pla_attrition_dynamic_var #陆军师损耗
+	initiative_factor = PRC_pla_initiative_factor_dynamic_var #主动性
+	experience_gain_army_factor = PRC_pla_experience_gain_army_factor_dynamic_var #陆军经验增长
+	command_power_gain = PRC_pla_command_power_gain_dynamic_var #每日指挥点数增长
+	army_org_factor = PRC_pla_army_org_factor_dynamic_var #陆军师组织度
+	army_org_regain = PRC_pla_army_org_regain_dynamic_var #陆军组织度恢复
+	experience_loss_factor = PRC_pla_experience_loss_factor #有经验的士兵损失
+	battalion_upkeep_factor = PRC_battalion_upkeep_factor_dynamic_var #陆军维护费
+	land_reinforce_rate = PRC_pla_land_reinforce_rate_dynamic_var #增援率
+	breakthrough_factor = PRC_pla_breakthrough_factor_dynamic_var #突破
+	mobilization_speed = PRC_pla_mobilization_speed_dynamic_var #动员速度
+	training_time_factor = PRC_pla_training_time_factor_dynamic_var #训练时间
+	military_development_monthly = PRC_pla_military_development_monthly_dynamic_var #月度军事发展
+	acclimatization_cold_climate_gain_factor = PRC_acclimatization_cold_climate_gain_factor_dynamic_var
+#寒冷适应度增长率
+	acclimatization_hot_climate_gain_factor = PRC_acclimatization_hot_climate_gain_factor_dynamic_var
+#炎热适应度增长率
+	pocket_penalty = PRC_pocket_penalty_dynamic_var
+#包围惩罚
+	army_armor_attack_factor = PRC_army_armor_attack_factor_dynamic_var
+#装甲师攻击
+	army_armor_defence_factor = PRC_army_armor_defence_factor_dynamic_var #装甲师防御
+	terrain_penalty_reduction = PRC_terrain_penalty_reduction_dynamic_var
+#地形惩罚降低
+	air_superiority_efficiency = PRC_pla_air_superiority_efficiency_dynamic_var #夺取制空权任务效率
+	air_intercept_efficiency = PRC_pla_air_intercept_efficiency_dynamic_var #拦截任务效率
+	air_strategic_bomber_bombing_factor = PRC_air_strategic_bomber_bombing_factor_dynamic_var #战略轰炸
+	navy_anti_air_attack_factor = PRC_navy_anti_air_attack_factor_dynamic_var #海军对空攻击
+	conscription_factor = PRC_pla_conscription_factor_dynamic_var #适役人口
+	recon_factor = PRC_pla_recon_factor_dynamic_var #侦察
+	army_infantry_attack_factor = PRC_pla_army_infantry_attack_factor_dynamic_var #步兵攻击
+	army_infantry_defence_factor = PRC_pla_army_infantry_defence_factor_dynamic_var #步兵防御
+	army_strength_factor = PRC_army_strength_factor_dynamic_var  #hp
+	supply_consumption_factor = PRC_supply_consumption_factor_dynamic_var  #补给消耗
+	reliability_factor = PRC_reliability_factor_dynamic_var #可靠性加成
+	no_supply_grace = PRC_no_supply_grace_dynamic_var #携行补给
+	fuel_capacity_factor = PRC_fuel_capacity_factor_dynamic_var #燃油容量
+	army_speed_factor = PRC_speed_factor_dynamic_var #陆军师速度
+}
+
+PRC_pla_land_1_dynamic = { #人民解放军陆军(军改完成）
+	icon = GFX_idea_PRC_pla
+
+	enable = { 
+		always = yes
+	}
+	xp_gain_army_unit= PRC_pla_xp_gain_army_unit_dynamic_var #陆军师经验获取
+	army_core_attack_factor = PRC_pla_army_core_attack_factor_dynamic_var #陆军师核心领土攻击
+	army_attack_factor = PRC_pla_army_attack_factor_dynamic_var #陆军师攻击
+	army_defence_factor = PRC_pla_army_defence_factor_dynamic_var #陆军师防御
+	max_planning_factor = PRC_pla_max_planning_factor_dynamic_var #计划加成上限系数
+	planning_speed = PRC_pla_planning_speed_dynamic_var #计划速度
+	attrition = PRC_pla_attrition_dynamic_var #陆军师损耗
+	initiative_factor = PRC_pla_initiative_factor_dynamic_var #主动性
+	experience_gain_army_factor = PRC_pla_experience_gain_army_factor_dynamic_var #陆军经验增长
+	command_power_gain = PRC_pla_command_power_gain_dynamic_var #每日指挥点数增长
+	army_org_factor = PRC_pla_army_org_factor_dynamic_var #陆军师组织度
+	army_org_regain = PRC_pla_army_org_regain_dynamic_var #陆军组织度恢复
+	experience_loss_factor = PRC_pla_experience_loss_factor #有经验的士兵损失
+	battalion_upkeep_factor = PRC_battalion_upkeep_factor_dynamic_var #陆军维护费
+	land_reinforce_rate = PRC_pla_land_reinforce_rate_dynamic_var #增援率
+	breakthrough_factor = PRC_pla_breakthrough_factor_dynamic_var #突破
+	mobilization_speed = PRC_pla_mobilization_speed_dynamic_var #动员速度
+	training_time_factor = PRC_pla_training_time_factor_dynamic_var #训练时间
+	military_development_monthly = PRC_pla_military_development_monthly_dynamic_var #月度军事发展
+	acclimatization_cold_climate_gain_factor = PRC_acclimatization_cold_climate_gain_factor_dynamic_var
+#寒冷适应度增长率
+	acclimatization_hot_climate_gain_factor = PRC_acclimatization_hot_climate_gain_factor_dynamic_var
+#炎热适应度增长率
+	pocket_penalty = PRC_pocket_penalty_dynamic_var
+#包围惩罚
+	army_armor_attack_factor = PRC_army_armor_attack_factor_dynamic_var
+#装甲师攻击
+	army_armor_defence_factor = PRC_army_armor_defence_factor_dynamic_var #装甲师防御
+	terrain_penalty_reduction = PRC_terrain_penalty_reduction_dynamic_var
+#地形惩罚降低
+	air_superiority_efficiency = PRC_pla_air_superiority_efficiency_dynamic_var #夺取制空权任务效率
+	air_intercept_efficiency = PRC_pla_air_intercept_efficiency_dynamic_var #拦截任务效率
+	air_strategic_bomber_bombing_factor = PRC_air_strategic_bomber_bombing_factor_dynamic_var #战略轰炸
+	navy_anti_air_attack_factor = PRC_navy_anti_air_attack_factor_dynamic_var #海军对空攻击
+	conscription_factor = PRC_pla_conscription_factor_dynamic_var #适役人口
+	recon_factor = PRC_pla_recon_factor_dynamic_var #侦察
+	army_infantry_attack_factor = PRC_pla_army_infantry_attack_factor_dynamic_var #步兵攻击
+	army_infantry_defence_factor = PRC_pla_army_infantry_defence_factor_dynamic_var #步兵防御
+	army_strength_factor = PRC_army_strength_factor_dynamic_var  #hp
+	supply_consumption_factor = PRC_supply_consumption_factor_dynamic_var  #补给消耗
+	reliability_factor = PRC_reliability_factor_dynamic_var #可靠性加成
+	no_supply_grace = PRC_no_supply_grace_dynamic_var #携行补给
+	fuel_capacity_factor = PRC_fuel_capacity_factor_dynamic_var #燃油容量
+	army_speed_factor = PRC_speed_factor_dynamic_var #陆军师速度
+}
+	
+PRC_plan_navy_dynamic = { #人民解放军海军
+	icon = GFX_idea_PRC_plan_dynamic
+
+	enable = { 
+		tag = PRC 
+		has_completed_focus = PRC_a_blue_water_navy_1
+	}
+	naval_invasion_prep_speed = PRC_plan_naval_invasion_prep_speed_dynamic_var #登陆准备速度
+	naval_invasion_capacity  = PRC_plan_naval_invasion_capacity_dynamic_var #登陆作战上限
+	naval_invasion_penalty  = PRC_plan_naval_invasion_penalty_dynamic_var #登陆惩罚
+	amphibious_invasion  = PRC_plan_amphibious_invasion_dynamic_var #两栖登陆速度
+	naval_accidents_chance = PRC_plan_naval_accidents_chance_dynamic_var #事故几率
+	naval_coordination = PRC_plan_naval_coordination_dynamic_var #舰队协同性
+	naval_damage_factor  = PRC_plan_naval_damage_factor_dynamic_var #海军伤害
+	naval_defense_factor = PRC_plan_naval_defense_factor_dynamic_var #海军防御
+	navy_capital_ship_attack_factor = PRC_plan_navy_capital_ship_attack_factor_dynamic_var #主力舰攻击
+	navy_capital_ship_defence_factor = PRC_plan_navy_capital_ship_defence_factor_dynamic_var #主力舰装甲
+	navy_submarine_detection_factor = PRC_plan_navy_submarine_detection_factor_dynamic_var #对潜探测
+	navy_surface_detection_factor = PRC_plan_navy_submarine_detection_factor_dynamic_var #对海探测
+	ships_at_battle_start = PRC_plan_ships_at_battle_start_dynamic_var #最早接战时的参战舰艇数
+	navy_submarine_attack_factor = PRC_plan_navy_submarine_attack_factor_dynamic_var #潜艇攻击
+	sortie_efficiency = PRC_plan_sortie_efficiency_dynamic_var #出击效率
+	carrier_night_traffic = PRC_plan_carrier_night_traffic_dynamic_var #航母夜间起降能力
+	extra_marine_supply_grace = PRC_plan_extra_marine_supply_grace_dynamic_var #海军陆战队携行补给
+	experience_gain_navy_factor = PRC_experience_gain_navy_factor_dynamic_var #海军经验增长
+	navy_carrier_air_agility_factor = PRC_navy_carrier_air_agility_factor_dynamic_var #舰载机机动
+	spotting_chance = PRC_spotting_chance_dynamic_var #索敌速度
+	navy_screen_attack_factor = PRC_navy_screen_attack_factor_dynamic_var #屏卫舰攻击
+	navy_screen_defence_factor = PRC_navy_screen_defence_factor_dynamic_var #屏卫舰防御
+	screening_efficiency = PRC_screening_efficiency_dynamic_var #屏卫效率
+	positioning = PRC_positioning_dynamic_var #	
+	custom_modifier_tooltip = PRC_battlecruiser_modifier_tooltip
+	navy_carrier_air_attack_factor = PRC_plan_navy_carrier_air_attack_factor_dynamic_var  #舰载机攻击
+	navy_carrier_air_targetting_factor = PRC_plan_navy_carrier_air_targetting_factor_dynamic_var #舰载机瞄准
+	production_speed_dockyard_factor = PRC_production_speed_dockyard_factor_dynamic_var #船坞建造速度
+	industrial_capacity_dockyard = PRC_production_speed_dockyard_factor_dynamic_var #船坞产出
+	naval_equipment_research = PRC_naval_equipment_research_dynamic_var #海军研究速度
+}	
+PRC_plan_navy_1_dynamic = { #人民解放军海军(军改完成）
+	icon = GFX_idea_PRC_plan_dynamic
+
+	enable = { 
+		tag = PRC 
+		has_completed_focus = PRC_a_blue_water_navy_1
+	}
+	naval_invasion_prep_speed = PRC_plan_naval_invasion_prep_speed_dynamic_var #登陆准备速度
+	naval_invasion_capacity  = PRC_plan_naval_invasion_capacity_dynamic_var #登陆作战上限
+	naval_invasion_penalty  = PRC_plan_naval_invasion_penalty_dynamic_var #登陆惩罚
+	amphibious_invasion  = PRC_plan_amphibious_invasion_dynamic_var #两栖登陆速度
+	naval_accidents_chance = PRC_plan_naval_accidents_chance_dynamic_var #事故几率
+	naval_coordination = PRC_plan_naval_coordination_dynamic_var #舰队协同性
+	naval_damage_factor  = PRC_plan_naval_damage_factor_dynamic_var #海军伤害
+	naval_defense_factor = PRC_plan_naval_defense_factor_dynamic_var #海军防御
+	navy_capital_ship_attack_factor = PRC_plan_navy_capital_ship_attack_factor_dynamic_var #主力舰攻击
+	navy_capital_ship_defence_factor = PRC_plan_navy_capital_ship_defence_factor_dynamic_var #主力舰装甲
+	navy_submarine_detection_factor = PRC_plan_navy_submarine_detection_factor_dynamic_var #对潜探测
+	navy_surface_detection_factor = PRC_plan_navy_submarine_detection_factor_dynamic_var #对海探测
+	ships_at_battle_start = PRC_plan_ships_at_battle_start_dynamic_var #最早接战时的参战舰艇数
+	navy_submarine_attack_factor = PRC_plan_navy_submarine_attack_factor_dynamic_var #潜艇攻击
+	sortie_efficiency = PRC_plan_sortie_efficiency_dynamic_var #出击效率
+	carrier_night_traffic = PRC_plan_carrier_night_traffic_dynamic_var #航母夜间起降能力
+	extra_marine_supply_grace = PRC_plan_extra_marine_supply_grace_dynamic_var #海军陆战队携行补给
+	experience_gain_navy_factor = PRC_experience_gain_navy_factor_dynamic_var #海军经验增长
+	navy_carrier_air_agility_factor = PRC_navy_carrier_air_agility_factor_dynamic_var #舰载机机动
+	spotting_chance = PRC_spotting_chance_dynamic_var #索敌速度
+	navy_screen_attack_factor = PRC_navy_screen_attack_factor_dynamic_var #屏卫舰攻击
+	navy_screen_defence_factor = PRC_navy_screen_defence_factor_dynamic_var #屏卫舰防御
+	screening_efficiency = PRC_screening_efficiency_dynamic_var #屏卫效率
+	positioning = PRC_positioning_dynamic_var #	
+	custom_modifier_tooltip = PRC_battlecruiser_modifier_tooltip
+	navy_carrier_air_attack_factor = PRC_plan_navy_carrier_air_attack_factor_dynamic_var  #舰载机攻击
+	navy_carrier_air_targetting_factor = PRC_plan_navy_carrier_air_targetting_factor_dynamic_var #舰载机瞄准
+	production_speed_dockyard_factor = PRC_production_speed_dockyard_factor_dynamic_var #船坞建造速度
+	industrial_capacity_dockyard = PRC_production_speed_dockyard_factor_dynamic_var #船坞产出
+	naval_equipment_research = PRC_naval_equipment_research_dynamic_var #海军研究速度
+}
+
+PRC_pla_zair_dynamic = { #人民解放军空军
+	icon = GFX_idea_PRC_plaaf_dynamic
+
+	enable = { 
+		tag = PRC 
+		has_completed_focus = PRC_Sortie_Of_Eagle
+	}
+	army_bonus_air_superiority_factor = PRC_plaaf_army_bonus_air_superiority_factor_dynamic_var #空优
+	air_cas_present_factor = PRC_plaaf_air_cas_present_factorr_dynamic_var #对地支援
+	air_accidents = PRC_plaaf_air_accidents_dynamic_var #空军失事机率
+	air_weather_penalty = PRC_air_weather_penalty_dynamic_var #空军天气惩罚
+	air_attack_factor = PRC_plaaf_air_attack_factor_dynamic_var #对空攻击
+	air_ace_generation_chance_factor = PRC_plaaf_air_ace_generation_chance_factor_dynamic_var #空战王牌生成机率
+	army_bonus_air_superiority_factor = PRC_plaaf_army_bonus_air_superiority_factor_dynamic_var #制空权
+	air_mission_efficiency = PRC_plaaf_air_mission_efficiency_dynamic_var #空军任务效率 
+	air_superiority_efficiency = PRC_plaaf_air_superiority_efficiency_dynamic_var #制空权任务效率 
+	air_intercept_efficiency = PRC_plaaf_air_intercept_efficiency_dynamic_var #空军拦截效率
+	air_cas_efficiency = PRC_plaaf_air_cas_efficiency_dynamic_var #空中支援任务效率
+	air_night_penalty = PRC_plaaf_air_night_penalty_dynamic_var #夜间惩罚
+	air_range_factor = PRC_plaaf_air_range_factor_dynamic_var #空军航程
+	air_agility_factor = PRC_plaaf_air_agility_factor_dynamic_var #空军机动
+	air_escort_efficiency = PRC_plaaf_air_escort_efficiency_dynamic_var #护航效率
+	air_defence_factor = PRC_plaaf_air_defence_factor_dynamic_var #空中防御
+	air_superiority_detect_factor = PRC_plaaf_air_superiority_detect_factor #战斗机探测
+	naval_strike_targetting_factor = PRC_plaaf_naval_strike_targetting_factor_dynamic_var #对海瞄准
+	navy_surface_detection = PRC_plaaf_navy_surface_detection_dynamic_var #对海探测
+	ground_attack_factor = PRC_plaaf_ground_attack_factor_dynamic_var #对地攻击系数
+	naval_strike_attack_factor = PRC_plaaf_naval_strike_attack_factor_dynamic_var #对海攻击
+	production_factory_max_efficiency_factor = PRC_plaaf_production_factory_max_efficiency_factor_dynamic_var #生产效率上限
+	production_factory_efficiency_gain_factor = PRC_plaaf_production_factory_efficiency_gain_factor_dynamic_var #生产效率增长
+}
+
+PRC_pla_zair_1_dynamic = { #人民解放军空军（军改完成）
+	icon = GFX_idea_PRC_plaaf_dynamic
+
+	enable = { 
+		tag = PRC 
+		has_completed_focus = PRC_Sortie_Of_Eagle
+	}
+	army_bonus_air_superiority_factor = PRC_plaaf_army_bonus_air_superiority_factor_dynamic_var #空优
+	air_cas_present_factor = PRC_plaaf_air_cas_present_factorr_dynamic_var #对地支援
+	air_accidents = PRC_plaaf_air_accidents_dynamic_var #空军失事机率
+	air_weather_penalty = PRC_air_weather_penalty_dynamic_var #空军天气惩罚
+	air_attack_factor = PRC_plaaf_air_attack_factor_dynamic_var #对空攻击
+	air_ace_generation_chance_factor = PRC_plaaf_air_ace_generation_chance_factor_dynamic_var #空战王牌生成机率
+	army_bonus_air_superiority_factor = PRC_plaaf_army_bonus_air_superiority_factor_dynamic_var #制空权
+	air_mission_efficiency = PRC_plaaf_air_mission_efficiency_dynamic_var #空军任务效率 
+	air_superiority_efficiency = PRC_plaaf_air_superiority_efficiency_dynamic_var #制空权任务效率 
+	air_intercept_efficiency = PRC_plaaf_air_intercept_efficiency_dynamic_var #空军拦截效率
+	air_cas_efficiency = PRC_plaaf_air_cas_efficiency_dynamic_var #空中支援任务效率
+	air_night_penalty = PRC_plaaf_air_night_penalty_dynamic_var #夜间惩罚
+	air_range_factor = PRC_plaaf_air_range_factor_dynamic_var #空军航程
+	air_agility_factor = PRC_plaaf_air_agility_factor_dynamic_var #空军机动
+	air_escort_efficiency = PRC_plaaf_air_escort_efficiency_dynamic_var #护航效率
+	air_defence_factor = PRC_plaaf_air_defence_factor_dynamic_var #空中防御
+	air_superiority_detect_factor = PRC_plaaf_air_superiority_detect_factor #战斗机探测
+	naval_strike_targetting_factor = PRC_plaaf_naval_strike_targetting_factor_dynamic_var #对海瞄准
+	navy_surface_detection = PRC_plaaf_navy_surface_detection_dynamic_var #对海探测
+	ground_attack_factor = PRC_plaaf_ground_attack_factor_dynamic_var #对地攻击系数
+	naval_strike_attack_factor = PRC_plaaf_naval_strike_attack_factor_dynamic_var #对海攻击
+	production_factory_max_efficiency_factor = PRC_plaaf_production_factory_max_efficiency_factor_dynamic_var #生产效率上限
+	production_factory_efficiency_gain_factor = PRC_plaaf_production_factory_efficiency_gain_factor_dynamic_var #生产效率增长
+}
+
+
+
+
+
+
+
+
+PRC_made_in_china_dynamic = {#中国制造
+	icon = GFX_idea_PRC_made_in_china_idea
+	desc = PRC_made_in_china_dynamic_desc #No such thing in dynamic modifiers, consider tooltips instead
+
+	enable = { 
+		always = yes
+	}
+	dtg_threshold = PRC_mic_dtg_threshold_dynamic_var
+	business_value_factor = PRC_mic_business_value_factor_dynamic_var
+	personal_value_factor = PRC_mic_personal_value_factor_dynamic_var
+	conscription_factor = PRC_mic_conscription_factor_dynamic_var
+	academic_development_monthly = PRC_mic_academic_development_monthly_dynamic_var
+	production_factory_start_efficiency_factor = PRC_mic_production_factory_start_efficiency_factor_dynamic_var
+	production_factory_efficiency_gain_factor = PRC_mic_production_factory_efficiency_gain_factor_dynamic_var
+	trade_opinion_factor = PRC_mic_faction_trade_opinion_factor_dynamic_var
+	business_value_factor = PRC_mic_business_value_dynamic_var
+	political_power_gain = PRC_mic_political_power_gain_dynamic_var
+	stability_factor = PRC_mic_stability_factor_dynamic_var
+	stability_weekly = PRC_mic_stability_weekly_dynamic_var 
+	war_support_factor = PRC_mic_war_support_factor_dynamic_var
+	war_support_weekly = PRC_mic_war_support_weekly_dynamic_var
+	consumer_goods_factor = PRC_mic_consumer_goods_factor_dynamic_var
+	industrial_capacity_factory = PRC_mic_industrial_capacity_factory_dynamic_var
+	industrial_capacity_dockyard = PRC_mic_industrial_capacity_dockyard_dynamic_var
+	production_factory_max_efficiency_factor = PRC_mic_production_factory_max_efficiency_factor_dynamic_var
+	line_change_production_efficiency_factor = PRC_mic_line_change_production_efficiency_factor_dynamic_var
+	production_speed_buildings_factor = PRC_mic_production_speed_buildings_factor_dynamic_var
+	production_speed_arms_factory_factor = PRC_mic_production_speed_arms_factory_factor_dynamic_var
+	production_speed_industrial_complex_factor = PRC_mic_production_speed_industrial_complex_factor_dynamic_var
+	production_speed_power_plant_factor = PRC_mic_production_speed_power_plant_factor_dynamic_var
+	production_cost_infrastructure_factor = PRC_mic_production_cost_infrastructure_factor_dynamic_var
+	production_cost_industrial_complex_factor = PRC_mic_production_cost_industrial_complex_factor_dynamic_var
+	research_speed_factor = PRC_mic_research_speed_factor_dynamic_var
+	compliance_growth = PRC_mic_compliance_growth_dynamic_var
+	resistance_growth = PRC_mic_resistance_growth_dynamic_var
+	resistance_decay = PRC_mic_resistance_decay_dynamic_var
+	tax_personal_rate_factor = PRC_mic_tax_personal_rate_factor_dynamic_var
+	industrial_development_monthly = PRC_mic_industrial_development_monthly_dynamic_var
+	poverty_development_monthly = PRC_mic_poverty_development_monthly_dynamic_var
+	society_development_monthly = PRC_mic_society_development_monthly_dynamic_var
+	income_growth_factor = PRC_mic_income_growth_factor_dynamic_var
+	production_speed_rail_way_factor = PRC_mic_production_speed_rail_way_factor_dynamic_var
+	personal_expense_factor = PRC_mic_personal_expense_factor_dynamic_var
+	inflation_monthly = PRC_mic_inflation_monthly_dynamic_var
+	conscription = PRC_mic_conscription_dynamic_var
+	monthly_population = PRC_mic_monthly_population_dynamic_var
+	industry_repair_factor = PRC_mic_industry_repair_factor_var
+	production_lack_of_resource_penalty_factor = PRC_mic_production_lack_of_resource_penalty_factor_dynamic_var
+	production_speed_infrastructure_factor = PRC_mic_production_speed_infrastructure_factor_dynamic_var
+	production_speed_nuclear_reactor_factor = PRC_mic_production_speed_nuclear_reactor_factor_dynamic_var
+	production_speed_energy_farm_factor = PRC_mic_production_speed_energy_farm_factor_dynamic_var
+	production_speed_office_park_factor = PRC_mic_production_speed_office_park_factor_dynamic_var
+	production_speed_synthetic_refinery_factor = PRC_mic_production_speed_synthetic_refinery_factor_dynamic_var
+	fuel_gain_factor = PRC_mic_fuel_gain_factor_dynamic_var
+	min_export = PRC_mic_min_export_dynamic_var
+	local_resources_factor = PRC_mic_local_resources_factor_var
+	military_industrial_organization_research_bonus = PRC_mic_military_industrial_organization_research_bonus_var
+	military_industrial_organization_funds_gain = PRC_mic_military_industrial_organization_funds_gain_bonus_var
+	expense_growth_factor = PRC_mic_expense_growth_factor_dynamic_var
+	cic_to_overlord_factor = PRC_mic_cic_to_overlord_factor_dynamic_var
+	mic_to_overlord_factor = PRC_mic_mic_to_overlord_factor_dynamic_var
+	battalion_upkeep_factor = PRC_mic_battalion_upkeep_factor_dynamic_var
+	supply_consumption_factor  = PRC_mic_supply_consumption_factor_dynamic_var
+	supply_factor = PRC_mic_supply_factor_dynamic_var
+	unit_upkeep_attrition_factor = PRC_mic_unit_upkeep_attrition_factor_dynamic_var
+	truck_attrition_factor = PRC_mic_truck_attrition_factor_dynamic_var
+	supply_node_range = PRC_mic_supply_node_range_dynamic_var
+	misc_income = PRC_mic_misc_income_dynamic_var
+	mio_funds_gain = PRC_mic_mio_funds_gain_var
+	military_development_monthly = PRC_mic_military_development_monthly_var
+}
+
+PRC_build_green_china_dynamic = {#建设绿色中国
+	icon = GFX_idea_PRC_chinese_enviroment
+	desc = PRC_build_green_china_dynamic_desc
+
+	enable = {
+		always = yes
+	}
+
+	personal_expense = 0.05
+	business_value_factor = PRC_EII_var_a
+	stability_factor = PRC_EII_var_a
+	production_speed_energy_farm_factor = PRC_EII_var_a
+	production_speed_nuclear_reactor_factor = PRC_EII_var_a
+	political_power_gain = PRC_EII_var_a
+	society_development_monthly = PRC_bgc_society_development_monthly_var
+	farming_development_monthly = PRC_bgc_farming_development_monthly_var
+	supply_consumption_factor = PRC_bgc_supply_consumption_factor_var
+	monthly_population = PRC_bgc_monthly_population_var
+	local_resources_factor = PRC_bgc_local_resources_factor_var
+	consumer_goods_factor = PRC_bgc_consumer_goods_factor_var
+	battalion_upkeep_factor = PRC_bgc_battalion_upkeep_factor_var
+	tax_personal_rate = PRC_bgc_tax_personal_rate_var
+
+
+	
+}
+
+TFR_PRC_spaceage_dynamic_modifier = { #中国太空时代
+	icon = GFX_idea_PRC_chinese_space_age
+	production_speed_buildings_factor = TFR_PRC_spaceage_production_speed_buildings_factor_dynamic #建造速度
+	production_factory_efficiency_gain_factor = TFR_PRC_spaceage_production_factory_efficiency_gain_factor_dynamic #生产效率增长速度
+	industrial_capacity_factory =	TFR_PRC_spaceage_industrial_capacity_factory_dynamic #工厂产出
+	society_development_monthly = TFR_PRC_spaceage_society_development_monthly_dynamic #社会发展度
+	political_power_factor = TFR_PRC_spaceage_political_power_factor_dynamic #政治点数
+	production_lack_of_resource_penalty_factor = TFR_PRC_spaceage_production_lack_of_resource_penalty_factor_dynamic #战略资源不足惩罚
+	consumer_goods_factor = TFR_PRC_spaceage_consumer_goods_factor_dynamic #生活消费品系数
+	industrial_capacity_dockyard = TFR_PRC_spaceage_industrial_capacity_dockyard_dynamic #船坞产出
+	research_speed_factor = TFR_PRC_spaceage_research_speed_factor_dynamic #研究速度
+	expense_growth_factor = TFR_PRC_spaceage_expense_growth_factor_dynamic #每月支出
+	income_growth_factor = TFR_PRC_spaceage_income_growth_factor_dynamic #每月收入
+	inflation_monthly = TFR_PRC_spaceage_inflation_monthly_dynamic #每月通货膨胀
+	business_value_factor = TFR_PRC_spaceage_business_value_factor_dynamic #商业价值
+	out_of_supply_factor = TFR_PRC_spaceage_out_of_supply_factor_dynamic #补给不足
+	production_speed_infrastructure_factor = TFR_PRC_spaceage_production_speed_infrastructure_factor_dynamic #基建速度
+	local_resources_factor = TFR_PRC_spaceage_local_resources_factor_dynamic #战略资源产出
+	misc_income = TFR_PRC_spaceage_misc_income_dynamic #杂项收入
+	industrial_development_monthly = PRC_chinese_space_age_industrial_development_monthly_dynamic #工业发展度
+	supply_factor = TFR_PRC_spaceage_supply_factor_dynamic #补给效率
+	production_factory_max_efficiency_factor = TFR_PRC_spaceage_production_factory_max_efficiency_factor_dynamic #生产上限
+	initiative_factor = TFR_PRC_spaceage_initiative_factor_dynamic #主动性
+	supply_node_range = TFR_PRC_spaceage_supply_node_range_dynamic #补给范围
+	air_superiority_efficiency = TFR_PRC_spaceage_sair_superiority_efficiency_dynamic #空优效率
+	farming_development_monthly = TFR_PRC_spaceage_farming_development_monthly_dynamic #农业发展度
+	communist_drift = TFR_PRC_spaceage_communist_drift_dynami #威社支持率
+	master_ideology_drift = TFR_PRC_spaceage_master_ideology_drift_dynami #执政党支持率
+}

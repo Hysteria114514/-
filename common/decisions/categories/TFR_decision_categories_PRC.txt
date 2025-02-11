@@ -1,0 +1,593 @@
+PRC_great_asian_war1 = {
+    icon = GFX_PRC_gaw_cat
+    visible_when_empty = yes
+
+    allowed = {
+    	tag = PRC
+    }
+    
+    visible = {
+        OR = {
+            has_completed_focus = PRC_finilize_korean_revolution
+            has_global_flag = pan_asian_war_ongoing
+        }
+    }
+    priority = 99
+}
+
+PRC_chinas_liberalization_category = {
+    icon = GFX_PRC_liberal_decision   
+    picture = GFX_decision_cat_PRC_chinas_liberalization
+    visible_when_empty = yes
+    priority = 6
+
+    allowed = {
+        original_tag = PRC
+    }
+    
+    visible = {
+        has_completed_focus = PRC_the_chinese_glasnost
+    }
+    scripted_gui = PRC_reforms_deccat_gui
+}
+
+PRC_balance_of_power_liberal_category = {
+    icon = generic_propaganda
+    
+    allowed = {
+    	tag = PRC
+    }	
+    visible = {
+    	
+    }
+}
+
+PRC_taiwan_war_cat = {
+    icon = GFX_decision_category_PRC_internal_factions_icon   
+    picture = GFX_decision_cat_PRC_taiwan_war
+    visible_when_empty = yes
+    priority = 2
+
+    allowed = {
+    	original_tag = PRC
+    }
+    
+    visible = {
+    	has_global_flag = PRC_ongoing_taiwan_war
+    }
+}
+
+PRC_siberian_war_cat = { #retarded ass shit
+    icon = GFX_decision_category_PRC_internal_factions_icon   
+    picture = GFX_decision_cat_PRC_siberian_war
+    visible_when_empty = yes
+    priority = 4
+
+    allowed = {
+    	original_tag = PRC
+    }
+    
+    visible = {
+    	has_country_flag = PRC_siberian_war_flag
+    }
+}
+
+PRC_coronavirus_category = {
+    icon = GFX_decision_category_PRC_internal_factions_icon
+    picture = PRC_covid_19_cat
+    visible_when_empty = yes
+    priority = 2
+
+    allowed = {
+    	original_tag = PRC
+    }
+
+    visible = {
+		OR = {
+			has_idea = PRC_coronavirus_pandemic_idea
+			has_idea = PRC_coronavirus_pandemic_idea1
+			has_idea = PRC_coronavirus_pandemic_idea2
+			has_idea = PRC_coronavirus_pandemic_idea3
+			has_idea = PRC_coronavirus_pandemic_idea4
+		}
+    }
+}
+ 
+PRC_foreign_policy_category = {
+    icon = GFX_decision_category_PRC_internal_factions_icon
+    visible_when_empty = yes
+    priority = 3
+    scripted_gui = TFR_asian_cold_war_gui
+    visible = {
+		OR = {
+			is_debug = yes
+			has_completed_focus = PRC_establish_eadi
+		}
+
+    }
+    
+    allowed = {
+    	original_tag = PRC
+    }
+}
+
+PRC_national_peoples_congress_cat = {
+    icon = GFX_decision_category_PRC_internal_factions_icon   
+    #picture = GFX_decision_cat_PRC_internal_factions
+    visible_when_empty = yes
+    priority = 5
+
+    allowed = {
+    	tag = PRC
+    }
+	
+    visible = {
+    	has_country_flag = PRC_internal_factions_enabled_flag
+    }
+}
+
+PRC_maoist_politburo_cat = {
+    icon = GFX_decision_category_PRC_maoist_politburo_icon   
+    #picture = GFX_decision_cat_PRC_internal_factions
+    visible_when_empty = yes
+    priority = 5
+
+    allowed = {
+    	tag = PRC
+    }
+    visible = {
+    	has_completed_focus = PRC_legacy_of_mao
+    }
+}
+
+PRC_socialist_democratization_cat = {
+    icon = GFX_decision_category_PRC_internal_factions_icon   
+    #picture = GFX_decision_cat_PRC_internal_factions
+    visible_when_empty = yes
+    priority = 5
+
+    allowed = {
+    	tag = PRC
+    }
+    visible = {
+    	has_completed_focus = PRC_revolution_of_21_century
+    }
+}
+
+PRC_the_red_dragon_cat = {
+    icon = GFX_decision_category_PRC_the_red_dragon_icon   
+    #picture = GFX_decision_cat_PRC_internal_factions
+    visible_when_empty = yes
+    priority = 5
+
+    allowed = {
+    	tag = PRC
+    }
+    visible = {
+    	has_completed_focus = PRC_chinas_most_dire_hour
+    }
+}
+
+PRC_the_rebellious_west_cat = {
+    icon = GFX_decision_category_PRC_internal_factions_icon
+    picture = GFX_decision_cat_PRC_internal_factions
+    visible_when_empty = yes
+
+    allowed = {
+    	tag = PRC
+    }
+    
+    visible = {
+    	has_country_flag = PRC_rebellious_west_enabled
+		OR = {
+			XIN = {
+				has_war = yes
+			}
+			1152 = {
+				is_demilitarized_zone = yes
+			}
+			1153 = {
+				is_demilitarized_zone = yes
+			}
+			1155 = {
+				is_demilitarized_zone = yes
+			}
+			322 = {
+				is_demilitarized_zone = yes
+			}
+		}
+    }
+    
+    priority = 1
+}
+
+PRC_balance_of_power_category = {
+    icon = GFX_decision_category_PRC_internal_factions_icon
+    visible_when_empty = no
+
+    allowed = {
+    	tag = PRC
+    }
+    
+    visible = {
+    }
+    
+    priority = 4
+}
+
+PRC_chinese_economic_miracle = {
+    icon = GFX_decision_category_PRC_internal_factions_icon
+    visible_when_empty = yes
+
+    allowed = {
+    	tag = PRC
+    }
+    
+    visible = {
+    	has_completed_focus = PRC_reorient_the_economy
+    }
+    
+    priority = 4
+}
+
+PRC_chinese_socialist_economy_cat = {
+    icon = GFX_decision_category_PRC_internal_factions_icon
+    visible_when_empty = yes
+
+    allowed = {
+    	tag = PRC
+    }
+    
+    visible = {
+    	has_completed_focus = PRC_denounce_deng_xiao_ping_thought
+    }
+    
+    priority = 4
+}
+
+PRC_pla_reformation = {
+    icon = GFX_PRC_pla_cat
+	picture = GFX_decision_cat_PRC_pla_picture
+    visible_when_empty = yes
+
+    allowed = {
+    	#tag = PRC
+    }
+    
+    visible = {
+    	has_country_flag = PRC_army_reform_start
+    }
+    
+    priority = 4
+}
+
+PRC_indo_pakistan_war = {
+    icon = GFX_PRC_indo_pakistani_war_decision
+
+    allowed = {
+    	tag = PRC
+    }
+    
+    visible = {
+    	has_country_flag = PRC_indo_pakistan_war_ongoing
+    }
+}
+
+PRC_national_peoples_congress_category = {
+    icon = generic_propaganda
+    
+    allowed = {
+    	tag = PRC
+    }	
+    visible = {
+    	
+    }
+}
+
+PRC_the_chinese_century_category = {
+    icon = GFX_decision_category_PRC_сhinese_century_icon
+    visible_when_empty = yes
+    
+    allowed = {
+    	tag = PRC
+    }	
+    visible = {
+    	always = no
+    }
+	priority = 5
+}
+
+
+PRC_chinese_liberal_economy_cat = {
+    icon = GFX_decision_category_PRC_internal_factions_icon
+    visible_when_empty = yes
+
+    allowed = {
+    	tag = PRC
+    }
+    
+    visible = {
+    	has_completed_focus = PRC_economic_cake_growth
+    }
+    
+    priority = 4
+}
+
+PRC_xiongania_category = {
+    icon = GFX_decision_category_PRC_сhinese_century_icon
+    visible_when_empty = yes
+    priority = 4
+
+    allowed = {
+        original_tag = PRC
+    }
+    
+    visible = {
+        has_country_flag = PRC_xiongania_enable
+        always = no
+    }
+    scripted_gui = PRC_xiongania_bar_gui
+}
+
+PRC_loji_category = {
+    icon = GFX_decision_cat_PRC_loji_category_icon
+    visible_when_empty = yes
+    priority = 15
+
+    allowed = {
+        original_tag = PRC
+    }
+    
+    visible = {
+        has_completed_focus = PRC_ai_assisted_governance
+        is_ai = no
+    }
+}
+
+PHI_unification = {
+    icon = blank
+    visible_when_empty = yes
+    
+    allowed = {
+    	OR = {
+            tag = PHI
+            tag = NPA
+            tag = MIN
+        }
+    }	
+    visible = {
+        
+    }
+}
+
+PRC_chinese_liberal_economy_cat = {
+    icon = GFX_decision_category_PRC_internal_factions_icon
+    visible_when_empty = yes
+
+    allowed = {
+    	tag = PRC
+    }
+    
+    visible = {
+    	has_completed_focus = PRC_economic_cake_growth
+    }
+    
+    priority = 4
+}
+
+TFR_PRC_SpaceProgram_decisions = { #中国太空计划
+	icon = GFX_TFR_PRC_space_decisions_icon
+	visible_when_empty = yes
+	priority = 1
+
+	allowed = {
+		tag = PRC
+	}
+
+	visible = {
+		has_completed_focus = PRC_nation_never_forget
+	}
+}
+
+TFR_PRC_Chosen_Reform_cat = {
+    icon = PRK_decisions_DPRK_Category_icon
+    visible_when_empty = no
+    priority = 4
+    visible = {
+    	has_completed_focus = PRC_Chosen_Reform
+    }
+    
+    allowed = {
+    	tag = PRC
+    }
+}
+
+PRC_mon_core = { #蒙古造核决议组
+    icon = GFX_decision_category_PRC_internal_factions_icon
+    visible_when_empty = no
+    priority = 4
+    visible = {
+    	has_country_flag = PRC_mon_core_1
+    }
+    
+    allowed = {
+    	original_tag = PRC
+    }
+}
+
+PRC_North_East = { #外东北决议组
+    icon = GFX_decision_category_PRC_internal_factions_icon
+    visible_when_empty = yes #此处防止二欧俄罗斯战败导致外东北独立，故留下此窗口方便重新收复
+    priority = 4
+    visible = {
+    	has_completed_focus = PRC_Chinese_Begonia
+        OR = {
+            408 = {   
+                NOT = {
+                    is_core_of = ROOT 
+                }  
+            }         
+            SOV = {
+                exists = no
+            }   
+        }
+    }
+    allowed = {
+    	original_tag = PRC
+    }
+}
+
+PRC_Taiwan_Rebuild = { #台湾重建
+    icon = GFX_decision_category_PRC_internal_factions_icon
+    visible_when_empty = no
+    priority = 4
+    visible = {
+        has_completed_focus = PRC_utilize_xinjiang_methods_1
+        1148 = {
+            NOT = {
+                is_core_of = ROOT
+            }
+        }
+    }
+
+    allowed = {
+        original_tag = PRC
+    }
+}
+
+
+
+
+PRC_national_capital_construction = {#首都工程
+    icon = GFX_PRC_gaw_cat
+    visible_when_empty = yes
+
+    allowed = {
+    	tag = PRC
+    }
+    
+    visible = {
+    	OR = {
+			has_global_flag = PRC_NCC
+		}
+        is_debug = yes
+    }
+    priority = 99
+}
+PRC_test = {
+    icon = GFX_PRC_gaw_cat
+
+    allowed = {
+    	tag = PRC
+    }
+
+    visible = {
+        is_debug = yes
+    }
+
+    priority = 200
+}
+
+PRC_china_century_decisions = {#中国世纪
+    icon = GFX_decision_category_PRC_сhinese_century_icon
+    
+    visible_when_empty = yes
+    
+    allowed = {
+    	tag = PRC
+    }	
+    visible = {
+    	has_completed_focus = PRC_china_century
+    }
+	priority = 98
+}
+
+PRC_balance_of_power_category = {#权力平衡
+    icon = GFX_decision_category_PRC_internal_factions_icon
+    visible_when_empty = yes
+
+    allowed = {
+    	tag = PRC
+    }
+    
+    visible = {
+        tag = PRC
+    }
+    
+    priority = 4
+}
+
+PRC_build_green_china = {#建立绿色中国
+    icon = GFX_decision_category_PRC_internal_factions_icon
+    visible_when_empty = yes
+
+    allowed = {
+    	tag = PRC
+    }
+    
+    visible = {
+        tag = PRC
+    }
+    
+    priority = 50
+}
+
+strengthen_pdo_category = {#加强太约决议组
+	icon = GFX_decision_category_generic_prospect_for_resources	
+	visible_when_empty = no
+	available = {
+		is_ai = no
+	}
+	allowed = {
+    		tag = PRC
+	}
+	visible = {
+    		tag = PRC
+	}
+	priority = 20
+}
+
+
+
+PRC_pla_reformation_1 = {#军改决议组
+    icon = GFX_PRC_pla_cat
+   scripted_gui = TFR_PRC_military_gui
+    visible_when_empty = yes
+
+    allowed = {
+    	tag = PRC
+    }
+    
+    visible = {
+    	has_completed_focus = PRC_modern_military_reforms
+    }
+    
+    priority = 4
+}
+
+PRC_garade_category = {#国务院决议组
+    icon = GFX_decision_category_garade_icon
+    visible_when_empty = yes
+    priority = 100
+
+    allowed = {
+        always = no
+    }
+
+}
+
+PRC_mainland_defense = {
+    icon = GFX_PRC_pla_cat
+    
+    #全局条件：正在进行大东亚战争
+    potential = {
+        is_subject = no
+    }
+    #可见条件:
+    visible = {
+        always = no
+    }
+    allowed = {
+        always = yes
+    }
+}

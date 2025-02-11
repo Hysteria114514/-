@@ -1,0 +1,594 @@
+PRC_balance_of_power_category = { #黑猫白猫
+	PRC_ban_private_education = { #禁止私立教育
+		icon = GFX_FRA_Reconfigure_the_Education_System
+		allowed = {
+			tag = PRC
+		}
+		visible = {
+			tag = PRC
+			NOT = {
+				PRC = {
+					has_country_flag = PRC_expand_charter_schools_flag
+				}
+			}
+		}
+		available = {
+			set_temp_variable = {
+				var = PRC_approval_rating_trigger_temp
+				value = 0.70
+			}
+			PRC_has_approval_rating_greater_than_or_equals = yes
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 70
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = PRC_made_in_china_dummy_idea
+					add_idea = PRC_ban_private_education_idea
+				}
+			}
+			add_power_balance_value = {
+				id = PRC_power_balance
+				value = -0.06
+			}
+			hidden_effect = {
+				set_country_flag = PRC_ban_private_education_flag
+			}
+		}
+		ai_will_do = {
+		base = 1
+		}
+	}
+	PRC_expand_charter_schools = { #扩建公立学校
+		icon = GFX_FRA_Reconfigure_the_Education_System
+		allowed = {
+			tag = PRC
+		}
+		visible = {
+			tag = PRC
+			NOT = {
+				PRC = {
+					has_country_flag = PRC_ban_private_education_flag
+				}
+			}
+		}
+		available = {
+			set_temp_variable = {
+				var = PRC_approval_rating_trigger_temp
+				value = 0.70
+			}
+			PRC_has_approval_rating_greater_than_or_equals = yes
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 70
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = PRC_made_in_china_dummy_idea
+					add_idea = PRC_expand_charter_schools_idea
+				}
+			}
+			add_to_variable = {
+				var = PRC_mic_consumer_goods_factor_dynamic_var
+				value = -0.01
+			}
+			add_power_balance_value = {
+				id = PRC_power_balance
+				value = 0.06
+			}
+			hidden_effect = {
+				set_country_flag = PRC_expand_charter_schools_flag
+			}
+		}
+		ai_will_do = {
+		base = 1
+		}
+	}
+	PRC_reign_in_ceos = { #统治企业
+		icon = GFX_decision_generic_arrest
+		allowed = {
+			tag = PRC
+		}
+		visible = {
+			tag = PRC
+		}
+		available = {
+			tag = PRC
+		}
+		fire_only_once = no
+		cost = 75
+		days_remove = 70
+		days_re_enable = 70
+		complete_effect = {
+		}
+		remove_effect = {
+			set_temp_variable = {
+					var = PRC_approval_rating_var_temp
+					value = 0.05
+				}
+			PRC_add_party_approval = yes
+			add_power_balance_value = {
+				id = PRC_power_balance
+				value = -0.04
+			}
+			set_temp_variable = {
+				var = poverty_development_var_temp
+				value = 0.10
+			}
+			add_poverty_development = yes
+		}
+		ai_will_do = {
+		base = 10
+		}
+	}
+	PRC_release_control = { #放开监管
+		icon = GFX_decision_generic_arrest
+		allowed = {
+			tag = PRC
+		}
+		visible = {
+			tag = PRC
+		}
+		available = {
+			tag = PRC
+		}
+		fire_only_once = no
+		cost = 75
+		days_remove = 70
+		days_re_enable = 70
+		complete_effect = {
+		}
+		remove_effect = {
+			set_temp_variable = {
+					var = PRC_approval_rating_var_temp
+					value = -0.05
+				}
+			PRC_add_party_approval = yes
+			add_power_balance_value = {
+				id = PRC_power_balance
+				value = 0.04
+			}
+			set_temp_variable = {
+				var = industrial_development_var_temp
+				value = 0.1
+			}
+			add_industrial_development = yes
+		}
+		ai_will_do = {
+		base = 10
+		}
+	}
+	PRC_government_employment_program = { #国家分配岗位
+		icon = GFX_PRC_decision_youth_project
+		allowed = {
+			tag = PRC
+		}
+		visible = {
+			tag = PRC
+			NOT = {
+				PRC = {
+					has_country_flag = PRC_self_employed_flag
+				}
+			}
+		}
+		available = {
+			set_temp_variable = {
+				var = PRC_approval_rating_trigger_temp
+				value = 0.75
+			}
+			PRC_has_approval_rating_greater_than_or_equals = yes
+		}
+		fire_only_once = yes
+		cost = 100
+		days_remove = 70
+		complete_effect = {
+		}
+		remove_effect = {
+			add_power_balance_value = {
+				id = PRC_power_balance
+				value = -0.06
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = PRC_made_in_china_dummy_idea
+					add_idea = PRC_government_employment_program_idea
+				}
+			}
+			add_to_variable = {
+				var = PRC_mic_consumer_goods_factor_dynamic_var
+				value = -0.01
+			}
+			hidden_effect = {
+				set_country_flag = PRC_government_employment_program_flag
+			}
+		}
+		ai_will_do = {
+		base = 10
+		}
+	}
+	PRC_self_employed = { #鼓励自主创业
+		icon = GFX_PRC_decision_youth_project
+		allowed = {
+			tag = PRC
+		}
+		visible = {
+			tag = PRC
+			NOT = {
+				PRC = {
+					has_country_flag = PRC_government_employment_program_flag
+				}
+			}
+		}
+		available = {
+			set_temp_variable = {
+				var = PRC_approval_rating_trigger_temp
+				value = 0.75
+			}
+			PRC_has_approval_rating_greater_than_or_equals = yes
+		}
+		fire_only_once = yes
+		cost = 100
+		days_remove = 70
+		complete_effect = {
+		}
+		remove_effect = {
+			add_power_balance_value = {
+				id = PRC_power_balance
+				value = 0.06
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = PRC_made_in_china_dummy_idea
+					add_idea = PRC_self_employed_idea
+				}
+			}
+			add_to_variable = {
+				var = PRC_mic_consumer_goods_factor_dynamic_var
+				value = -0.01
+			}
+			hidden_effect = {
+				set_country_flag = PRC_self_employed_flag
+			}
+		}
+		ai_will_do = {
+		base = 10
+		}
+	}
+	PRC_regulate_financial_speculation = { #约束金融投机
+		icon = GFX_SOV_china_investment
+		allowed = {
+			tag = PRC
+		}
+		visible = {
+			tag = PRC
+			NOT = {
+				PRC = {
+					has_country_flag = PRC_relax_financial_speculation_flag
+				}
+			}
+		}
+		available = {
+			set_temp_variable = {
+				var = PRC_approval_rating_trigger_temp
+				value = 0.65
+			}
+			PRC_has_approval_rating_greater_than_or_equals = yes
+		}
+		fire_only_once = yes
+		cost = 75
+		days_remove = 70
+		complete_effect = {
+		}
+		remove_effect = {
+			add_power_balance_value = {
+				id = PRC_power_balance
+				value = -0.06
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = PRC_made_in_china_dummy_idea
+					add_idea = PRC_regulate_financial_speculation_idea
+				}
+			}
+			hidden_effect = {
+				set_country_flag = PRC_regulate_financial_speculation_flag
+			}
+		}
+		ai_will_do = {
+		base = 10
+		}
+	}
+	PRC_relax_financial_speculation = { #为A股松绑
+		icon = GFX_SOV_china_investment
+		allowed = {
+			tag = PRC
+		}
+		visible = {
+			tag = PRC
+			NOT = {
+				PRC = {
+					has_country_flag = PRC_regulate_financial_speculation_flag
+				}
+			}
+		}
+		available = {
+			set_temp_variable = {
+				var = PRC_approval_rating_trigger_temp
+				value = 0.65
+			}
+			PRC_has_approval_rating_greater_than_or_equals = yes
+		}
+		fire_only_once = yes
+		cost = 75
+		days_remove = 70
+		complete_effect = {
+		}
+		remove_effect = {
+			add_power_balance_value = {
+				id = PRC_power_balance
+				value = 0.06
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = PRC_made_in_china_dummy_idea
+					add_idea = PRC_relax_financial_speculation_idea
+				}
+			}
+			hidden_effect = {
+				set_country_flag = PRC_relax_financial_speculation_flag
+			}
+		}
+		ai_will_do = {
+		base = 10
+		}
+	}
+	PRC_liberalize_energy_prices = { #能源交易自由化
+		icon = GFX_PRC_Communist_Money
+		available = {
+			has_country_flag = PRC_oil_crisis_ongoing
+			NOT = {
+				has_country_flag = PRC_energy_price_controls_flag
+			}
+		}
+		visible = {
+			has_country_flag = PRC_oil_crisis_ongoing
+			NOT = {
+				has_country_flag = PRC_energy_price_controls_flag
+			}
+		}
+		fire_only_once = yes
+		cost = 15
+		days_remove = 15
+		remove_effect = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = PRC_made_in_china_dummy_idea
+					add_idea = PRC_liberalized_energy_prices_idea
+				}
+			}
+			add_power_balance_value = {
+				id = PRC_power_balance
+				value = 0.03
+			}
+			if = {
+				limit = {
+					has_country_flag = PRC_internal_factions_enabled_flag
+				}
+				set_temp_variable = { 
+					var = PRC_influence_lib_var_temp
+					value = 0.03
+				}
+				PRC_add_influence_lib = yes
+			}
+			hidden_effect = {
+				set_country_flag = PRC_liberalized_energy_prices_flag
+				add_to_variable = {
+					var = PRC_mic_stability_factor_dynamic_var
+					value = -0.03
+				}
+				add_to_variable = {
+					var = PRC_mic_production_factory_efficiency_gain_factor_dynamic_var
+					value = 0.03
+				}
+				add_to_variable = {
+					var = PRC_mic_production_lack_of_resource_penalty_factor_dynamic_var
+					value = 0.03
+				}
+				add_to_variable = {
+					var = PRC_mic_production_factory_max_efficiency_factor_dynamic_var
+					value = 0.07
+				}
+			}
+		}
+		ai_will_do = {
+		base = 10
+		}
+	}
+	PRC_set_energy_price_controls = { #管控石油价格
+		icon = GFX_PRC_Communist_Money
+		available = {
+			has_country_flag = PRC_oil_crisis_ongoing
+			NOT = {
+				has_country_flag = PRC_liberalized_energy_prices_flag
+			}
+		}
+		visible = {
+			has_country_flag = PRC_oil_crisis_ongoing
+			NOT = {
+				has_country_flag = PRC_liberalized_energy_prices_flag
+			}
+		}
+		fire_only_once = yes
+		cost = 15
+		days_remove = 15
+		remove_effect = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = PRC_made_in_china_dummy_idea
+					add_idea = PRC_energy_price_controls_idea
+				}
+			}
+			add_power_balance_value = {
+				id = PRC_power_balance
+				value = -0.03
+			}
+			if = {
+				limit = {
+					has_country_flag = PRC_internal_factions_enabled_flag
+				}
+				set_temp_variable = { 
+					var = PRC_influence_new_var_temp
+					value = 0.05
+				}
+				PRC_add_influence_new = yes
+			}
+			hidden_effect = {
+				set_country_flag = PRC_energy_price_controls_flag
+				add_to_variable = {
+					var = PRC_mic_stability_factor_dynamic_var
+					value = 0.03
+				}
+				add_to_variable = {
+					var = PRC_mic_consumer_goods_factor_dynamic_var
+					value = 0.02
+				}
+				add_to_variable = {
+					var = PRC_mic_production_lack_of_resource_penalty_factor_dynamic_var
+					value = -0.03
+				}
+				add_to_variable = {
+					var = PRC_mic_production_factory_max_efficiency_factor_dynamic_var
+					value = -0.03
+				}
+			}
+		}
+		ai_will_do = {
+		base = 10
+		}
+	}
+	PRC_altai_oil_contract = { #阿尔泰石油合同
+		icon = GFX_decision_generic_oil
+		available = {
+			has_completed_focus = PRC_drill_for_xinjiang_oil
+		}
+		visible = {
+			has_completed_focus = PRC_drill_for_xinjiang_oil
+		}
+		fire_only_once = yes
+		cost = 40
+		days_remove = 70
+		remove_effect = {
+			add_resource = {
+				type = oil
+				amount = 35
+				state = 618
+			}
+			add_power_balance_value = {
+				id = PRC_power_balance
+				value = 0.03
+			}
+			add_to_variable = {
+				var = PRC_mic_consumer_goods_factor_dynamic_var
+				value = -0.01
+			}
+			#if = {
+			#	limit = {
+			#		has_country_flag = PRC_internal_factions_enabled_flag
+			#	}
+			#	set_temp_variable = { 
+			#		var = PRC_influence_lib_var_temp
+			#		value = 0.05
+			#	}
+			#	PRC_add_influence_lib = yes
+			#}
+		}
+		ai_will_do = {
+		base = 10
+		}
+	}
+	PRC_hoton_oil_contract = { #蒙古石油合同
+		icon = GFX_decision_generic_oil
+		available = {
+			has_completed_focus = PRC_drill_for_xinjiang_oil
+		}
+		visible = {
+			has_completed_focus = PRC_drill_for_xinjiang_oil
+		}
+		fire_only_once = yes
+		cost = 40
+		days_remove = 70
+		remove_effect = {
+			add_resource = {
+				type = oil
+				amount = 100
+				state = 287
+			}
+			add_power_balance_value = {
+				id = PRC_power_balance
+				value = 0.03
+			}
+			add_to_variable = {
+				var = PRC_mic_consumer_goods_factor_dynamic_var
+				value = -0.01
+			}
+			#if = {
+			#	limit = {
+			#		has_country_flag = PRC_internal_factions_enabled_flag
+			#	}
+			#	set_temp_variable = { 
+			#		var = PRC_influence_lib_var_temp
+			#		value = 0.05
+			#	}
+			#	PRC_add_influence_lib = yes
+			#}
+		}
+		ai_will_do = {
+		base = 10
+		}
+	}
+	PRC_kashgar_oil_contract = { #喀什石油合同
+		icon = GFX_decision_generic_oil
+		available = {
+			has_completed_focus = PRC_expand_domestic_oil_production
+		}
+		visible = {
+			has_completed_focus = PRC_expand_domestic_oil_production
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 70
+		remove_effect = {
+			add_resource = {
+				type = oil
+				amount = 100
+				state = 619
+			}
+			add_power_balance_value = {
+				id = PRC_power_balance
+				value = 0.03
+			}
+			#if = {
+			#	limit = {
+			#		has_country_flag = PRC_internal_factions_enabled_flag
+			#	}
+			#	set_temp_variable = { 
+			#		var = PRC_influence_lib_var_temp
+			#		value = 0.05
+			#	}
+			#	PRC_add_influence_lib = yes
+			#}
+		}
+		ai_will_do = {
+		base = 10
+		}
+	}
+}

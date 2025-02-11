@@ -1,0 +1,135 @@
+PRC_mon_core = { #蒙古造核决议组
+	PRC_mon_state_core = { #蒙古造核决议
+		icon = FX_PRC_soliders
+		available = {
+			PRC = {
+				controls_state = 1390
+				controls_state = 1391
+				controls_state = 1389
+				controls_state = 330
+				controls_state = 1388
+				controls_state = 329
+			}	
+		}
+		visible = {
+            MON = {
+                exists = no
+            }
+		}
+		cost = 100
+		days_remove = 90
+		fire_only_once = yes
+		remove_effect = {
+            add_state_core = 1390
+			add_state_core = 1391
+			add_state_core = 1389
+			add_state_core = 1388
+			add_state_core = 330
+			add_state_core = 329
+		1390 = {set_state_name = "苏赫巴托"}
+		1388 = {set_state_name = "科布多"}
+		}
+		ai_will_do = {
+			base = 999
+		}
+	}
+
+	PRC_mon_state_fix = { #蒙古环境治理
+		icon = FX_PRC_soliders
+		available = {
+			1390 = {
+				is_core_of = PRC
+			}
+			1391 = {
+				is_core_of = PRC
+			}
+			1389 = {
+				is_core_of = PRC
+			}
+			330 = {
+				is_core_of = PRC
+			}
+			1388 = {
+				is_core_of = PRC
+			}
+			329 = {
+				is_core_of = PRC
+			}
+		}
+		visible = {
+            1390 = {
+				is_core_of = PRC
+			}
+			1391 = {
+				is_core_of = PRC
+			}
+			1389 = {
+				is_core_of = PRC
+			}
+			330 = {
+				is_core_of = PRC
+			}
+			1388 = {
+				is_core_of = PRC
+			}
+			329 = {
+				is_core_of = PRC
+			}
+
+		}
+        
+		cost = 50
+		days_remove = 120
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 10
+		}
+		remove_effect = {
+				set_temp_variable = {
+    				var = PRC_enviromental_progress_temp
+   					value = 0.1
+  				}
+				PRC_add_enviromental_progress = yes
+				set_temp_variable = {
+					var = farming_development_var_temp
+					value = 0.2
+				}
+				add_farming_development = yes
+			1390 = {
+				add_dynamic_modifier = { 
+					modifier = PRC_mon_environmental_care
+				}
+			}
+			1391 = {
+				add_dynamic_modifier = { 
+					modifier = PRC_mon_environmental_care
+				}
+			}
+			1389 = {
+				add_dynamic_modifier = { 
+					modifier = PRC_mon_environmental_care
+				}
+			}
+			1388 = {
+				add_dynamic_modifier = { 
+					modifier = PRC_mon_environmental_care
+				}
+			}
+			330 = {
+				add_dynamic_modifier = { 
+					modifier = PRC_mon_environmental_care
+				}
+			}
+			329 = {
+				add_dynamic_modifier = { 
+					modifier = PRC_mon_environmental_care
+				}
+			}
+
+
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+}	

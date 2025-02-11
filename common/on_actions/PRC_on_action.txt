@@ -1,0 +1,196 @@
+###此为开局国家关系，将本文件下的所有add_opinion_modifier代码直接复制到on_action里的对应位置即可
+on_actions = {
+	on_pride_of_the_fleet_sunk = {
+		effect = {
+			if = {
+				limit = {
+					tag = CHI
+				}
+				PRC = {
+					set_country_flag = PRC_sunk_taiwan_pride_of_fleet
+					country_event = {
+						id = china.230
+						days = 1
+					}
+				}
+			}
+		}
+	}
+	on_startup = {
+		effect = {
+		    JAP = {
+			    add_opinion_modifier = {
+				    target = PRC
+				    modifier = anti_chinese
+			    }
+		    }
+		    CHI = {
+			    add_opinion_modifier = {
+				    target = PRC
+				    modifier = anti_prc
+			    }
+		    }
+		    PAK = {
+			    add_opinion_modifier = {
+				    target = PRC
+				    modifier = PAK_friendly
+			    }
+		    }
+			PRC = {
+		        add_opinion_modifier = {
+		 	        target = JAP
+			        modifier = anti_japanese
+		        }
+		        add_opinion_modifier = {
+		 	        target = JAP
+			        modifier = ww2_jap_crime
+		        }
+		        add_opinion_modifier = {
+		 	        target = JAP
+			        modifier = diaoyu_island
+		        }
+		        add_opinion_modifier = {
+		 	        target = CHI
+			        modifier = anti_taiwan
+		        }
+		        add_opinion_modifier = {
+		 	        target = PAK
+			        modifier = PAK_friendly
+		        }
+				country_event = { #小红书难民
+		            id = china.2005
+			        days = 1825
+	            }
+				country_event = { #西藏地震
+		            id = china.2006
+			        days = 1831
+	            }
+				country_event = { #聚变反应堆
+		            id = china.2009
+			        days = 1844
+	            }
+				country_event = { #615中印边境
+		            id = china.2014
+			        days = 194
+	            }
+				set_temp_variable = { 
+					var = PRC_influence_cen_var_temp
+					value = 0.4
+				}
+				PRC_add_influence_cen = yes	
+				set_temp_variable = { 
+					var = PRC_influence_lib_var_temp
+					value = 0.15
+				}
+				PRC_add_influence_lib = yes	
+				set_temp_variable = { 
+					var = PRC_influence_nat_var_temp
+					value = 0.25
+				}
+				PRC_add_influence_nat = yes	
+				set_temp_variable = { 
+					var = PRC_influence_new_var_temp
+					value = 0.15
+				}
+				PRC_add_influence_new = yes	
+			}
+		}
+	}
+	on_state_control_changed = {
+		effect = {
+			if = { #GAW_militia_jap2
+				limit = {
+					FROM.FROM = { 
+						OR = {
+							state = 530
+							state = 529
+						} 
+					}
+					OR = {
+						FROM = { tag = PRC}
+						FROM = { tag = JAP }
+					}
+					OR = {
+						ROOT = { tag = PRC }
+						ROOT = { tag = JAP }
+					}
+					NOT = {
+						JAP = {
+							has_country_flag = GAW_militia_jap2_flag
+						}
+					}
+				}
+				JAP = {
+					load_oob = GAW_militia_jap2
+					set_country_flag = GAW_militia_jap2_flag
+				}
+			}
+			if = { #GAW_militia_jap3
+				limit = {
+					FROM.FROM = { 
+						OR = {
+							state = 532
+							state = 535
+						} 
+					}
+					OR = {
+						FROM = { tag = PRC}
+						FROM = { tag = JAP }
+					}
+					OR = {
+						ROOT = { tag = PRC }
+						ROOT = { tag = JAP }
+					}
+					NOT = {
+						JAP = {
+							has_country_flag = GAW_militia_jap3_flag
+						}
+					}
+				}
+				JAP = {
+					load_oob = GAW_militia_jap3
+					set_country_flag = GAW_militia_jap3_flag
+				}
+			}
+
+			if = { #retardbuddy
+				limit = {
+					has_global_flag = PRC_ongoing_taiwan_war
+					FROM.FROM = { 
+						OR = {
+							region = 154
+							region = 94
+							region = 99
+							region = 71
+							region = 156
+							region = 193
+							region = 194
+							region = 195
+						}
+					}
+					OR = {
+						FROM = { tag = PRC}
+						FROM = { tag = JAP }
+						FROM = { tag = AST }
+					}
+					OR = {
+						ROOT = { tag = PRC }
+						ROOT = { tag = JAP }
+						ROOT = { tag = AST }
+					}
+					NOT = {
+						PRC = {
+							has_idea = PRC_fatal_mistake
+						}
+					}
+					PRC = {
+						is_ai = no
+					}
+				}
+				PRC = {
+					country_event = china.666
+				}
+			}
+		}
+	}
+}

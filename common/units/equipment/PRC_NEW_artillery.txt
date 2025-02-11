@@ -1,0 +1,47 @@
+equipments = {
+	PRC_203_cannon = { #侠炮
+		year = 1936
+		
+		active = no
+		
+		is_archetype = yes
+		can_license = no
+		picture = archetype_artillery_equipment
+		type = { 
+			armor
+			artillery
+		}
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		reliability = 70
+		manpower = 4
+		build_cost_ic = 30
+		
+		fuel_consumption = 1.25
+	}
+	PRC_203_cannon_1 = { #侠炮
+		year = 2020
+		
+		archetype = PRC_203_cannon
+		picture = "GFX_PRC_203_cannon"
+		interface_category = interface_category_land
+		
+		priority = 50
+		defense = 30
+		breakthrough = 20
+		soft_attack = 100
+		hard_attack = 40
+		maximum_speed = 12
+		reliability = 70
+		
+        build_cost_ic = 30
+		
+		resources = {
+			tungsten = 1
+			chromium = 1
+			steel = 3
+		}
+		fuel_consumption = 1.25
+	}
+}

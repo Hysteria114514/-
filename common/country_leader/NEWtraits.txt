@@ -1,0 +1,75 @@
+#添加领导人特质
+leader_traits = {
+	zongli = {
+	}
+	fuzongli = {
+	}
+	jjwsj = {
+	}
+	zzzfwsj = {
+	}
+	zzjcw = {
+	}
+	fgwzr = {
+	}
+	gabbz = {
+	}
+	hog_ogas = {
+		random = no
+		stability_factor = 0.30
+		war_support_factor = 0.20
+		weekly_stability = 0.01
+		offensive_war_stability_factor = 0.1
+		production_speed_industrial_complex_factor = 0.1
+		production_speed_infrastructure_factor = 0.15
+		production_factory_start_efficiency_factor = 0.1
+		army_attack_factor = 0.05
+		army_morale_factor = 0.05
+		initiative_factor = 0.25
+		max_planning_factor = 0.25
+		planning_speed = 0.2
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	strong_party_discipline = {
+		random = no
+		drift_defence_factor = 0.15
+		compliance_gain = 0.05
+		resistance_decay = 0.1
+		stability_factor = 0.1
+		surrender_limit = 0.1
+	}
+	Chief_of_the_Joint_Staff = { #联参参谋长
+		air_doctrine_cost_factor = -0.1 #空军学说花费
+		land_doctrine_cost_factor = -0.1 #陆军学说花费
+		naval_doctrine_cost_factor = -0.1 #海军学说花费
+		command_power_gain = 0.3 #每日指挥点数增长
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	chief_shellfire_determine_victory = { #炮火决胜加强
+		sprite = 16
+		army_attack_factor = 0.15
+		army_artillery_attack_factor = 0.15
+		experience_gain_army = 0.07
+		equipment_bonus = {
+			modern_tank_artillery_chassis = {
+				soft_attack = 0.25
+				build_cost_ic = -0.05 instant = yes
+			}
+			artillery_equipment = {
+				build_cost_ic = -0.1 instant = yes
+			}
+			rocket_artillery_equipment = {
+				build_cost_ic = -0.1 instant = yes
+			}
+		}
+		command_cap_increase = @tier3_cp_cap_increase
+		ai_will_do = {
+			factor = 2
+		}
+	}
+}
+

@@ -1,0 +1,80 @@
+north_china_development = {
+    production_speed_buildings_factor = 1.5  # 城乡建设等级3 * 0.5
+    production_speed_industrial_complex_factor = 2.0  # 高铁建设等级4 * 0.5
+    production_speed_infrastructure_factor = 2.0  # 路网建设等级4 * 0.5
+    research_speed_factor = 1.0  # 学校建设等级2 * 0.5
+    industrial_capacity_factory = 1.5  # 产业建设等级3 * 0.5
+    industrial_capacity_dockyard = 1.0  # 医院建设等级2 * 0.5
+}
+
+east_china_development = {
+    production_speed_buildings_factor = 1.5  # 城乡建设等级3 * 0.5
+    production_speed_industrial_complex_factor = 1.5  # 高铁建设等级3 * 0.5
+    production_speed_infrastructure_factor = 1.5  # 路网建设等级3 * 0.5
+    research_speed_factor = 1.0  # 学校建设等级2 * 0.5
+    industrial_capacity_factory = 1.5  # 产业建设等级3 * 0.5
+    industrial_capacity_dockyard = 1.0  # 医院建设等级2 * 0.5
+}
+
+south_china_development = {
+    production_speed_buildings_factor = 1.0  # 城乡建设等级2 * 0.5
+    production_speed_industrial_complex_factor = 1.5  # 高铁建设等级3 * 0.5
+    production_speed_infrastructure_factor = 1.5  # 路网建设等级3 * 0.5
+    research_speed_factor = 1.0  # 学校建设等级2 * 0.5
+    industrial_capacity_factory = 1.5  # 产业建设等级3 * 0.5
+    industrial_capacity_dockyard = 1.0  # 医院建设等级2 * 0.5
+}
+
+central_china_development = {
+    production_speed_buildings_factor = 1.0  # 城乡建设等级2 * 0.5
+    production_speed_industrial_complex_factor = 1.0  # 高铁建设等级2 * 0.5
+    production_speed_infrastructure_factor = 1.0  # 路网建设等级2 * 0.5
+    research_speed_factor = 1.0  # 学校建设等级2 * 0.5
+    industrial_capacity_factory = 1.0  # 产业建设等级2 * 0.5
+    industrial_capacity_dockyard = 1.0  # 医院建设等级2 * 0.5
+}
+
+northeast_china_development = {
+    production_speed_buildings_factor = 1.0  # 城乡建设等级2 * 0.5
+    production_speed_industrial_complex_factor = 1.0  # 高铁建设等级2 * 0.5
+    production_speed_infrastructure_factor = 1.0  # 路网建设等级2 * 0.5
+    research_speed_factor = 1.0  # 学校建设等级2 * 0.5
+    industrial_capacity_factory = 1.0  # 产业建设等级2 * 0.5
+    industrial_capacity_dockyard = 1.0  # 医院建设等级2 * 0.5
+}
+
+northwest_china_development = {
+    production_speed_buildings_factor = 1.0  # 城乡建设等级2 * 0.5
+    production_speed_industrial_complex_factor = 1.0  # 高铁建设等级2 * 0.5
+    production_speed_infrastructure_factor = 1.0  # 路网建设等级2 * 0.5
+    research_speed_factor = 1.0  # 学校建设等级2 * 0.5
+    industrial_capacity_factory = 1.0  # 产业建设等级2 * 0.5
+    industrial_capacity_dockyard = 1.0  # 医院建设等级2 * 0.5
+}
+
+southwest_china_development = {
+    production_speed_buildings_factor = 1.5  # 城乡建设等级3 * 0.5
+    production_speed_industrial_complex_factor = 1.0  # 高铁建设等级2 * 0.5
+    production_speed_infrastructure_factor = 1.0  # 路网建设等级2 * 0.5
+    research_speed_factor = 1.0  # 学校建设等级2 * 0.5
+    industrial_capacity_factory = 1.5  # 产业建设等级3 * 0.5
+    industrial_capacity_dockyard = 1.5  # 医院建设等级3 * 0.5
+}
+
+taiwan_development = {
+    production_speed_buildings_factor = 1.0  # 城乡建设等级2 * 0.5
+    production_speed_industrial_complex_factor = 1.0  # 高铁建设等级2 * 0.5
+    production_speed_infrastructure_factor = 1.0  # 路网建设等级2 * 0.5
+    research_speed_factor = 1.0  # 学校建设等级2 * 0.5
+    industrial_capacity_factory = 1.0  # 产业建设等级2 * 0.5
+    industrial_capacity_dockyard = 1.0  # 医院建设等级2 * 0.5
+}
+
+china_development_modifiers = {
+    production_speed_buildings_factor = 1.0
+    production_speed_industrial_complex_factor = 1.0
+    production_speed_infrastructure_factor = 1.0
+    research_speed_factor = 1.0
+    industrial_capacity_factory = 1.0
+    industrial_capacity_dockyard = 1.0
+}

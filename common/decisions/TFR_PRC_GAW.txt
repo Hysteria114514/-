@@ -1,0 +1,1604 @@
+PRC_great_asian_war1 = {
+
+	PRC_GAW_war_exhaustion = {
+		priority = 99
+		icon = GFX_SOV_decision_nato_war_deadline
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+			has_country_flag = PRC_kill_em_all_flag
+		}
+		days_mission_timeout = 400
+		activation = {
+			always = no
+		}
+		visible = {
+		}
+		fire_only_once = no
+		cancel_if_not_visible = no
+		is_good = no
+		cancel_trigger = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		cancel_effect = {
+			hidden_effect = {
+				PRC_japans_victory_in_the_gaw = yes
+				JAP = {
+					country_event = china.1002
+				}
+			}
+			news_event = {
+				id = news.414
+				days = 1
+			}
+		}
+		timeout_effect = {
+			PRC_increase_war_exhaustion = yes
+			activate_mission = PRC_GAW_war_exhaustion
+		}
+		complete_effect = {
+			hidden_effect = {
+				PRC_chinas_victory_in_the_gaw = yes
+				PRC = {
+					country_event = china.1001
+				}
+			}
+			news_event = {
+				id = news.413
+				days = 1
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	#引爆大东亚战争刷火星兵
+	PRC_korean_war_joining = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+		
+		available = {
+		    always = no
+		} 
+		
+		days_mission_timeout = 30
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+		}
+			
+		fire_only_once = yes
+		cancel_if_not_visible = yes
+		is_good = no
+			
+		complete_effect = {
+			if = {
+
+				limit = {tag = JAP}
+				has_country_flag = strengthen_pdo_military_1
+				JAP = {
+					random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"东京湾捞出来的高达\" division_template = \"difficulty\"  start_experience_factor = 0.5"
+							allow_spawning_on_enemy_provs = no
+							owner = JAP
+							count = 10
+						}
+					}
+					create_equipment_variant = {
+						name = "心神"
+						type = small_plane_airframe_2
+						modules = {
+							fixed_main_weapon_slot = heavy_mg_4x
+							fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+							fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
+							fixed_auxiliary_weapon_slot_3 = heavy_mg_4x
+							fixed_auxiliary_weapon_slot_4 = heavy_mg_4x 
+							engine_type_slot = engine_2_1x
+							special_type_slot_1 = ai_targeting_computer_small
+							special_type_slot_2 = fuel_tanks_small
+							special_type_slot_3 = fuel_tanks_small
+						}
+						design_team = mio:PRC_avic_organization
+						icon = "GFX_PRC_fighter5_medium"
+					}
+					add_equipment_to_stockpile = {
+						type = small_plane_airframe_3
+						variant_name = "心神"
+						amount = 2000
+						producer = PRC
+					}
+				}
+				RAJ = {
+					random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"东京湾捞出来的高达\" division_template = \"difficulty\"  start_experience_factor = 0.5"
+							allow_spawning_on_enemy_provs = no
+							owner = RAJ
+							count = 10
+						}
+
+					}
+				}
+				KOR = {
+					random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"东京湾捞出来的高达\" division_template = \"difficulty\"  start_experience_factor = 0.5"
+							allow_spawning_on_enemy_provs = no
+							owner = KOR
+							count = 5
+						}
+					}
+				}
+			}
+			if = {
+				
+				limit = {tag = JAP}
+				has_country_flag = strengthen_pdo_military_2
+				JAP = {
+					random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"东京湾捞出来的高达\" division_template = \"difficulty\"  start_experience_factor = 0.75"
+							allow_spawning_on_enemy_provs = no
+							owner = JAP
+							count = 20
+						}
+						
+					}
+					create_equipment_variant = {
+						name = "心神"
+						type = small_plane_airframe_2
+						modules = {
+							fixed_main_weapon_slot = heavy_mg_4x
+							fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+							fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
+							fixed_auxiliary_weapon_slot_3 = heavy_mg_4x
+							fixed_auxiliary_weapon_slot_4 = heavy_mg_4x 
+							engine_type_slot = engine_2_1x
+							special_type_slot_1 = ai_targeting_computer_small
+							special_type_slot_2 = fuel_tanks_small
+							special_type_slot_3 = fuel_tanks_small
+						}
+						design_team = mio:PRC_avic_organization
+						icon = "GFX_PRC_fighter5_medium"
+					}
+					add_equipment_to_stockpile = {
+						type = small_plane_airframe_3
+						variant_name = "心神"
+						amount = 5000
+						producer = PRC
+					}
+					
+				}
+				PAJ = {
+					random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"东京湾捞出来的高达\" division_template = \"difficulty\"  start_experience_factor = 0.75"
+							allow_spawning_on_enemy_provs = no
+							owner = PAJ
+							count = 20
+						}
+					}
+					
+				}
+				KOR = {
+					random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"东京湾捞出来的高达\" division_template = \"difficulty\"  start_experience_factor = 0.75"
+							allow_spawning_on_enemy_provs = no
+							owner = KOR
+							count = 5
+						}
+					}
+				}
+				AST = {
+					random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"东京湾捞出来的高达\" division_template = \"difficulty\"  start_experience_factor = 0.75"
+							allow_spawning_on_enemy_provs = no
+							owner = AST
+							count = 5
+						}
+					}
+				}
+			}
+			if = {
+				limit = {tag = JAP}
+				has_country_flag = strengthen_pdo_military_3
+				
+				JAP = {
+					random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"东京湾捞出来的高达\" division_template = \"difficulty\"  start_experience_factor = 1"
+							allow_spawning_on_enemy_provs = no
+							owner = JAP
+							count = 50
+						}
+					}
+					create_equipment_variant = {
+						name = "心神"
+						type = small_plane_airframe_2
+						modules = {
+							fixed_main_weapon_slot = heavy_mg_4x
+							fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+							fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
+							fixed_auxiliary_weapon_slot_3 = heavy_mg_4x
+							fixed_auxiliary_weapon_slot_4 = heavy_mg_4x 
+							engine_type_slot = engine_2_1x
+							special_type_slot_1 = ai_targeting_computer_small
+							special_type_slot_2 = fuel_tanks_small
+							special_type_slot_3 = fuel_tanks_small
+						}
+						design_team = mio:PRC_avic_organization
+						icon = "GFX_PRC_fighter5_medium"
+					}
+					add_equipment_to_stockpile = {
+						type = small_plane_airframe_4
+						variant_name = "心神"
+						amount = 10000
+						producer = PRC
+					}
+					create_equipment_variant = {
+						name = "F35X"
+						type = cv_small_plane_airframe_2
+						modules = {
+							fixed_main_weapon_slot = heavy_mg_4x
+							fixed_auxiliary_weapon_slot_1 = torpedo_mounting
+							fixed_auxiliary_weapon_slot_2 = torpedo_mounting
+							engine_type_slot = engine_2_1x
+							special_type_slot_1 = ai_targeting_computer_small
+							special_type_slot_2 = fuel_tanks_small
+						}
+						design_team = mio:PRC_avic_organization
+						icon = "GFX_PRC_J15_fly_shark"
+					}
+					add_equipment_to_stockpile = {
+						type = small_plane_airframe_3
+						variant_name = "F35X"
+						amount = 2000
+						producer = PRC
+					}
+				}
+				PAJ = {
+					random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"东京湾捞出来的高达\" division_template = \"difficulty\"  start_experience_factor = 1"
+							allow_spawning_on_enemy_provs = no
+							owner = PAJ
+							count = 50
+						}
+					}
+					
+				}
+				KOR = {
+					random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"东京湾捞出来的高达\" division_template = \"difficulty\"  start_experience_factor = 1"
+							allow_spawning_on_enemy_provs = no
+							owner = KOR
+							count = 10
+						}
+					}
+				}
+				AST = {
+					random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"东京湾捞出来的高达\" division_template = \"difficulty\"  start_experience_factor = 1"
+							allow_spawning_on_enemy_provs = no
+							owner = AST
+							count = 10
+						}
+					}
+				}
+			}
+		}
+
+		timeout_effect = {
+			PRC = {
+				set_country_flag = PRC_GAW_flag
+			}
+			
+			add_to_faction = PRK
+			PRK = {
+				set_country_flag = eadi_member
+			}
+			declare_war_on = {
+				target = KOR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = JAP
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = RAJ
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = AST
+				type = annex_everything
+			}
+			if = {
+				limit = {tag = PRC}
+				has_country_flag = unimate_difficulty_flag
+				declare_war_on = {
+					target = APA
+					type = annex_everything	
+				}
+				declare_war_on = {
+					target = SOV
+					type = annex_everything	
+				}
+				declare_war_on = {
+					target = GER
+					type = annex_everything	
+				}
+				declare_war_on = {
+					target = FRA
+					type = annex_everything	
+				}
+			}
+			#加强毛子美国和欧盟
+			if = {
+				limit = {tag = PRC}
+				has_country_flag = unimate_difficulty_flag
+				SOV = {
+					add_country_idea = strength_pdo_3
+					add_division_template = "difficulty"
+					random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"东京湾捞出来的高达\" division_template = \"difficulty\"  start_experience_factor = 1"
+							allow_spawning_on_enemy_provs = no
+							owner = SOV
+							count = 300
+						}
+					}
+				}
+				APA = {
+					add_country_idea = strength_pdo_3
+					add_division_template = "difficulty"
+					random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"东京湾捞出来的高达\" division_template = \"difficulty\"  start_experience_factor = 1"
+							allow_spawning_on_enemy_provs = no
+							owner = APA
+							count = 100
+						}
+					}
+				}
+				USA = {
+					add_country_idea = strength_pdo_3
+					add_division_template = "difficulty"
+					random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"东京湾捞出来的高达\" division_template = \"difficulty\"  start_experience_factor = 1"
+							allow_spawning_on_enemy_provs = no
+							owner = USA
+							count = 100
+						}
+					}
+				}
+				USB = {
+					add_country_idea = strength_pdo_3
+					add_division_template = "difficulty"
+					random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"东京湾捞出来的高达\" division_template = \"difficulty\"  start_experience_factor = 1"
+							allow_spawning_on_enemy_provs = no
+							owner = USB
+							count = 100
+						}
+					}
+				}
+				GER = {
+					add_country_idea = strength_pdo_3
+					add_division_template = "difficulty"
+					random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"东京湾捞出来的高达\" division_template = \"difficulty\"  start_experience_factor = 1"
+							allow_spawning_on_enemy_provs = no
+							owner = GER
+							count = 100
+						}
+					}
+				}
+				FRA = {
+					add_country_idea = strength_pdo_3
+					add_division_template = "difficulty"
+					random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"东京湾捞出来的高达\" division_template = \"difficulty\"  start_experience_factor = 1"
+							allow_spawning_on_enemy_provs = no
+							owner = FRA
+							count = 100
+						}
+					}
+				}
+				
+			}
+						
+			news_event = news.346
+			country_event = gaw.1
+			effect_tooltip = {
+				activate_mission = PRC_GAW_war_exhaustion
+				active_mission = JAP_huoxing_division
+			}
+			hidden_effect = {
+				PRC_gaw_start = yes
+			}
+		}
+	}
+
+
+
+	JAP_huoxing_division = {#每月刷火星兵
+		priority = 1
+
+		icon = GFX_JAP_election_day
+		
+		available = {
+		    always = no
+		} 
+		
+		days_mission_timeout = 30
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+		}
+			
+		fire_only_once = no
+		cancel_if_not_visible = yes
+		is_good = no
+
+		times_out_effect = {
+			if = {
+				
+				limit = {tag = JAP}
+				has_country_flag = strengthen_pdo_military_2
+				
+				JAP = {
+					random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"东京湾捞出来的高达\" division_template = \"difficulty\"  start_experience_factor = 0.75"
+							allow_spawning_on_enemy_provs = no
+							owner = JAP
+							count = 5
+						}
+					}
+
+				}
+			}
+			if = {
+				
+				limit = {tag = JAP}
+				has_country_flag = strengthen_pdo_military_3
+				
+				JAP = {
+					random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"东京湾捞出来的高达\" division_template = \"difficulty\"  start_experience_factor = 1"
+							allow_spawning_on_enemy_provs = no
+							owner = JAP
+							count = 20
+						}
+					}
+
+				
+			    }
+			
+		    }
+	}
+
+	}
+
+	PRC_operation_genko1 = {
+		icon = generic_industry
+		allowed = {
+			tag = PRC
+		}
+		visible = {
+			has_completed_focus = PRC_operation_majestic1
+		}
+		available = {
+			has_war_with = JAP
+		}
+		cost = 25
+		fire_only_once = yes
+		days_remove = 10
+		complete_effect = {
+			add_timed_idea = {
+			    idea = PRC_operation_houyi_idea
+			    days = 35
+			}
+			every_state = {
+				limit = {
+					is_core_of = JAP
+				}	
+				remove_dynamic_modifier = {
+					modifier = PRC_unplanned_offensive
+				}
+			}
+		}
+		remove_effect = {
+
+		}
+		ai_will_do = {
+			base = 150
+		}
+	}
+
+	PRC_to_end_japan = {
+		icon = generic_industry
+		allowed = {
+			tag = PRC
+		}
+		visible = {
+			has_completed_focus = PRC_operation_majestic1
+		}
+		available = {
+			531 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+			1340 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+			1337 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+			532 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+			535 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+		}
+		cost = 25
+		fire_only_once = yes
+		days_remove = 30
+		complete_effect = {
+		}
+		remove_effect = {
+			add_timed_idea = {
+				idea = PRC_to_end_japan_idea
+				days = 50
+			}
+		}
+		ai_will_do = {
+			base = 150
+		}
+	}
+
+	PRC_operation_changma1 = {
+		name = PRC_operation_changma1
+		icon = generic_industry
+		allowed = {
+			tag = PRC
+		}
+		visible = {
+			has_completed_focus = PRC_chinas_greatest_hour1
+		}
+		available = {
+				PRK = {
+					has_war_with = KOR
+				}
+		}
+		cost = 25
+		fire_only_once = yes
+		complete_effect = {
+			every_state = {
+				limit = {
+					region = 186
+				}
+				remove_dynamic_modifier = {
+					modifier = PRC_korean_war_modifer2
+				}
+				remove_dynamic_modifier = {
+					modifier = PRC_korean_war_modifer
+				}
+			}
+			add_timed_idea = {
+				idea = PRC_operation_yalu_idea
+				days = 50
+			}
+			set_global_flag = PRC_operation_changma_dec_global
+		}
+		remove_effect = {
+		}
+		ai_will_do = {
+			base = 270
+		}
+	}
+
+	PRC_hindustan_offensive = {
+		icon = generic_industry
+		allowed = {
+			tag = PRC
+		}
+		visible = {
+			has_completed_focus = PRC_kashmir_road1
+		}
+		available = {
+			has_war_with = RAJ
+		}
+		cost = 35
+		fire_only_once = yes
+
+		days_remove = 50
+		complete_effect = {
+			add_timed_idea = {
+				idea = PRC_operation_chuge_idea
+				days = 100
+			}
+			every_state = {
+				limit = {
+					is_core_of = RAJ
+				}
+				remove_dynamic_modifier = {
+					modifier = PRC_unplanned_offensive
+				}
+			}
+		}
+		remove_effect = {
+			set_country_flag = PRC_hindustan_offensive_dec_flag
+		}
+		ai_will_do = {
+			base = 200
+		}
+	}
+
+
+	PRC_operation_coronet = {
+		icon = generic_industry
+		allowed = {
+			tag = PRC
+		}
+		visible = {
+			has_completed_focus = PRC_operation_coronet1
+		}
+		available = {
+			has_war_with = AST
+		}
+		cost = 25
+		fire_only_once = yes
+		days_remove = 10
+		complete_effect = {
+			add_timed_idea = {
+			    idea = PRC_operation_blind_idea
+			    days = 100
+			}
+		}
+		remove_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = AST
+						is_core_of = NZL
+					}
+				}
+				remove_dynamic_modifier = {
+					modifier = PRC_unplanned_offensive
+				}
+			}
+		}
+		ai_will_do = {
+			base = 190
+		}
+	}
+
+	
+	PRC_put_the_nuclear_arsenal_on_full_operational_alert = {
+		icon = GFX_decision_generic_deploy_nukes
+		available = {
+		}
+		visible = {
+			has_completed_focus = PRC_all_chinese_mobilization1
+		}
+		fire_only_once = yes
+		cost = 150
+		days_remove = 10
+		complete_effect = {
+		}
+		remove_effect = {
+			set_country_flag = PRC_nukes_available
+			custom_effect_tooltip = PRC_put_the_nuclear_arsenal_on_full_operational_alert_tt
+		}
+		ai_will_do = {
+				base = 50
+		}
+	}
+
+	PRC_nuke_tokyo = {
+		icon = GFX_decision_generic_deploy_nukes
+		available = {
+			has_global_flag = pan_asian_war_ongoing
+			JAP  = {
+				controls_province = 1182
+			}
+			has_war_with = JAP
+			command_power > 29
+		}
+		visible = {
+			has_country_flag = PRC_nukes_available
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1332
+			}
+		}
+		on_map_mode = map_and_decisions_view
+		fire_only_once = yes
+		cost = 125
+		days_remove = 2
+		complete_effect = {
+			add_command_power = -30
+		}
+		remove_effect = {
+			launch_nuke = {
+				province = 1182
+			}
+			news_event = news.528
+			add_days_mission_timeout = {
+				mission = PRC_GAW_war_exhaustion
+				days = 25
+			}
+			JAP = {
+				add_days_mission_timeout = {
+					mission = JAP_GAW_war_exhaustion
+					days = -25
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = PRC_used_nukes
+						}
+					}
+					JAP = {
+						country_event = {
+							id = jap.61
+							days = 1
+						}
+					}
+				}
+				AST = {
+					add_days_mission_timeout = {
+						mission = JAP_GAW_war_exhaustion
+						days = -25
+					}
+				}
+				RAJ = {
+					add_days_mission_timeout = {
+						mission = JAP_GAW_war_exhaustion
+						days = -25
+					}
+				}
+				set_country_flag = PRC_used_nukes
+			}
+		}
+		ai_will_do = {
+				base = 50
+		}
+	}
+	PRC_nuke_nagoya = {
+		icon = GFX_decision_generic_deploy_nukes
+		available = {
+			has_global_flag = pan_asian_war_ongoing
+			JAP  = {
+				controls_province = 10125
+			}
+			has_war_with = JAP
+			command_power > 29
+		}
+		visible = {
+			has_country_flag = PRC_nukes_available
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1337
+			}
+		}
+		on_map_mode = map_and_decisions_view
+		fire_only_once = yes
+		cost = 125
+		days_remove = 2
+		complete_effect = {
+			add_command_power = -30
+		}
+		remove_effect = {
+			set_country_flag = PRC_used_nukes
+			launch_nuke = {
+				province = 10125
+			}
+		}
+		ai_will_do = {
+				base = 50
+		}
+	}
+	PRC_nuke_osaka = {
+		icon = GFX_decision_generic_deploy_nukes
+		available = {
+			has_global_flag = pan_asian_war_ongoing
+			JAP  = {
+				controls_province = 7072
+			}
+			has_war_with = JAP
+			command_power > 29
+		}
+		visible = {
+			has_country_flag = PRC_nukes_available
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1340
+			}
+		}
+		on_map_mode = map_and_decisions_view
+		fire_only_once = yes
+		cost = 125
+		days_remove = 2
+		complete_effect = {
+			add_command_power = -30
+		}
+		remove_effect = {
+			set_country_flag = PRC_used_nukes
+			launch_nuke = {
+				province = 7072
+			}
+		}
+		ai_will_do = {
+				base = 50
+		}
+	}
+	PRC_nuke_hiroshima = {
+		icon = GFX_decision_generic_deploy_nukes
+		available = {
+			has_global_flag = pan_asian_war_ongoing
+			JAP  = {
+				controls_province = 1092
+			}
+			has_war_with = JAP
+			command_power > 29
+		}
+		visible = {
+			has_country_flag = PRC_nukes_available
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 529
+			}
+		}
+		on_map_mode = map_and_decisions_view
+		fire_only_once = yes
+		cost = 125
+		days_remove = 2
+		complete_effect = {
+			add_command_power = -30
+		}
+		remove_effect = {
+			set_country_flag = PRC_used_nukes
+			launch_nuke = {
+				province = 1092
+			}
+		}
+		ai_will_do = {
+				base = 50
+		}
+	}
+	PRC_nuke_kyoto = {
+		icon = GFX_decision_generic_deploy_nukes
+		available = {
+			has_global_flag = pan_asian_war_ongoing
+			JAP  = {
+				controls_province = 11960
+			}
+			has_war_with = JAP
+			command_power > 29
+		}
+		visible = {
+			has_country_flag = PRC_nukes_available
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 531
+			}
+		}
+		on_map_mode = map_and_decisions_view
+		fire_only_once = yes
+		cost = 125
+		days_remove = 2
+		complete_effect = {
+			add_command_power = -30
+		}
+		remove_effect = {
+			set_country_flag = PRC_used_nukes
+			launch_nuke = {
+				province = 11960
+				controller = PRC
+				use_nuke = yes
+			}
+			news_event = news.529
+			add_days_mission_timeout = {
+				mission = PRC_GAW_war_exhaustion
+				days = 20
+			}
+			JAP = {
+				add_days_mission_timeout = {
+					mission = JAP_GAW_war_exhaustion
+					days = -20
+				}
+			}
+			hidden_effect = {
+				AST = {
+					add_days_mission_timeout = {
+						mission = JAP_GAW_war_exhaustion
+						days = -20
+					}
+				}
+				RAJ = {
+					add_days_mission_timeout = {
+						mission = JAP_GAW_war_exhaustion
+						days = -20
+					}
+				}
+			}
+		}
+		ai_will_do = {
+				base = 50
+		}
+	}
+	PRC_nuke_sendai = {
+		icon = GFX_decision_generic_deploy_nukes
+		available = {
+			has_global_flag = pan_asian_war_ongoing
+			JAP  = {
+				controls_province = 7169
+			}
+			has_war_with = JAP
+			command_power > 29
+		}
+		visible = {
+			has_country_flag = PRC_nukes_available
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1335
+			}
+		}
+		on_map_mode = map_and_decisions_view
+		fire_only_once = yes
+		cost = 125
+		days_remove = 2
+		complete_effect = {
+			add_command_power = -30
+		}
+		remove_effect = {
+			set_country_flag = PRC_used_nukes
+			launch_nuke = {
+				province = 7169
+			}
+		}
+		ai_will_do = {
+				base = 50
+		}
+	}
+	PRC_nuke_sapporo = {
+		icon = GFX_decision_generic_deploy_nukes
+		available = {
+			has_global_flag = pan_asian_war_ongoing
+			JAP  = {
+				controls_province = 10444
+			}
+			has_war_with = JAP
+			command_power > 29
+		}
+		visible = {
+			has_country_flag = PRC_nukes_available
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1334
+			}
+		}
+		on_map_mode = map_and_decisions_view
+		fire_only_once = yes
+		cost = 125
+		days_remove = 2
+		complete_effect = {
+			add_command_power = -30
+		}
+		remove_effect = {
+			set_country_flag = PRC_used_nukes
+			launch_nuke = {
+				province = 10444
+			}
+		}
+		ai_will_do = {
+				base = 50
+		}
+	}
+	PRC_nuke_hochimin_city = {
+		icon = GFX_decision_generic_deploy_nukes
+		available = {
+			has_global_flag = pan_asian_war_ongoing
+			VIN  = {
+				controls_province = 4401
+			}
+			has_war_with = VIN
+			command_power > 29
+		}
+		visible = {
+			has_country_flag = PRC_nukes_available
+			has_war_with = VIN
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 783
+			}
+		}
+		on_map_mode = map_and_decisions_view
+		fire_only_once = yes
+		cost = 125
+		days_remove = 2
+		complete_effect = {
+			add_command_power = -30
+		}
+		remove_effect = {
+			set_country_flag = PRC_used_nukes
+			launch_nuke = {
+				province = 4401
+			}
+			news_event = news.530
+			add_days_mission_timeout = {
+				mission = PRC_GAW_war_exhaustion
+				days = 15
+			}
+			JAP = {
+				add_days_mission_timeout = {
+					mission = JAP_GAW_war_exhaustion
+					days = -15
+				}
+			}
+			hidden_effect = {
+				AST = {
+					add_days_mission_timeout = {
+						mission = JAP_GAW_war_exhaustion
+						days = -15
+					}
+				}
+				RAJ = {
+					add_days_mission_timeout = {
+						mission = JAP_GAW_war_exhaustion
+						days = -15
+					}
+				}
+			}
+		}
+		ai_will_do = {
+				base = 50
+		}
+	}
+	PRC_nuke_bangkok = {
+		icon = GFX_decision_generic_deploy_nukes
+		available = {
+			has_global_flag = pan_asian_war_ongoing
+			SIA  = {
+				controls_province = 7408
+			}
+			has_war_with = SIA
+			command_power > 29
+		}
+		visible = {
+			has_war_with = SIA
+			has_country_flag = PRC_nukes_available
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 289
+			}
+		}
+		on_map_mode = map_and_decisions_view
+		fire_only_once = yes
+		cost = 125
+		days_remove = 2
+		complete_effect = {
+			add_command_power = -30
+		}
+		remove_effect = {
+			set_country_flag = PRC_used_nukes
+			launch_nuke = {
+				province = 7408
+			}
+			news_event = news.531
+			add_days_mission_timeout = {
+				mission = PRC_GAW_war_exhaustion
+				days = 15
+			}
+			JAP = {
+				add_days_mission_timeout = {
+					mission = JAP_GAW_war_exhaustion
+					days = -15
+				}
+			}
+			hidden_effect = {
+				AST = {
+					add_days_mission_timeout = {
+						mission = JAP_GAW_war_exhaustion
+						days = -15
+					}
+				}
+				RAJ = {
+					add_days_mission_timeout = {
+						mission = JAP_GAW_war_exhaustion
+						days = -15
+					}
+				}
+			}
+		}
+		ai_will_do = {
+				base = 50
+		}
+	}
+	PRC_nuke_dehli = {
+		icon = GFX_decision_generic_deploy_nukes
+		available = {
+			has_global_flag = pan_asian_war_ongoing
+			RAJ  = {
+				controls_province = 2086
+			}
+			has_war_with = RAJ
+			command_power > 29
+		}
+		visible = {
+			has_country_flag = PRC_nukes_available
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1379
+			}
+		}
+		on_map_mode = map_and_decisions_view
+		fire_only_once = yes
+		cost = 125
+		days_remove = 2
+		complete_effect = {
+			add_command_power = -30
+		}
+		remove_effect = {
+			set_country_flag = PRC_used_nukes
+			launch_nuke = {
+				province = 2086
+			}
+			news_event = news.532
+			add_days_mission_timeout = {
+				mission = PRC_GAW_war_exhaustion
+				days = 20
+			}
+			JAP = {
+				add_days_mission_timeout = {
+					mission = JAP_GAW_war_exhaustion
+					days = -20
+				}
+			}
+			hidden_effect = {
+				AST = {
+					add_days_mission_timeout = {
+						mission = JAP_GAW_war_exhaustion
+						days = -20
+					}
+				}
+				RAJ = {
+					add_days_mission_timeout = {
+						mission = JAP_GAW_war_exhaustion
+						days = -20
+					}
+				}
+			}
+		}
+		ai_will_do = {
+				base = 50
+		}
+	}
+	PRC_nuke_chennai = {
+		icon = GFX_decision_generic_deploy_nukes
+		available = {
+			has_global_flag = pan_asian_war_ongoing
+			RAJ  = {
+				controls_province = 10278
+			}
+			has_war_with = RAJ
+			command_power > 29
+		}
+		visible = {
+			has_country_flag = PRC_nukes_available
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1418
+			}
+		}
+		on_map_mode = map_and_decisions_view
+		fire_only_once = yes
+		cost = 125
+		days_remove = 2
+		complete_effect = {
+			add_command_power = -30
+		}
+		remove_effect = {
+			set_country_flag = PRC_used_nukes
+			launch_nuke = {
+				province = 10278
+			}
+		}
+		ai_will_do = {
+				base = 50
+		}
+	}
+	PRC_nuke_jakarta = {
+		icon = GFX_decision_generic_deploy_nukes
+		available = {
+			has_global_flag = pan_asian_war_ongoing
+			INS  = {
+				controls_province = 7381
+			}
+			has_war_with = INS
+			command_power > 29
+		}
+		visible = {
+			has_country_flag = PRC_nukes_available
+			has_war_with = INS
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1387
+			}
+		}
+		on_map_mode = map_and_decisions_view
+		fire_only_once = yes
+		cost = 125
+		days_remove = 2
+		complete_effect = {
+			add_command_power = -30
+		}
+		remove_effect = {
+			set_country_flag = PRC_used_nukes
+			launch_nuke = {
+				province = 7381
+			}
+			news_event = news.533
+			add_days_mission_timeout = {
+				mission = PRC_GAW_war_exhaustion
+				days = 20
+			}
+			JAP = {
+				add_days_mission_timeout = {
+					mission = JAP_GAW_war_exhaustion
+					days = -20
+				}
+			}
+			hidden_effect = {
+				AST = {
+					add_days_mission_timeout = {
+						mission = JAP_GAW_war_exhaustion
+						days = -20
+					}
+				}
+				RAJ = {
+					add_days_mission_timeout = {
+						mission = JAP_GAW_war_exhaustion
+						days = -20
+					}
+				}
+			}
+		}
+		ai_will_do = {
+				base = 50
+		}
+	}
+	PRC_nuke_sydney = {
+		icon = GFX_decision_generic_deploy_nukes
+		available = {
+			has_global_flag = pan_asian_war_ongoing
+			AST  = {
+				controls_province = 12406
+			}
+			has_war_with = AST
+			command_power > 29
+			520 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+		}
+		visible = {
+			has_country_flag = PRC_nukes_available
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 285
+			}
+		}
+		on_map_mode = map_and_decisions_view
+		fire_only_once = yes
+		cost = 125
+		days_remove = 2
+		complete_effect = {
+			add_command_power = -30
+		}
+		remove_effect = {
+			set_country_flag = PRC_used_nukes
+			launch_nuke = {
+				province = 12406
+			}
+			news_event = news.534
+			add_days_mission_timeout = {
+				mission = PRC_GAW_war_exhaustion
+				days = 20
+			}
+			JAP = {
+				add_days_mission_timeout = {
+					mission = JAP_GAW_war_exhaustion
+					days = -20
+				}
+			}
+			hidden_effect = {
+				AST = {
+					add_days_mission_timeout = {
+						mission = JAP_GAW_war_exhaustion
+						days = -20
+					}
+				}
+				RAJ = {
+					add_days_mission_timeout = {
+						mission = JAP_GAW_war_exhaustion
+						days = -20
+					}
+				}
+			}
+		}
+		ai_will_do = {
+				base = 50
+		}
+	}
+	PRC_nuke_seoul = {
+		icon = GFX_decision_generic_deploy_nukes
+		available = {
+			has_global_flag = pan_asian_war_ongoing
+			KOR  = {
+				controls_province = 13692
+			}
+			has_war_with = KOR
+			command_power > 29
+		}
+		visible = {
+			has_country_flag = PRC_nukes_available
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1041
+			}
+		}
+		on_map_mode = map_and_decisions_view
+		fire_only_once = yes
+		cost = 125
+		days_remove = 2
+		complete_effect = {
+			add_command_power = -30
+		}
+		remove_effect = {
+			set_country_flag = PRC_used_nukes
+			launch_nuke = {
+				province = 13692
+			}
+			news_event = news.535
+			add_days_mission_timeout = {
+				mission = PRC_GAW_war_exhaustion
+				days = 15
+			}
+			JAP = {
+				add_days_mission_timeout = {
+					mission = JAP_GAW_war_exhaustion
+					days = -15
+				}
+			}
+			hidden_effect = {
+				AST = {
+					add_days_mission_timeout = {
+						mission = JAP_GAW_war_exhaustion
+						days = -15
+					}
+				}
+				RAJ = {
+					add_days_mission_timeout = {
+						mission = JAP_GAW_war_exhaustion
+						days = -15
+					}
+				}
+			}
+		}
+		ai_will_do = {
+				base = 50
+		}
+	}
+	PRC_nuke_busan = {
+		icon = GFX_decision_generic_deploy_nukes
+		available = {
+			has_global_flag = pan_asian_war_ongoing
+			KOR  = {
+				controls_province = 4056
+			}
+			has_war_with = KOR
+			command_power > 29
+		}
+		visible = {
+			has_country_flag = PRC_nukes_available
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1409
+			}
+		}
+		on_map_mode = map_and_decisions_view
+		fire_only_once = yes
+		cost = 125
+		days_remove = 2
+		complete_effect = {
+			add_command_power = -30
+		}
+		remove_effect = {
+			set_country_flag = PRC_used_nukes
+			launch_nuke = {
+				province = 4056
+			}
+		}
+		ai_will_do = {
+				base = 50
+		}
+	}
+
+	PRC_block_kor_jap = {
+		icon = GFX_PRC_sea_blockade
+		allowed = {
+			tag = PRC
+		}
+		visible = {
+			has_completed_focus = PRC_block_pdo
+		}
+		available = {
+			ships_in_area = {
+				area = 76
+				size > 29
+			}
+			ships_in_area = {
+				area = 90
+				size > 29
+
+			}
+		}
+		cost = 15
+		fire_only_once = yes
+		complete_effect = {
+			JAP = {
+				add_ideas = JAP_total_embargo_idea
+			}
+			KOR = {
+				add_ideas = JAP_total_embargo_idea
+			}
+		}
+		remove_effect = {
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+
+	PRC_block_raj = {
+		icon = GFX_PRC_sea_blockade
+		allowed = {
+			tag = PRC
+		}
+		visible = {
+			has_completed_focus = PRC_block_pdo
+		}
+		available = {
+			ships_in_area = {
+				area = 60
+				size > 29
+
+			}
+			ships_in_area = {
+				area = 104
+				size > 29
+
+			}
+			ships_in_area = {
+				area = 101
+				size > 29
+
+			}
+		}
+		cost = 15
+		fire_only_once = yes
+		complete_effect = {
+			RAJ = {
+				add_ideas = JAP_total_embargo_idea
+			}
+		}
+		remove_effect = {
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+
+	PRC_block_ast_nzl= {
+		icon = GFX_PRC_sea_blockade
+		allowed = {
+			tag = PRC
+		}
+		visible = {
+			has_completed_focus = PRC_block_pdo
+		}
+		available = {
+			ships_in_area = {
+				area = 99
+				size > 29
+			}
+			ships_in_area = {
+				area = 92
+				size > 29
+
+			}
+			ships_in_area = {
+				area = 81
+				size > 29
+			}
+			ships_in_area = {
+				area = 86
+				size > 29
+			}
+			ships_in_area = {
+				area = 83
+				size > 29
+			}
+		}
+		cost = 15
+		fire_only_once = yes
+		complete_effect = {
+			AST = {
+				add_ideas = JAP_total_embargo_idea
+			}
+			NZL = {
+				add_ideas = JAP_total_embargo_idea
+			}
+		}
+		remove_effect = {
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+
+
+}

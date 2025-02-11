@@ -1,0 +1,28 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			PRC = {
+				set_variable = { 
+					var = PRC_EII_var
+					value = 20
+				}
+				set_variable = { 
+					var = PRC_EII_var_a
+					value = 0.02
+				}
+				set_variable = { 
+					var = PRC_EII_var_b
+					value = 0.002
+				}
+				add_dynamic_modifier = {
+					modifier = PRC_build_green_china_dynamic
+				}
+			}
+		}
+	}
+	
+	on_monthly = {
+		
+	}
+	
+}

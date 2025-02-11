@@ -1,0 +1,158 @@
+PRC_power_balance = { #黑猫白猫
+	initial_value = 0
+	left_side = PRC_nationalization_side #平等
+	right_side = PRC_privitization_side #富强
+	decision_category = PRC_balance_of_power_category
+	#Middle
+	range = { #完美的平衡
+		id = PRC_balance_range
+		min = -0.2
+		max = 0.2
+		modifier = {
+				research_speed_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+		}
+		on_activate = {
+		}
+		on_deactivate = {
+		}
+	}
+	#Nationalization Side
+	side = { #平等
+		id = PRC_nationalization_side
+		icon = GFX_bop_PRC_nationalization
+		range = { #以平等为核心
+			id = PRC_total_nationalization_range
+			min = -1
+			max = -0.8
+			modifier = {
+				research_speed_factor = 0.15
+				production_speed_buildings_factor = -0.15
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+				power_balance_daily = 0.0005
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+		range = { #推动平等
+			id = PRC_nationalization_dominant_range
+			min = -0.8
+			max = -0.6
+			modifier = {
+				research_speed_factor = 0.125
+				production_speed_buildings_factor = -0.125
+				industrial_capacity_factory = -0.125
+				industrial_capacity_dockyard = -0.125
+				power_balance_weekly = 0.0025
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+		range = { #鼓励平等
+			id = PRC_nationalizaton_alligned_range
+			min = -0.6
+			max = -0.4
+			modifier = {
+				research_speed_factor = 0.1
+				production_speed_buildings_factor = -0.1
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				power_balance_weekly = 0.0007
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+		range = { #倾向平等
+			id = PRC_nationalization_lean_range
+			min = -0.4
+			max = -0.2
+			modifier = {
+				research_speed_factor = 0.075
+				production_speed_buildings_factor = -0.075
+				industrial_capacity_factory = -0.075
+				industrial_capacity_dockyard = -0.075
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+	}
+	#Centralization Side
+	side = { #富强
+		id = PRC_privitization_side
+		icon = GFX_bop_PRC_privitization
+		range = { #倾向富强
+			id = PRC_privitization_lean_range
+			min = 0.2
+			max = 0.4
+			modifier = {
+				research_speed_factor = -0.075
+				production_speed_buildings_factor = 0.075
+				industrial_capacity_factory = 0.075
+				industrial_capacity_dockyard = 0.075
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+		range = { #鼓励富强
+			id = PRC_privitization_alligned_range
+			min = 0.4
+			max = 0.6
+			modifier = {
+				research_speed_factor = -0.1
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				power_balance_weekly = -0.0007
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+		range = { #推动富强
+			id = PRC_privitization_dominant_range
+			min = 0.6
+			max = 0.8
+			modifier = {
+				research_speed_factor = -0.125
+				production_speed_buildings_factor = 0.125
+				industrial_capacity_factory = 0.125
+				industrial_capacity_dockyard = 0.125
+				power_balance_weekly = -0.0025
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+		range = { #以富强为核心
+			id = PRC_privitization_total_control_range
+			min = 0.8
+			max = 1
+			modifier = {
+				research_speed_factor = -0.15
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				power_balance_daily = -0.0005
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+	}
+}

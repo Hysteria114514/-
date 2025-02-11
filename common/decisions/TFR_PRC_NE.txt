@@ -1,0 +1,677 @@
+PRC_North_East = { #外东北决议组
+	PRC_recover_ne = { #请求归还外东北
+		icon = GFX_PRC_new_left_decision
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 200
+		}
+		allowed = {
+			original_tag = PRC
+		}
+		available = {
+            SOV = {
+                has_war_with = FRA
+            }
+			not = {
+				has_war_with = SOV
+			}
+		}
+		visible = {
+			SOV = {
+				exists = yes
+			}
+		}
+		modifier = {
+
+		}
+		complete_effect = {
+            PRC = { country_event = { id = recover_east_north_PRC.1 }}
+		}
+
+	}
+	PRC_North_East_Trade_1 = { #外东北交易（大量资源）
+		icon = GFX_PRC_new_left_decision
+		available = {
+		        has_country_flag = PRC_ne_trade_1
+	        }
+		visible = {
+	        has_country_flag = PRC_ne_trade_1
+		}
+		cost = 100
+		days_remove = 60
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 20
+			consumer_goods_factor = 0.2
+			production_speed_buildings_factor = -0.2
+			SOV =  {
+				consumer_goods_factor = -0.2
+				production_speed_buildings_factor = 0.2
+			}
+		}
+		remove_effect = {
+			country_event = recover_east_north_PRC.207
+			set_temp_variable = {
+				var = debt_var_temp
+				value = 30
+				}
+				add_debt = yes
+			SOV = {
+				set_temp_variable = {
+					var = income_var_temp
+					value = 30
+				}
+				add_income = yes
+				add_offsite_building = { type = industrial_complex level = 20 }
+			}
+            transfer_state = 408
+            transfer_state = 409
+            transfer_state = 657
+            transfer_state = 1328
+            transfer_state = 1293
+            transfer_state = 563
+            transfer_state = 560
+            transfer_state = 537
+		}
+		ai_will_do = {
+			base = 999
+		}
+	}
+
+	PRC_North_East_Trade_2 = { #外东北交易
+		icon = GFX_PRC_new_left_decision
+		available = {
+		    has_country_flag = PRC_ne_trade_2   #已接受部分条件	
+	        }
+		visible = {
+	        has_country_flag = PRC_ne_trade_2
+		}
+		cost = 50
+		days_remove = 120
+        fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 10
+			consumer_goods_factor = 0.1
+			production_speed_buildings_factor = -0.1
+			SOV = {
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		remove_effect = {
+			country_event = recover_east_north_PRC.207
+			set_temp_variable = {
+				var = debt_var_temp
+				value = 30
+				}
+				add_debt = yes
+			SOV = {
+				set_temp_variable = {
+					var = income_var_temp
+					value = 30
+				}
+				add_income = yes
+				add_offsite_building = { type = industrial_complex level = 10 }
+			}
+
+            transfer_state = 408
+            transfer_state = 409
+            transfer_state = 657
+            transfer_state = 1328
+            transfer_state = 560
+            transfer_state = 537
+
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+    PRC_North_East_War1 = { #海参崴
+        icon = border_war
+
+        visible = {
+            has_country_flag = PRC_ne_war
+            NOT = {
+				controls_state = 408
+			    }
+			}
+		available = {
+		    has_country_flag = PRC_ne_war
+			SOV = { 
+				has_war = no
+			}
+		}
+
+        highlight_states = {
+			highlight_state_targets = {
+				state = 408
+			}
+		}
+		on_map_mode = map_only
+
+        days_remove = 30
+        cost = 50
+
+        ai_will_do = {
+            base = 999
+        }
+
+        remove_effect = {
+            start_border_war = {
+				change_state_after_war = yes
+				attacker = {
+					state = 1416
+					num_provinces = 1
+                    on_win = north_east_border.1
+                    on_lose = north_east_border.2
+				}
+				defender = {
+					state = 408
+					num_provinces = 1
+                    on_win = north_east_border.3
+                    on_lose = north_east_border.4
+				}
+			}
+        }
+    }
+
+    PRC_North_East_War2 = { #伯力
+        icon = border_war
+        highlight_states = {
+			highlight_state_targets = {
+				state = 409
+			}
+		}
+		on_map_mode = map_only
+
+
+        visible = {
+            has_country_flag = PRC_ne_war
+            NOT = {
+				    controls_state = 409
+			}
+        }
+
+		available = {
+		    has_country_flag = PRC_ne_war
+			SOV = { 
+				has_war = no
+			}
+		}
+
+        days_remove = 30
+        cost = 50
+
+        ai_will_do = {
+            base = 999
+        }
+
+        remove_effect = {
+            start_border_war = {
+				change_state_after_war = yes
+				attacker = {
+					state = 717
+					num_provinces = 1
+                    on_win = north_east_border.1
+                    on_lose = north_east_border.2
+				}
+				defender = {
+					state = 409
+					num_provinces = 1
+                    on_win = north_east_border.3
+                    on_lose = north_east_border.4
+				}
+			}
+        }
+    }
+
+    PRC_North_East_War3 = { #比罗比詹
+        icon = border_war
+        highlight_states = {
+			highlight_state_targets = {
+				state = 657
+			}
+		}
+		on_map_mode = map_only
+
+
+        visible = {
+            has_country_flag = PRC_ne_war
+            NOT = {
+				controls_state = 657
+			}
+        }
+
+		available = {
+		    has_country_flag = PRC_ne_war
+			SOV = { 
+				has_war = no
+			}
+		}
+
+        days_remove = 30
+        cost = 50
+
+        ai_will_do = {
+            base = 999
+        }
+
+        remove_effect = {
+            start_border_war = {
+				change_state_after_war = yes
+				attacker = {
+					state = 717
+					num_provinces = 1
+                    on_win = north_east_border.1
+                    on_lose = north_east_border.2
+				}
+				defender = {
+					state = 657
+					num_provinces = 1
+                    on_win = north_east_border.3
+                    on_lose = north_east_border.4
+				}
+			}
+        }
+    }
+    
+    PRC_North_East_War4 = { #海兰泡
+        icon = border_war
+        highlight_states = {
+			highlight_state_targets = {
+				state = 1328
+			}
+		}
+		on_map_mode = map_only
+
+
+        visible = {
+            has_country_flag = PRC_ne_war
+            NOT = {
+				controls_state = 1328
+			}
+        }
+
+		available = {
+		    has_country_flag = PRC_ne_war
+			SOV = { 
+				has_war = no
+			}
+		}
+
+        days_remove = 30
+        cost = 50
+
+        ai_will_do = {
+            base = 999
+        }
+
+        remove_effect = {
+            start_border_war = {
+				change_state_after_war = yes
+				attacker = {
+					state = 714
+					num_provinces = 1
+                    on_win = north_east_border.1
+                    on_lose = north_east_border.2
+				}
+				defender = {
+					state = 1328
+					num_provinces = 1
+                    on_win = north_east_border.3
+                    on_lose = north_east_border.4
+				}
+			}
+        }
+    }
+
+    PRC_North_East_War5 = { #外兴安岭
+        icon = border_war
+        highlight_states = {
+			highlight_state_targets = {
+				state = 1293
+			}
+		}
+		on_map_mode = map_only
+
+
+        visible = {
+            has_country_flag = PRC_ne_war
+            NOT = {
+				controls_state = 1293
+			}
+        }
+
+		available = {
+		    has_country_flag = PRC_ne_war
+			SOV = { 
+				has_war = no
+			}
+		}
+
+        days_remove = 30
+        cost = 50
+
+        ai_will_do = {
+            base = 999
+        }
+
+        remove_effect = {
+            start_border_war = {
+				change_state_after_war = yes
+				attacker = {
+					state = 714
+					num_provinces = 1
+                    on_win = north_east_border.1
+                    on_lose = north_east_border.2
+				}
+				defender = {
+					state = 1293
+					num_provinces = 1
+                    on_win = north_east_border.3
+                    on_lose = north_east_border.4
+				}
+			}
+        }
+    }
+
+    PRC_North_East_War6 = { #尼布楚
+        icon = border_war
+        highlight_states = {
+			highlight_state_targets = {
+				state = 563
+			}
+		}
+		on_map_mode = map_only
+
+
+        visible = {
+            has_country_flag = PRC_ne_war
+            NOT = {
+				controls_state = 563
+			}
+        }
+
+		available = {
+		    has_country_flag = PRC_ne_war
+			SOV = { 
+				has_war = no
+			}
+		}
+
+        days_remove = 30
+        cost = 50
+
+        ai_will_do = {
+            base = 999
+        }
+
+        remove_effect = {
+            start_border_war = {
+				change_state_after_war = yes
+				attacker = {
+					state = 1167
+					num_provinces = 1
+                    on_win = north_east_border.1
+                    on_lose = north_east_border.2
+				}
+				defender = {
+					state = 563
+					num_provinces = 1
+                    on_win = north_east_border.3
+                    on_lose = north_east_border.4
+				}
+			}
+        }
+    }
+
+    PRC_North_East_War7 = { #庙街
+        icon = border_war
+        highlight_states = {
+			highlight_state_targets = {
+				state = 657
+			}
+		}
+		on_map_mode = map_only
+
+
+        visible = {
+            has_country_flag = PRC_ne_war
+			    PRC = {
+				    controls_state = 657
+					AND = { 
+						NOT = {
+							controls_state = 560
+							}
+					}
+			    }
+			
+        }
+
+		available = {
+		    has_country_flag = PRC_ne_war
+			SOV = { 
+				has_war = no
+			}
+		}
+
+        days_remove = 30
+        cost = 50
+
+        ai_will_do = {
+            base = 999
+        }
+
+        remove_effect = {
+            start_border_war = {
+				change_state_after_war = yes
+				attacker = {
+					state = 657
+					num_provinces = 1
+                    on_win = north_east_border.1
+                    on_lose = north_east_border.2
+				}
+				defender = {
+					state = 560
+					num_provinces = 1
+                    on_win = north_east_border.3
+                    on_lose = north_east_border.4
+				}
+			}
+        }
+    }
+
+    PRC_North_East_War8 = { #库页岛
+        icon = border_war
+        highlight_states = {
+			highlight_state_targets = {
+				state = 409
+			}
+		}
+		on_map_mode = map_only
+
+
+        visible = {
+            has_country_flag = PRC_ne_war
+			    PRC = {
+				    controls_state = 409
+					AND = {
+						NOT = {controls_state = 537}
+					}
+			    }
+        }
+
+		available = {
+		    has_country_flag = PRC_ne_war
+			SOV = { 
+				has_war = no
+			}
+		}
+		
+        days_remove = 30
+        cost = 50
+
+        ai_will_do = {
+            base = 999
+        }
+
+        remove_effect = {
+            start_border_war = {
+				change_state_after_war = yes
+				attacker = {
+					state = 409
+					num_provinces = 1
+                    on_win = north_east_border.1
+                    on_lose = north_east_border.2
+				}
+				defender = {
+					state = 537
+					num_provinces = 1
+                    on_win = north_east_border.3
+                    on_lose = north_east_border.4
+				}
+			}
+        }
+    }    
+
+    PRC_ne_state_core_1 = { #外东北造核决议(大)
+		icon = FX_PRC_soliders
+
+		visible = {
+			
+			PRC = {
+				OR = {
+					has_country_flag = PRC_ne_trade_1 
+					has_country_flag = PRC_ne_war
+				}
+			}
+			
+		}
+        available = {
+            PRC = {
+				controls_state = 408
+				controls_state = 409
+				controls_state = 657
+				controls_state = 1328
+				controls_state = 1293
+				controls_state = 563
+				controls_state = 560
+				controls_state = 537
+			}
+        }
+		cost = 100
+		days_remove = 90
+		fire_only_once = yes
+		remove_effect = {
+			country_event = recover_east_north_PRC.206
+            add_state_core = 408
+			add_state_core = 409
+			add_state_core = 657
+			add_state_core = 1328
+			add_state_core = 1293
+			add_state_core = 563
+			add_state_core = 560
+			add_state_core = 537
+			SOV = {
+			    remove_state_core = 408
+				remove_state_core = 409
+				remove_state_core = 657
+				remove_state_core = 1328
+				remove_state_core = 1293
+				remove_state_core = 563
+				remove_state_core = 560
+				remove_state_core = 537
+			}	
+			408 = { set_state_name = "海参崴" }
+			409 = { set_state_name = "伯力" }
+			657 = { set_state_name = "牛满" }
+			1328 = { set_state_name = "海兰泡" }
+			1293 = { set_state_name = "外兴安岭" }
+			563 = { set_state_name = "尼布楚" }
+			560 = { set_state_name = "庙街" }
+			537 = { set_state_name = "库页岛" }
+			set_province_name = { id = 957 name = "海参崴" }
+			set_province_name = { id = 3977 name = "双城子" }
+			set_province_name = { id = 6961 name = "兰沟崴" }
+			set_province_name = { id = 12189 name = "伯力" }
+			set_province_name = { id = 9604 name = "中华港" }
+			set_province_name = { id = 12263 name = "宏科" }
+			set_province_name = { id = 12678 name = "牛满" }
+			set_province_name = { id = 7763 name = "海兰泡" }
+			set_province_name = { id = 10678 name = "外兴安岭" }
+			set_province_name = { id = 12641 name = "尼布楚" }
+			set_province_name = { id = 12559 name = "庙街" }
+			set_province_name = { id = 12446 name = "库宁" }		    
+		}	
+		ai_will_do = {
+			base = 999
+		}
+	    
+    }
+
+	PRC_ne_state_core_2 = { #外东北造核决议(小)
+		icon = FX_PRC_soliders
+
+		visible = {
+			
+			PRC = {
+				has_country_flag = PRC_ne_trade_2 
+			}
+			
+		}
+        available = {
+            PRC = {
+				controls_state = 408
+				controls_state = 409
+				controls_state = 657
+				controls_state = 1328
+				controls_state = 560
+				controls_state = 537
+			}
+        }
+		cost = 75
+		days_remove = 60
+		fire_only_once = yes
+		remove_effect = {
+			country_event = recover_east_north_PRC.206
+            add_state_core = 408
+			add_state_core = 409
+			add_state_core = 657
+			add_state_core = 1328
+			add_state_core = 560
+			add_state_core = 537
+			SOV = {
+			    remove_state_core = 408
+				remove_state_core = 409
+				remove_state_core = 657
+				remove_state_core = 1328
+				remove_state_core = 560
+				remove_state_core = 537
+			}	
+			408 = { set_state_name = "海参崴" }
+			409 = { set_state_name = "伯力" }
+			657 = { set_state_name = "牛满" }
+			1328 = { set_state_name = "海兰泡" }
+			560 = { set_state_name = "庙街" }
+			537 = { set_state_name = "库页岛" }
+			set_province_name = { id = 957 name = "海参崴" }
+			set_province_name = { id = 3977 name = "双城子" }
+			set_province_name = { id = 6961 name = "兰沟崴" }
+			set_province_name = { id = 12189 name = "伯力" }
+			set_province_name = { id = 9604 name = "中华港" }
+			set_province_name = { id = 12263 name = "宏科" }
+			set_province_name = { id = 12678 name = "牛满" }
+			set_province_name = { id = 7763 name = "海兰泡" }
+			set_province_name = { id = 12559 name = "庙街" }
+			set_province_name = { id = 12446 name = "库宁" }		    
+		}	
+		ai_will_do = {
+			base = 999
+		}
+	    
+    }
+}   
+
+	

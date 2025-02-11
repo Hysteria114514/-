@@ -1,0 +1,380 @@
+PRC_cetgc_organization = {
+	include = generic_support_equipment_organization
+	icon = GFX_idea_PRC_cetgc
+	allowed = {	
+		tag = PRC 
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+##tank##
+PRC_norinco_organization = {
+	include = generic_infantry_tank_organization
+	icon = GFX_idea_PRC_norinco
+	allowed = {	
+		tag = PRC 
+		has_dlc = "Arms Against Tyranny"
+	}
+	add_trait = {  
+		token = PRC_mio_trait_high_precision_aiming
+		name = PRC_mio_trait_high_precision_aiming
+		icon = GFX_tfr_mio_icon_aiming
+		special_trait_background = yes
+
+		relative_position_id = generic_mio_trait_tank_artillery_improvements 
+		position = { x=0 y=4 }
+
+		any_parent = { generic_mio_trait_tank_artillery_improvements }
+
+		limit_to_equipment_type = { modern_tank_artillery_chassis }
+
+		equipment_bonus = {
+			soft_attack = 0.08
+			maximum_speed =-0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+}
+PRC_inner_mongolia_first_machinery_organization = {
+	include = generic_tank_refurbishment_plant_organization
+	icon = GFX_idea_PRC_inner_mongolia_first_machinery
+	allowed = {	
+		tag = PRC 
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+PRC_norinco_group_organization = {
+	include = generic_mobile_tank_organization
+	icon = GFX_idea_PRC_norinco_group
+	allowed = {	
+		tag = PRC 
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+##infantry equipment##
+PRC_csig_organization = {
+	include = generic_motorized_mechanized_organization
+	icon = GFX_idea_PRC_csig
+	allowed = {	
+		tag = PRC 
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+PRC_poly_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_PRC_poly
+	allowed = {	
+		tag = PRC 
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+PRC_dajiang_organization = {
+	include = generic_TFR_UAV_equipment_organization
+	icon = GFX_idea_PRC_dajiang
+	allowed = {	
+		tag = PRC 
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+PRC_norinco = {
+	name = 中国北方工业有限公司
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_PRC_norinco
+	allowed = {	
+		tag = PRC 
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+##plan##
+PRC_avic_organization = {
+	include = generic_light_aircraft_organization
+	icon = GFX_idea_PRC_avic
+	allowed = {	
+		tag = PRC 
+		has_dlc = "Arms Against Tyranny"
+	}
+	add_trait = { 
+		token = trust_in_the_pilot
+		name = 模块化设计
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		position = { x=0 y=0 }
+		special_trait_background = yes
+		available = {
+			FROM = {
+				has_completed_focus = PRC_Project_Advanced_Aircraft
+			}
+	}
+		production_bonus = {
+			production_capacity_factor = 0.05  #产量
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.1
+		}
+	}
+	add_trait = { 
+		token = streamline_aircraft_production
+		name = 生产流水线
+		icon = GFX_generic_mio_department_icon_plane_medium_line_efficiency
+		position = { x=1 y=0 }
+		special_trait_background = yes
+		available = {
+			FROM = {
+				has_completed_focus = PRC_streamline_aircraft_production_1
+			}
+	}
+		production_bonus = {
+			production_efficiency_gain_factor = 0.2
+			production_efficiency_cap_factor = 0.2
+			production_capacity_factor = 0.25  #产量
+		}
+	}
+}
+PRC_cosic_organization = {
+	include = generic_heavy_aircraft_organization
+	icon = GFX_idea_PRC_cosic
+	allowed = {	
+		tag = PRC 
+		has_dlc = "Arms Against Tyranny"
+	}
+	add_trait = { 
+		token = streamline_aircraft_production
+		name = 生产流水线
+		icon = GFX_generic_mio_department_icon_plane_medium_line_efficiency
+		position = { x=0 y=4 }
+		special_trait_background = yes
+		available = {
+			FROM = {
+				has_completed_focus = PRC_streamline_aircraft_production_1
+			}
+	}
+		production_bonus = {
+			production_efficiency_gain_factor = 0.2
+			production_efficiency_cap_factor = 0.2
+			production_capacity_factor = 0.25  #产量
+		}
+	}
+}
+PRC_casc_organization = {
+	include = generic_medium_aircraft_organization
+	icon = GFX_idea_PRC_casc
+	allowed = {	
+		tag = PRC 
+		has_dlc = "Arms Against Tyranny"
+	}
+	add_trait = { 
+		token = invest_in_ai
+		name = AI深度学习
+		icon = GFX_generic_mio_trait_icon_reliability
+		special_trait_background = yes
+		position = { x=1 y=2 }
+		limit_to_equipment_type = { mio_cat_eq_all_medium_plane }
+		available = {
+			FROM = {
+				has_completed_focus = PRC_invest_in_ai
+			}
+        	}
+		organization_modifier = {
+			military_industrial_organization_funds_gain = 0.2
+		}
+		equipment_bonus = {
+			air_ground_attack = 0.15
+			air_agility = 0.1
+		}
+	}
+
+	add_trait = { 
+		token = trust_in_the_pilot
+		name = 模块化设计
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+		position = { x=1 y=3 }
+		limit_to_equipment_type = { mio_cat_eq_all_medium_plane }
+		available = {
+			FROM = {
+				has_completed_focus = PRC_Project_Advanced_Aircraft
+			}
+	}
+		production_bonus = {
+			production_capacity_factor = 0.1  #产量
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.25
+		}
+	}
+
+	add_trait = { 
+		token = streamline_aircraft_production
+		name = 生产流水线
+		icon = GFX_generic_mio_department_icon_plane_medium_line_efficiency
+		position = { x=1 y=4 }
+		limit_to_equipment_type = { mio_cat_eq_all_medium_plane }
+		available = {
+			FROM = {
+				has_completed_focus = PRC_streamline_aircraft_production_1
+			}
+	}
+		production_bonus = {
+			production_efficiency_gain_factor = 0.2
+			production_efficiency_cap_factor = 0.2
+			production_capacity_factor = 0.25  #产量
+		}
+	}
+}
+PRC_avic_organization2 = {
+	name = 沈阳飞机工业集团
+	include = generic_multi_role_aircraft_organization
+	icon = GFX_SOV_sukhoi_organization
+	allowed = {	
+		tag = PRC
+		has_dlc = "Arms Against Tyranny"
+	}
+	add_trait = { 
+		token = trust_in_the_pilot
+		name = 模块化设计
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		position = { x=0 y=0 }
+		special_trait_background = yes
+		available = {
+			FROM = {
+				has_completed_focus = PRC_Project_Advanced_Aircraft
+			}
+	}
+		production_bonus = {
+			production_capacity_factor = 0.05  #产量
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.1
+		}
+	}
+	add_trait = { 
+		token = streamline_aircraft_production
+		name = 生产流水线
+		icon = GFX_generic_mio_department_icon_plane_medium_line_efficiency
+		position = { x=1 y=0 }
+		special_trait_background = yes
+		available = {
+			FROM = {
+				has_completed_focus = PRC_streamline_aircraft_production
+			}
+	}
+		production_bonus = {
+			production_efficiency_gain_factor = 0.2
+			production_efficiency_cap_factor = 0.2
+			production_capacity_factor = 0.25  #产量
+		}
+	}
+}
+##ship##
+PRC_csic_organization = {
+	include = generic_escort_ship_organization
+	icon = GFX_idea_PRC_csic
+	allowed = {	
+		tag = PRC 
+		has_dlc = "Arms Against Tyranny"
+	}
+	add_trait = { 
+		token = increase_naval_production
+		name = 大型干船坞
+		icon = GFX_generic_mio_department_icon_facilities
+		available = {
+			FROM = {
+				has_completed_focus =  PRC_increase_naval_production_1
+			}
+	}
+		production_bonus = {
+			production_capacity_factor = 0.25
+			production_cost_factor = -0.1
+		}
+		special_trait_background = yes
+		organization_modifier = {
+			military_industrial_organization_funds_gain = 0.1
+		}
+		position = { x=8 y=0 }
+	}
+}
+PRC_chsic_organization = {
+	include = generic_task_force_ship_organization
+	icon = GFX_idea_PRC_csic
+	allowed = {	
+		tag = PRC 
+		has_dlc = "Arms Against Tyranny"
+	}
+	add_trait = { 
+		token = increase_naval_production
+		name = 大型干船坞
+		icon = GFX_generic_mio_department_icon_facilities
+		available = {
+			FROM = {
+				has_completed_focus =  PRC_increase_naval_production_1
+			}
+	}
+		production_bonus = {
+			production_capacity_factor = 0.25
+			production_cost_factor = -0.1
+		}
+		special_trait_background = yes
+		organization_modifier = {
+			military_industrial_organization_funds_gain = 0.1
+		}
+		position = { x=9 y=0 }
+	}
+}
+PRC_jiangnan_organization = {
+	include = generic_battle_line_ship_organization
+	icon = GFX_idea_PRC_jiangnan
+	allowed = {	
+		tag = PRC 
+		has_dlc = "Arms Against Tyranny"
+	}
+	add_trait = { 
+		token = increase_naval_production
+		name = 大型干船坞
+		icon = GFX_generic_mio_department_icon_facilities
+		available = {
+			FROM = {
+				has_completed_focus =  PRC_increase_naval_production_1
+			}
+	}
+		production_bonus = {
+			production_capacity_factor = 0.25
+			production_cost_factor = -0.1
+		}
+		special_trait_background = yes
+		organization_modifier = {
+			military_industrial_organization_funds_gain = 0.1
+		}
+		position = { x=9 y=0 }
+	}
+}
+PRC_cssc_organization = {
+	name = 广州广船国际股份有限公司
+	include = generic_black_sea_fleet_organization
+	icon = GFX_idea_GER_rheinmetall
+	allowed = {	
+		tag = PRC 
+		has_dlc = "Arms Against Tyranny"
+	}
+	add_trait = { 
+		token = increase_naval_production
+		name = 大型干船坞
+		icon = GFX_generic_mio_department_icon_facilities
+		available = {
+			FROM = {
+				has_completed_focus =  PRC_increase_naval_production_1
+			}
+	}
+		production_bonus = {
+			production_capacity_factor = 0.25
+			production_cost_factor = -0.1
+		}
+		special_trait_background = yes
+		organization_modifier = {
+			military_industrial_organization_funds_gain = 0.1
+		}
+		position = { x=9 y=0 }
+	}
+}
+
+
